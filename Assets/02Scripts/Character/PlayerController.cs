@@ -14,7 +14,13 @@ public class PlayerController : BaseController
 
     }
 
-
+    protected override void SetIsAttacking()
+    {
+        if(_rigidbody.velocity.magnitude == 0 )
+            isAttacking = true;
+        else
+            isAttacking = false;
+    }
 
 
 

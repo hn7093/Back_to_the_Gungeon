@@ -23,6 +23,8 @@ public class BaseController : MonoBehaviour
 
     protected Vector2 weaponLookDirection = Vector2.zero;
     public Vector2 WeaponLookDirection { get { return lookDirection; } }
+    protected bool isAttacking = false;
+    public bool IsAttacking { get { return isAttacking; } }
     public Transform closestEnemy;
 
     protected bool isLeft = false;
@@ -90,6 +92,8 @@ public class BaseController : MonoBehaviour
 
         rotZ = Mathf.Atan2(weaponLookDirection.y, weaponLookDirection.x) * Mathf.Rad2Deg;
     }
+
+    protected virtual void SetIsAttacking() { }
 
     protected virtual void HandleAction()
     {
