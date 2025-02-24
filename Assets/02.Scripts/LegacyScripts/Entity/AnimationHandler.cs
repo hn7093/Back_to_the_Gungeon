@@ -1,29 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
 {
-    private static readonly int IsMoving = Animator.StringToHash("IsMove");
-    private static readonly int IsDamage = Animator.StringToHash("IsDamage");
+
+
+    private static readonly int IsMove = Animator.StringToHash("IsMove");
+
     protected Animator animator;
+
     protected virtual void Awake()
     {
-        // ìì‹  í¬í•¨ ìì‹ì—ì„œ ê°€ì ¸ì˜¤ê¸°
         animator = GetComponentInChildren<Animator>();
     }
 
     public void Move(Vector2 obj)
     {
-        animator.SetBool(IsMoving, obj.magnitude > 0.5f);
+
+        if (animator == null)
+        {
+            Debug.LogWarning("Animator is null");
+            return;
+        }
+
+        animator.SetBool(IsMove, obj.magnitude > .5f);//ÀÌµ¿¼Óµµ°¡  .5f ÀÌ»óÀÏ¶§ ÀÌµ¿¾Ö´Ï¸ŞÀÌ¼Ç
     }
 
-    public void Damage()
-    {
-        animator.SetBool(IsDamage, true);
-    }
-    public void EndInvincibility()
-    {
-        animator.SetBool(IsDamage, false);
-    }
+
 }

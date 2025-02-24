@@ -1,45 +1,102 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class PlayerController : BaseController
 {
-    [Header("PlayerInfo")]
-    private Camera camera;
-    // Start is called before the first frame update
-    protected override void Start()
-    {
-        base.Start();
-        camera = Camera.main;
-        isAttacking = true;
-    }
 
+    private List<BaseController> enemyList; // Àû ¸®½ºÆ®
     protected override void HandleAction()
     {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        movementDirection = new Vector2(horizontal, vertical).normalized;
 
     }
-    public override void Death()
-    {
-        base.Death();
-        GameManager.Instance.GameOver();
-    }
 
-    void OnMove(InputValue inputValue)
+    protected override void SetIsAttacking()
     {
-        movementDirection = inputValue.Get<Vector2>();
-        movementDirection = movementDirection.normalized;
-
-        // ëˆŒë¦¼(ì´ë™ì¤‘) = ê³µê²© ì¤‘ì§€, ë—Œ(ì •ì§€) = ê³µê²©
-        if(movementDirection == Vector2.zero)
-        {
+        if (_rigidbody.velocity.magnitude == 0)
             isAttacking = true;
+        else
+            isAttacking = false;
+    }
+
+    public void SetEnemyList(List<BaseController> enemies)
+    {
+        enemyList = enemies;
+    }
+
+    public bool SetCloserTarget()
+    {
+        if (enemyList == null || enemyList.Count == 0) return false;
+        Debug.Log("SetCloserTarget : " + enemyList.Count);
+        closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+        foreach (var enemy in enemyList)
+        {
+            // È°¼ºÈ­ µÈ ¿ÀºêÁ§Æ®ÀÏ ¶§¸¸
+            if (!enemy.gameObject.activeSelf) continue;
+
+            // ºñ±³¿ëÀ¸·Î Â÷ÀÌÀÇ Á¦°öÀ» »ç¿ë - Á¦°ö±Ù »ı·«
+            float dis = (enemy.transform.position - transform.position).sqrMagnitude;
+            if (dis < closestDistance)
+            {
+                closestDistance = dis;
+                closestEnemy = enemy.transform;
+            }
+        }
+        if (closestEnemy == null)
+        {
+            return false;
         }
         else
         {
-            isAttacking = false;
+            LookDirection = closestEnemy.transform.position - transform.position;
+            targetEntity = closestEnemy;
+            return true;
         }
     }
+
+    protected override void HandleAttackDelay()
+    {
+        if (_weaponHandler == null)
+            return;
+
+        if (timeSinceLastAttack <= _weaponHandler.Delay)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+        }
+
+        // °ø°İ °¡´É ¿©ºÎ È®ÀÎ
+        if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && SetCloserTarget())
+        {
+            timeSinceLastAttack = 0;
+            Attack();
+        }
+    }
+
+    public override void Death()
+    {
+        _rigidbody.velocity = Vector3.zero;
+        // ¸ğµç º»ÀÎ°ú ÀÚ½Ä ½ºÇÁ¶óÀÌÆ®
+        foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
+        {
+            Color color = renderer.color;
+            color.a = 0.3f;
+            renderer.color = color;
+        }
+
+        // ¸ğµç º»ÀÎ°ú ÀÚ½Ä ÄÄÆ÷³ÍÆ® ºñÈ°¼ºÈ­
+        foreach (Behaviour componet in transform.GetComponentsInChildren<Behaviour>())
+        {
+            componet.enabled = false;
+        }
+
+        // 2ÃÊÈÄ »èÁ¦
+        Destroy(gameObject, 2f);
+    }
+
 }
