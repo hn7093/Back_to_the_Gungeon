@@ -32,7 +32,7 @@ public class PlayerController : BaseController
     public bool SetCloserTarget()
     {
         if (enemyList == null || enemyList.Count == 0) return false;
-        Debug.Log("SetCloserTarget : " + enemyList.Count);
+
         closestEnemy = null;
         float closestDistance = Mathf.Infinity;
         foreach (var enemy in enemyList)
@@ -73,8 +73,10 @@ public class PlayerController : BaseController
         // 공격 가능 여부 확인
         if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && SetCloserTarget())
         {
-            timeSinceLastAttack = 0;
             Attack();
+        
+            timeSinceLastAttack = 0;
+            
         }
     }
 
