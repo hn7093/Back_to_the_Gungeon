@@ -77,7 +77,7 @@ public class StageManager : MonoBehaviour
         nextStage = currentStage.GetComponentInChildren<NextStage>(); // 새로운 스테이지에서 NextStage 찾기
         if (nextStage == null)
         {
-            Debug.LogError("새로 생성된 스테이지에서 NextStage를 찾을 수 없습니다!");
+            Debug.LogError("Cannot found Next Stage");
         }
         
         stageCount++;

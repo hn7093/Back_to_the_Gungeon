@@ -9,11 +9,13 @@ public class NextStage : MonoBehaviour
     public GameObject closeDoor;
     public GameObject openDoor;
     
+    public GameObject player;
     StageManager stageManager;
 
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         stageManager = FindObjectOfType<StageManager>();
     }
 
@@ -29,16 +31,21 @@ public class NextStage : MonoBehaviour
         openDoor.gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        openDoor = collision.gameObject;
-        
-        // 페이드 아웃 후
-        Destroy(stageManager.currentStage); // 현재 맵 파괴
-        // 페이드 인 후
-        stageManager.GenerateNewStage();
-        // 플레이어 좌표값도 변경해야함
-    }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("텔레포트");
+            // 페이드 아웃 후
+            Destroy(stageManager.currentStage); // 현재 맵 파괴
+            // 페이드 인 후
+            stageManager.GenerateNewStage();
+            // 플레이어 좌표값도 변경해야함
+            if (player != null)
+            {
+                player.transform.position = new Vector3(0, -5f, 0); // 새로운 방 시작 위치
+            }
 
-    
+        }
+    }
 }
