@@ -31,15 +31,7 @@ public class ResourceController : MonoBehaviour
 
     private void Update()
     {
-        if (timeSinceLastChange <= InvincibleTime)
-        {
-            timeSinceLastChange += Time.deltaTime;
-            if (timeSinceLastChange >= InvincibleTime)
-            {
-                timeSinceLastChange = InvincibleTime;
-                animationHandler.EndInvincibility();
-            }
-        }
+        DisableInvincible();
     }
 
     public bool ChangeHealth(float change)
@@ -86,5 +78,18 @@ public class ResourceController : MonoBehaviour
     public void RemoveHealthChangeEvent(Action<float, float> action)
     {
         OnChangeHealth -= action;
+    }
+
+    public void DisableInvincible()
+    {
+        if (timeSinceLastChange <= InvincibleTime)
+        {
+            timeSinceLastChange += Time.deltaTime;
+            if (timeSinceLastChange >= InvincibleTime)
+            {
+                timeSinceLastChange = InvincibleTime;
+                animationHandler.EndInvincibility();
+            }
+        }
     }
 }
