@@ -31,7 +31,7 @@ public class ResourceController : MonoBehaviour
 
     private void Update()
     {
-        if (timeSinceLastChange < InvincibleTime)
+        if (timeSinceLastChange <= InvincibleTime)
         {
             timeSinceLastChange += Time.deltaTime;
             if (timeSinceLastChange >= InvincibleTime)

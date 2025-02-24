@@ -81,21 +81,24 @@ public class PlayerController : BaseController
     public override void Death()
     {
         _rigidbody.velocity = Vector3.zero;
-        // 모든 본인과 자식 스프라이트
-        foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
-        {
-            Color color = renderer.color;
-            color.a = 0.3f;
-            renderer.color = color;
-        }
+        _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        animationHandlers[0].Die();
 
         // 모든 본인과 자식 컴포넌트 비활성화
-        foreach (Behaviour componet in transform.GetComponentsInChildren<Behaviour>())
-        {
-            componet.enabled = false;
-        }
+        StartCoroutine(DisableComponentsAfterDelay(1f));
 
-        //게임오버 화면 호출
+        // 게임오버 화면 호출
     }
 
+    private IEnumerator DisableComponentsAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // 모든 본인과 자식 컴포넌트 비활성화
+        foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
+        {
+            component.enabled = false;
+        }
+    }
 }

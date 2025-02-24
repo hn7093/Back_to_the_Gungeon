@@ -9,6 +9,7 @@ public class AnimationHandler : MonoBehaviour
 
     private static readonly int IsMove = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
+    private static readonly int IsDie = Animator.StringToHash("IsDie");
 
     protected Animator animator;
 
@@ -38,4 +39,8 @@ public class AnimationHandler : MonoBehaviour
         animator.SetTrigger(IsDamage);
     }
 
+    public void Die()
+    {
+        animator.SetTrigger(IsDie);
+    }
 }
