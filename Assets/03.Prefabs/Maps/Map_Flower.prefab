@@ -7274,6 +7274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6356604604581857032}
   - component: {fileID: 6758365580799616856}
+  - component: {fileID: 6936341898430454763}
   m_Layer: 0
   m_Name: Map_Flower
   m_TagString: Untagged
@@ -7312,6 +7313,26 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6936341898430454763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626775572201589379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14de17bfc595dbf44a856b86e559bf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage:
+  - {fileID: 7626775572201589379}
+  - {fileID: 9020578995374005157, guid: f3d979766c231b244bab13177dc63254, type: 3}
+  - {fileID: 3135250469454625111, guid: e74c87bc0a6619c42935b3fa86352fa7, type: 3}
+  - {fileID: 4668722388427643496, guid: a8a9aaf105754cc49bcf46970b13fe1c, type: 3}
+  currentStage: {fileID: 0}
+  closeDoor: {fileID: 5214142106595942383}
+  openDoor: {fileID: 2260470777344874073}
 --- !u!1 &8395464680097968171
 GameObject:
   m_ObjectHideFlags: 0

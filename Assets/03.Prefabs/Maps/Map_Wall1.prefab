@@ -2711,6 +2711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7088830807264857223}
   - component: {fileID: 2724560578687099398}
+  - component: {fileID: 2509496343770259296}
   m_Layer: 0
   m_Name: Map_Wall1
   m_TagString: Untagged
@@ -2749,6 +2750,20 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &2509496343770259296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135250469454625111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14de17bfc595dbf44a856b86e559bf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeDoor: {fileID: 3653535544677233959}
+  openDoor: {fileID: 8347235168098220264}
 --- !u!1 &3653535544677233959
 GameObject:
   m_ObjectHideFlags: 0

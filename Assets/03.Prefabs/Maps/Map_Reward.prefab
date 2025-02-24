@@ -5827,6 +5827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3581849407479257410}
   - component: {fileID: 1979571475241912895}
+  - component: {fileID: 2281931610755962955}
   m_Layer: 0
   m_Name: Map_Reward
   m_TagString: Untagged
@@ -5865,6 +5866,20 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &2281931610755962955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641816624991601808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14de17bfc595dbf44a856b86e559bf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeDoor: {fileID: 6912338105078542401}
+  openDoor: {fileID: 4163780363733024140}
 --- !u!1 &8755931987678843144
 GameObject:
   m_ObjectHideFlags: 0

@@ -6575,6 +6575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248851623088567171}
   - component: {fileID: 6431224890662646777}
+  - component: {fileID: -4998210723080960580}
   m_Layer: 0
   m_Name: Map_Default
   m_TagString: Untagged
@@ -6613,3 +6614,23 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &-4998210723080960580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683872029173957444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14de17bfc595dbf44a856b86e559bf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage:
+  - {fileID: 7626775572201589379, guid: 2724984570a60324f85a4bda2833c0ed, type: 3}
+  - {fileID: 9020578995374005157, guid: f3d979766c231b244bab13177dc63254, type: 3}
+  - {fileID: 3135250469454625111, guid: e74c87bc0a6619c42935b3fa86352fa7, type: 3}
+  - {fileID: 4668722388427643496, guid: a8a9aaf105754cc49bcf46970b13fe1c, type: 3}
+  currentStage: {fileID: 0}
+  closeDoor: {fileID: 5940593507905126733}
+  openDoor: {fileID: 6968111338153725837}
