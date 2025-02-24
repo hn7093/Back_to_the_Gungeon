@@ -43,4 +43,10 @@ public class AnimationHandler : MonoBehaviour
     {
         animator.SetTrigger(IsDie);
     }
+
+        public void Revive()
+    {
+        animator.ResetTrigger(IsDie);
+    }
+
 }
