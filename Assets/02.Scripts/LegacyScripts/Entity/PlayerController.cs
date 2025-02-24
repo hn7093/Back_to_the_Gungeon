@@ -95,8 +95,7 @@ public class PlayerController : BaseController
             componet.enabled = false;
         }
 
-        // 2초후 삭제
-        Destroy(gameObject, 2f);
+        //게임오버 화면 호출
     }
 
 }

@@ -8,6 +8,7 @@ public class AnimationHandler : MonoBehaviour
 
 
     private static readonly int IsMove = Animator.StringToHash("IsMove");
+    private static readonly int IsDamage = Animator.StringToHash("IsDamage");
 
     protected Animator animator;
 
@@ -28,5 +29,13 @@ public class AnimationHandler : MonoBehaviour
         animator.SetBool(IsMove, obj.magnitude > .5f);//이동속도가  .5f 이상일때 이동애니메이션
     }
 
+    public void Damage()
+    {
+        animator.SetBool(IsDamage, true);
+    }
+    public void EndInvincibility()
+    {
+        animator.SetBool(IsDamage, false);
+    }
 
 }
