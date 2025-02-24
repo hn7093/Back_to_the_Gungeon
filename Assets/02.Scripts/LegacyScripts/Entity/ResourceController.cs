@@ -36,6 +36,7 @@ public class ResourceController : MonoBehaviour
             timeSinceLastChange += Time.deltaTime;
             if (timeSinceLastChange >= InvincibleTime)
             {
+                timeSinceLastChange = InvincibleTime;
                 animationHandler.EndInvincibility();
             }
         }
