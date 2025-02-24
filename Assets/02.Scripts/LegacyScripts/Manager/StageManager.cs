@@ -61,11 +61,11 @@ public class StageManager : MonoBehaviour
         {
             currentStage = Instantiate(stage[0]);
         }
-        else if (stageCount % 3 == 0)
+        else if (stageCount % 4 == 0)
         {
             currentStage = Instantiate(stage[randomMapIndex]); // 보상 맵 출현
         }
-        else if (stageCount % 10 == 0)
+        else if (stageCount == 10)
         {
             currentStage = Instantiate(stage[randomMapIndex]); // 보스 스테이지 지정
         }

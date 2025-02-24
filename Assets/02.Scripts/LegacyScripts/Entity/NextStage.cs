@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 public class NextStage : MonoBehaviour
 {
@@ -11,13 +12,17 @@ public class NextStage : MonoBehaviour
     
     public GameObject player;
     StageManager stageManager;
+    public Fade fade;
 
-
-    private void Start()
+    void Awake()
     {
+        fade = FindObjectOfType<Fade>();
+        if(fade == null)
+            Debug.LogError("Fade is null");
         player = GameObject.FindGameObjectWithTag("Player");
         stageManager = FindObjectOfType<StageManager>();
     }
+
 
     public void DoorOpen()
     {
@@ -37,8 +42,10 @@ public class NextStage : MonoBehaviour
         {
             Debug.Log("텔레포트");
             // 페이드 아웃 후
+            StartCoroutine(fade.FadeOut());
             Destroy(stageManager.currentStage); // 현재 맵 파괴
             // 페이드 인 후
+            StartCoroutine(fade.FadeIn());
             stageManager.GenerateNewStage();
             // 플레이어 좌표값도 변경해야함
             if (player != null)
@@ -48,4 +55,5 @@ public class NextStage : MonoBehaviour
 
         }
     }
+    
 }
