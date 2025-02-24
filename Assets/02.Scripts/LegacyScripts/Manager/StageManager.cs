@@ -7,13 +7,20 @@ public class StageManager : MonoBehaviour
     public List<GameObject> stage = new List<GameObject>();
     public GameObject currentStage;
     
-    NextStage nextStage;
+    public NextStage nextStage;
 
     private int stageCount = 0;
     private int randomMapIndex;
     private int lastMapIndex = -1; // 첫맵부터 랜덤맵인덱스랑 겹쳐서 같은 맵 판정을 받으면 안되기 때문에 마이너스로 초기화   
     void Start()
     {
+        if (nextStage == null)
+        {
+            Debug.Log("Next Stage Not Found");
+            nextStage = FindObjectOfType<NextStage>();
+            if(nextStage == null)
+                Debug.LogError("Next Stage Not Found");
+        }
         GenerateNewStage();
     }
 
@@ -38,8 +45,6 @@ public class StageManager : MonoBehaviour
     
     public void GenerateNewStage()
     {
-        stageCount++;
-        
         if (currentStage != null)
         {
             Destroy(currentStage);
@@ -52,7 +57,11 @@ public class StageManager : MonoBehaviour
         
         lastMapIndex = randomMapIndex;
 
-        if (stageCount % 3 == 0)
+        if (stageCount == 0)
+        {
+            currentStage = Instantiate(stage[0]);
+        }
+        else if (stageCount % 3 == 0)
         {
             currentStage = Instantiate(stage[randomMapIndex]); // 보상 맵 출현
         }
@@ -64,6 +73,14 @@ public class StageManager : MonoBehaviour
         {
          currentStage = Instantiate(stage[randomMapIndex]); // 일반맵 생성   
         }
+        
+        nextStage = currentStage.GetComponentInChildren<NextStage>(); // 새로운 스테이지에서 NextStage 찾기
+        if (nextStage == null)
+        {
+            Debug.LogError("새로 생성된 스테이지에서 NextStage를 찾을 수 없습니다!");
+        }
+        
+        stageCount++;
     }
     
 }

@@ -10,7 +10,13 @@ public class NextStage : MonoBehaviour
     public GameObject openDoor;
     
     StageManager stageManager;
-    
+
+
+    private void Start()
+    {
+        stageManager = FindObjectOfType<StageManager>();
+    }
+
     public void DoorOpen()
     {
         closeDoor.gameObject.SetActive(false);
