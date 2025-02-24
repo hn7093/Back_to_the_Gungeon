@@ -13,7 +13,7 @@ public class ResourceController : MonoBehaviour
     
     private float timeSinceLastChange = float.MaxValue;
 
-    [SerializeField]public float CurrentHealth { get; private set; }
+    [SerializeField] public float CurrentHealth;
     public float MaxHealth => statHandler.Health;
     public AudioClip damageClip;
     private Action<float, float> OnChangeHealth;

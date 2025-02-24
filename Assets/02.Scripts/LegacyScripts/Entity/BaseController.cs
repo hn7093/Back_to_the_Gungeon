@@ -16,7 +16,8 @@ public class BaseController : MonoBehaviour
     [SerializeField] protected Transform rightHandPivot;
     [SerializeField] protected Transform leftHandPivot;
     [SerializeField] protected Transform weaponPivot;
-    [SerializeField] WeaponSO weaponData;
+    [SerializeField] protected WeaponSO weaponData;
+    [SerializeField] protected float lookOffset = 1.5f;
 
     protected Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get { return movementDirection; } }
@@ -100,7 +101,13 @@ public class BaseController : MonoBehaviour
     {
         if (closestEnemy != null)
         {
-            lookDirection = (closestEnemy.position - transform.position).normalized;
+            lookDirection = (closestEnemy.position - transform.position);
+
+            if(lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
+                lookDirection = Vector3.right;
+            else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
+                lookDirection = Vector3.left;
+
             Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
         }
         else
@@ -111,6 +118,12 @@ public class BaseController : MonoBehaviour
         if (closestEnemy != null)
         {
             weaponLookDirection = (closestEnemy.position - weaponPivot.position).normalized;
+
+            if (lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
+                weaponLookDirection = Vector3.right;
+            else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
+                weaponLookDirection = Vector3.left;
+
             Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
         }
         else
