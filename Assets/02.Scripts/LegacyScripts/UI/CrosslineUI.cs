@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrosslineUI : MonoBehaviour
 {
     PlayerController player;
-    [Range(0.01f, 1.5f)][SerializeField] private float smoothSpeed = 1f;
+    [Range(0.01f, 1.5f)][SerializeField] private float smoothSpeed = 0.25f;
     private void Awake()
     {
         player = FindObjectOfType<PlayerController>();
