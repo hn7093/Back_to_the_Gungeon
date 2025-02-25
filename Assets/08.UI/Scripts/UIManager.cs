@@ -41,6 +41,8 @@ namespace Preference
         
         public List<PageObject> Pages;
         private PageObject _currentPage;
+        
+        public bool isOpenStartPage = false;
 
         private void Start()
         {
@@ -50,15 +52,18 @@ namespace Preference
                 pageInstance.SetActive(false);
                 pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
             }
-            
-            _currentPage = Pages[0];
-            // Debug.Log(_currentPage.Instance);
-            _currentPage.Instance.SetActive(true);
+
+            if (isOpenStartPage)
+            {
+                _currentPage = Pages[0];
+                Debug.Log(_currentPage.Instance);
+                _currentPage.Instance.SetActive(true);
+            }
         }
 
         public void GoTo(PageType pageName)
         {
-            _currentPage.Instance.SetActive(false);
+            _currentPage?.Instance.SetActive(false);
             // 없는 경우에 대한 알림 필요
             _currentPage = Pages.Find(page => page.PageName == pageName);
             _currentPage.Instance.SetActive(true);

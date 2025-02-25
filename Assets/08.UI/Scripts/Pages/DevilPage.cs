@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
+using Preference;
+using UnityEngine.UI;
 
-public class DevilPage : MonoBehaviour
+public class DevilPage : UIMonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Button ExitButton;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        ExitButton.onClick.AddListener(() => gameObject.SetActive(false));
     }
 }
