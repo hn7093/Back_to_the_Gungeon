@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3068870324399637210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50,15 +50,6 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 512
-  delay: 1
-  weaponSize: 1
-  power: 1
-  speed: 1
-  attackRange: 10
-  isOnKnockback: 0
-  knockbackPower: 0.1
-  knockbackTime: 0.5
-  attackSoundClip: {fileID: 0}
   projectileSpawnPosition: {fileID: 115697322852634292}
 --- !u!212 &7858711774115473874
 SpriteRenderer:

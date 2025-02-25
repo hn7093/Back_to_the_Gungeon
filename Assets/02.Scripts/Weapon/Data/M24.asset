@@ -15,19 +15,19 @@ MonoBehaviour:
   weaponType: 0
   delay: 1
   weaponSize: 1
-  power: 0
-  speed: 8
+  power: 12
+  speed: 15
   attackRange: 20
   attackSoundClip: {fileID: 0}
   isOnKnockback: 1
   knockbackPower: 0.3
   knockbackTime: 0.5
   collideBoxSize: {x: 0, y: 0}
-  projectileSpawnPosition: {fileID: 0}
-  bulletIndex: 0
-  bulletSize: 0.2
+  bulletIndex: 1
+  bulletSize: 1
   duration: 3
   spread: 0
   numberofProjectilesPerShot: 1
   multipleProjectilesAngel: 0
+  multipleDelay: 0
   projectileColor: {r: 1, g: 1, b: 1, a: 1}
