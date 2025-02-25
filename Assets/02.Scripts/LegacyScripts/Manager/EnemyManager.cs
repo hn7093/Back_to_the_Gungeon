@@ -27,14 +27,19 @@ public class EnemyManager : MonoBehaviour
     }
     void Start()
     {
+        // test
         SpawnRandomEnemy();
-        SpawnRandomEnemy();
+        // SpawnRandomEnemy();
+        // SpawnRandomEnemy();
+        // SpawnRandomEnemy();
+        // SpawnRandomEnemy();
+        // SpawnRandomEnemy();
     }
 
     public void StartWave(int waveCount)
     {
         // 호출 오류 수정
-        if(waveCount <= 0)
+        if (waveCount <= 0)
         {
             GameManager.Instance.EndWave();
             return;
@@ -53,8 +58,8 @@ public class EnemyManager : MonoBehaviour
     {
         enemySpawnComplite = false;
         yield return new WaitForSeconds(timeBetweenWaves);
-        
-        for(int i = 0; i<waveCount; i++)
+
+        for (int i = 0; i < waveCount; i++)
         {
             yield return new WaitForSeconds(timeBetweenSpawns);
             SpawnRandomEnemy();
@@ -65,7 +70,7 @@ public class EnemyManager : MonoBehaviour
     private void SpawnRandomEnemy()
     {
         // 설정 확인
-        if(enemyPrefabs.Count == 0 || spawnAreas.Count == 0)
+        if (enemyPrefabs.Count == 0 || spawnAreas.Count == 0)
         {
             Debug.LogWarning("Enemy Prefab 또는 Spawn Area가 설정되지 않았습니다.");
         }
@@ -79,7 +84,7 @@ public class EnemyManager : MonoBehaviour
             Random.Range(randomArea.xMin, randomArea.xMax),
             Random.Range(randomArea.yMin, randomArea.yMax)
         );
-        
+
         // 생성
         GameObject spawnEntity = Instantiate(randomPrefab, new Vector3(randomPosition.x, randomPosition.y), Quaternion.identity);
         EnemyController enemyController = spawnEntity.GetComponent<EnemyController>();
@@ -94,26 +99,26 @@ public class EnemyManager : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        if(spawnAreas == null) return;
+        if (spawnAreas == null) return;
 
         // 스폰 영역 표시
         Gizmos.color = gizmoColor;
-        foreach(var area in spawnAreas)
+        foreach (var area in spawnAreas)
         {
-            Vector3 center = new Vector3(area.x + area.width/2, area.y + area.height/2);
+            Vector3 center = new Vector3(area.x + area.width / 2, area.y + area.height / 2);
             Vector3 size = new Vector3(area.width, area.height);
             Gizmos.DrawCube(center, size);
         }
     }
-    
+
     // 적 죽음시 처리
     public void RemoveEnemyOnDeath(EnemyController enemy)
     {
         Debug.Log("remove");
         activeEnemies.Remove(enemy);
-        
+
         // 전부 소환되고 남은 몬스터가 없다면
-        if(enemySpawnComplite && activeEnemies.Count == 0)
+        if (enemySpawnComplite && activeEnemies.Count == 0)
         {
             FindObjectOfType<PlayerController>().SetEnemyList(null);
             GameManager.Instance.EndWave();

@@ -43,9 +43,6 @@ public class ProjectileController : MonoBehaviour
             // 지속 시간 종료
             DestroyProjectile(transform.position, false);
         }
-
-        _rigidbody.velocity = direction * rangeWeaponHandler.Speed;
-
     }
     public void Init(Vector2 direction, RangeWeaponHandler weaponHandler)
     {
@@ -67,7 +64,9 @@ public class ProjectileController : MonoBehaviour
         {
             pivot.localRotation = Quaternion.Euler(0, 0, 0);
         }
-
+        _rigidbody.velocity = Vector2.zero;
+        _rigidbody.velocity = direction.normalized * rangeWeaponHandler.Speed;
+        Debug.Log(_rigidbody.velocity.magnitude);
         isReady = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,7 +79,10 @@ public class ProjectileController : MonoBehaviour
             DestroyProjectile(collision.ClosestPoint(transform.position) - direction * 0.2f, fxOnDestroy);
         }
         // target은 rangeWeaponHandler의 레이어
-        else if (rangeWeaponHandler.target.value == (rangeWeaponHandler.target.value | (1 << collision.gameObject.layer)))
+        Debug.Log(rangeWeaponHandler.target.value);
+
+        Debug.Log(collision.gameObject.layer);
+         if (rangeWeaponHandler.target.value == (rangeWeaponHandler.target.value | (1 << collision.gameObject.layer)))
         {
             // 목표 오브젝트
             // 데미지 & 넉백

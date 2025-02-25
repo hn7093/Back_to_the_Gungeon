@@ -103,7 +103,7 @@ public class BaseController : MonoBehaviour
         {
             lookDirection = (closestEnemy.position - transform.position);
 
-            if(lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
+            if (lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
                 lookDirection = Vector3.right;
             else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
                 lookDirection = Vector3.left;

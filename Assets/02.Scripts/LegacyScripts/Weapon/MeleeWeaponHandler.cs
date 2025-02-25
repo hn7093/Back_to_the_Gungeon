@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeWeaponHandler : WeaponHandler
 {
     [Header("Melee Attack Info")]
-    public Vector2 collideBoxSize = Vector2.zero;
+    public Vector2 collideBoxSize = Vector2.one;
     public Vector2 CollideBoxSize { get => collideBoxSize; set => collideBoxSize = value; }
 
     protected override void Start()
@@ -14,7 +14,7 @@ public class MeleeWeaponHandler : WeaponHandler
         collideBoxSize = collideBoxSize * WeaponSize;
     }
 
-    public override void Attack()
+    public override IEnumerator Attack()
     {
         base.Attack();
         // 사각형에 포함되는지 검사
@@ -44,6 +44,7 @@ public class MeleeWeaponHandler : WeaponHandler
                 }
             }
         }
+        yield return null;
     }
 
     public override void Rotate(bool isLeft)
