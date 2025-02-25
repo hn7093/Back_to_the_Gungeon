@@ -50,23 +50,7 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 512
-  delay: 1
-  weaponSize: 1
-  power: 1
-  speed: 1
-  attackRange: 10
-  isOnKnockback: 0
-  knockbackPower: 0.1
-  knockbackTime: 0.5
-  attackSoundClip: {fileID: 0}
   projectileSpawnPosition: {fileID: 115697322852634292}
-  bulletIndex: 0
-  bulletSize: 1
-  duration: 1
-  spread: 1
-  numberofProjectilesPerShot: 1
-  multipleProjectilesAngel: 1
-  projectileColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!212 &7858711774115473874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -144,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 4974182303227196431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.557, y: 0.088, z: 0}
+  m_LocalPosition: {x: 0.48, y: 0.143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5150,7 +5134,7 @@ Transform:
   m_GameObject: {fileID: 8407088804733910084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.063, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5197,7 +5181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 110
   m_Sprite: {fileID: 21300000, guid: 2fc381757815e4e419e1bbb468fef768, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5219,7 +5203,7 @@ Animator:
   m_GameObject: {fileID: 8407088804733910084}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4a3522d923b89a478a48f3812f6ee85, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

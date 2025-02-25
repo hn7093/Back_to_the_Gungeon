@@ -180,6 +180,7 @@ public class _BaseController : MonoBehaviour
 
     protected virtual void Attack()
     {
+        Debug.Log("c");
         _weaponHandler?.Attack();
     }
 

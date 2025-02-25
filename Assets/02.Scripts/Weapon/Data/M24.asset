@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponType: 0
   delay: 1
   weaponSize: 1
-  power: 12
+  power: 0.12
   speed: 15
   attackRange: 20
   attackSoundClip: {fileID: 0}

@@ -79,9 +79,6 @@ public class ProjectileController : MonoBehaviour
             DestroyProjectile(collision.ClosestPoint(transform.position) - direction * 0.2f, fxOnDestroy);
         }
         // target은 rangeWeaponHandler의 레이어
-        Debug.Log(rangeWeaponHandler.target.value);
-
-        Debug.Log(collision.gameObject.layer);
          if (rangeWeaponHandler.target.value == (rangeWeaponHandler.target.value | (1 << collision.gameObject.layer)))
         {
             // 목표 오브젝트

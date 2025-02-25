@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class PlayerController : BaseController
 {
 
-    private List<BaseController> enemyList; // 적 리스트
+    [SerializeField] private List<BaseController> enemyList; // 적 리스트
 
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
@@ -108,6 +108,7 @@ public class PlayerController : BaseController
         // 공격 가능 여부 확인
         if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && SetCloserTarget())
         {
+            Debug.Log("0");
             Attack();
         
             timeSinceLastAttack = 0;

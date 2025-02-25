@@ -84,6 +84,9 @@ public class BaseController : MonoBehaviour
         SetLookDirection();
         SetIsLeft();
         Rotate(isLeft);
+        SetIsAttacking();
+        HandleAttackDelay();
+
     }
 
     protected virtual void FixedUpdate()
@@ -108,7 +111,7 @@ public class BaseController : MonoBehaviour
             else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
                 lookDirection = Vector3.left;
 
-            Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
+            //Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
         }
         else
         {
@@ -124,7 +127,7 @@ public class BaseController : MonoBehaviour
             else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
                 weaponLookDirection = Vector3.left;
 
-            Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
+            //Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
         }
         else
         {
@@ -209,7 +212,7 @@ public class BaseController : MonoBehaviour
 
     protected virtual void Attack()
     {
-        _weaponHandler?.Attack();
+        StartCoroutine(_weaponHandler.Attack());
     }
 
     public void ApplyKnockback(Transform other, float power, float duration)

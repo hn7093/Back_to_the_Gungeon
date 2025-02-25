@@ -16,7 +16,7 @@ MonoBehaviour:
   delay: 1.2
   weaponSize: 1
   power: 6
-  speed: 3
+  speed: 8
   attackRange: 20
   attackSoundClip: {fileID: 0}
   isOnKnockback: 1
