@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
 {
-
-
-    private static readonly int IsMove = Animator.StringToHash("IsMove");
+    private static readonly int IsMoving = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
-    private static readonly int IsDie = Animator.StringToHash("IsDie");
+    private static readonly int IsAttack = Animator.StringToHash("IsAttack");
+    private static readonly int IsDeath = Animator.StringToHash("IsDeath");
 
     protected Animator animator;
 
@@ -20,14 +19,7 @@ public class AnimationHandler : MonoBehaviour
 
     public void Move(Vector2 obj)
     {
-
-        if (animator == null)
-        {
-            Debug.LogWarning("Animator is null");
-            return;
-        }
-
-        animator.SetBool(IsMove, obj.magnitude > .5f);//이동속도가  .5f 이상일때 이동애니메이션
+        animator.SetBool(IsMoving, obj.magnitude > 0.5f);//이동속도가  0.5f 이상일때 이동애니메이션
     }
 
     public void EndInvincibility()
@@ -36,17 +28,21 @@ public class AnimationHandler : MonoBehaviour
     }
     public void Damage()
     {
-        animator.SetTrigger(IsDamage);
+        animator.SetBool(IsDamage, true);
     }
 
-    public void Die()
+    public void Attack()
     {
-        animator.SetTrigger(IsDie);
+        animator.SetBool(IsAttack, true);
     }
 
-        public void Revive()
+    public void Death()
     {
-        animator.ResetTrigger(IsDie);
+        animator.SetTrigger(IsDeath);
     }
 
+    public void InvincibilityEnd()
+    {
+        animator.SetBool(IsDamage, false);
+    }
 }

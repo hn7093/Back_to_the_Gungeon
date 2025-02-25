@@ -120,7 +120,7 @@ public class PlayerController : BaseController
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-        animationHandlers[0].Die();
+        animationHandlers[0].Death();
 
         // 모든 본인과 자식 컴포넌트 비활성화
         StartCoroutine(DisableComponentsAfterDelay(1f));

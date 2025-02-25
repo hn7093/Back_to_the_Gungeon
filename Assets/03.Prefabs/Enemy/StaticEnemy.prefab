@@ -49,23 +49,7 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 512
-  delay: 1
-  weaponSize: 1
-  power: 1
-  speed: 1
-  attackRange: 10
-  isOnKnockback: 0
-  knockbackPower: 0.1
-  knockbackTime: 0.5
-  attackSoundClip: {fileID: 0}
   projectileSpawnPosition: {fileID: 0}
-  bulletIndex: 0
-  bulletSize: 1
-  duration: 0
-  spread: 0
-  numberofProjectilesPerShot: 0
-  multipleProjectilesAngel: 0
-  projectileColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &733081926811025575
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +260,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -447,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvincibleTime: 0.5
+  CurrentHealth: 0
   damageClip: {fileID: 0}
 --- !u!114 &141610020739938732
 MonoBehaviour:
@@ -469,9 +455,12 @@ MonoBehaviour:
   leftHandPivot: {fileID: 0}
   weaponPivot: {fileID: 3029542260956351055}
   weaponData: {fileID: 0}
+  lookOffset: 1.5
   closestEnemy: {fileID: 0}
   followRange: 15
   canMove: 0
+  chase: 1
+  AttackPos: {fileID: 0}
 --- !u!114 &4081560334346075662
 MonoBehaviour:
   m_ObjectHideFlags: 0

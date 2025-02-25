@@ -244,7 +244,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 0.4433962, g: 0.15686187, b: 0.15686187, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -518,7 +519,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 0.09433961, g: 0.08143466, b: 0.08143466, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -853,7 +855,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -913,6 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvincibleTime: 0.5
+  CurrentHealth: 0
   damageClip: {fileID: 0}
 --- !u!114 &1755005130
 MonoBehaviour:
@@ -961,6 +965,7 @@ MonoBehaviour:
   leftHandPivot: {fileID: 0}
   weaponPivot: {fileID: 0}
   weaponData: {fileID: 0}
+  lookOffset: 1.5
   closestEnemy: {fileID: 0}
 --- !u!50 &1755005133
 Rigidbody2D:
