@@ -18,13 +18,20 @@ namespace Preference
         public GameObject Instance;
     }
     
-    public abstract class UIMonoBehaviour : MonoBehaviour {
-        protected SystemManager systemManager = SystemManager.Instance;
-        protected UIManager _uiManager;
+    public abstract class UIMonoBehaviour : MonoBehaviour
+    {
+        protected SystemManager systemManager;
+        protected FileManager fileManager;
+        protected AudioManager audioManager;
+        protected UIManager uiManager;
         
         public void connectUIMnager(UIManager uiManager)
         {
-            _uiManager = uiManager;
+            this.uiManager = uiManager;
+            // fix: Awake 순서상의 문제로 등록되지 못한 경우 발생
+            systemManager = SystemManager.Instance;
+            fileManager = systemManager.FileManager;
+            audioManager = systemManager.AudioManager;
         }
     }
     
@@ -35,7 +42,7 @@ namespace Preference
         public List<PageObject> Pages;
         private PageObject _currentPage;
 
-        private void Awake()
+        private void Start()
         {
             foreach (PageObject page in Pages)
             {
@@ -45,6 +52,7 @@ namespace Preference
             }
             
             _currentPage = Pages[0];
+            // Debug.Log(_currentPage.Instance);
             _currentPage.Instance.SetActive(true);
         }
 

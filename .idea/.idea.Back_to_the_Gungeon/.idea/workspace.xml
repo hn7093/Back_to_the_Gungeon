@@ -4,28 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/PlayerActionInput.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/PlayerActionInput.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Documents.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Documents/GameStartPage.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Documents/GameStartPage.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Fonts/Maplestory Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Fonts/Maplestory Light.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Fonts/Maplestory OTF Light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Fonts/Maplestory OTF Light.otf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/GameStartPage.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/GameStartPage.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/SDFs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/SDFs/Maplestory Light SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/SDFs/Maplestory Light SDF.asset.meta" beforeDir="false" />
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: UI 매니저 및 전역 관리 관련 파일 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/05.Sounds/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05.Sounds/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/FileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/FileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/GameOverPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/GameOverPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +43,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a1cbff1ff154500b905c9e210c0dc4c176200/dd/7de941d0/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/62/e1e4be74/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -136,6 +126,7 @@
       <workItem from="1740364260574" duration="9245000" />
       <workItem from="1740377460149" duration="22537000" />
       <workItem from="1740442282584" duration="5813000" />
+      <workItem from="1740453932038" duration="6667000" />
     </task>
     <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
       <option name="closed" value="true" />
@@ -161,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740375918568</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: UI 매니저 및 전역 관리 관련 파일 추가">
+      <option name="closed" value="true" />
+      <created>1740454088227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740454088227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +202,7 @@
     <MESSAGE value="feat: UI 구성 요소 관련" />
     <MESSAGE value="feat: 게임오버 페이지" />
     <MESSAGE value="feat: 파일 매니저 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 파일 매니저 추가" />
+    <MESSAGE value="feat: UI 매니저 및 전역 관리 관련 파일 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: UI 매니저 및 전역 관리 관련 파일 추가" />
   </component>
 </project>

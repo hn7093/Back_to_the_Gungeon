@@ -1,17 +1,15 @@
 using Preference;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameOverPage : UIMonoBehaviour
 {
-    private string _startScenePath = "";
-    
-    public void RestartGame()
-    {
-        systemManager.FileManager.StartGame();
-    }
+    public Button ExitButton;
+    public Button RestartButton;
+    public Button RetryButton;
 
-    public void ExitGame()
+    private void Start()
     {
-        // SceneManager.LoadScene(_startScenePath);
+        
     }
 }

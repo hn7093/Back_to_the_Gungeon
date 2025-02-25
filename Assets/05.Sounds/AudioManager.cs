@@ -17,6 +17,7 @@ public class AudioData
 public class AudioManager : MonoBehaviour
 {
     public List<AudioData> bgmList;
+    public AudioData currentBGM;
     
     // 볼륨 변경 로직 필요
     public AudioSource _audioSource;
@@ -29,7 +30,8 @@ public class AudioManager : MonoBehaviour
             return;
         }
         
-        _audioSource.clip = bgmList[number].clip;
+        currentBGM = bgmList[number];
+        _audioSource.clip = currentBGM.clip;
         _audioSource.Play();
     }
     
@@ -50,6 +52,12 @@ public class AudioManager : MonoBehaviour
         
         // _audioSource.clip = bgmList.Find(list => list.name == name).clip;
         // _audioSource.Play();
+    }
+
+    public void TurnBGMOn(bool isOn)
+    {
+        if(isOn) _audioSource.Play();
+        else _audioSource.Stop();
     }
     
     private void Awake()

@@ -1,27 +1,17 @@
 using Preference;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartGamePage : UIMonoBehaviour
 {
-    
-    public void StartGame()
-    {
-        Debug.Log("StartGame");
-    }
+    public Button StartGameBtn;
+    public Button SettingsBtn;
+    public Button LoadBtn;
+    public Button ExitBtn;
 
-    public void LoadGame()
+    private void Start()
     {
-        systemManager.FileManager.LoadGameData();
+        SettingsBtn.onClick.AddListener(() => uiManager.GoTo(PageType.SETTINGS_PAGE));
+        ExitBtn.onClick.AddListener(() => fileManager.ExitGame());
     }
-
-    public void GotoSettings()
-    {
-        systemManager.UIManager.GoTo(PageType.SETTINGS_PAGE);
-    }
-
-    public void QuitGame()
-    {
-        systemManager.FileManager.ExitGame();
-    }
-    
 }
