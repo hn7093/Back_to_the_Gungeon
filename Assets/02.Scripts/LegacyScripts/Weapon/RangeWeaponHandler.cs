@@ -38,7 +38,7 @@ public class RangeWeaponHandler : WeaponHandler
 
     public override IEnumerator Attack()
     {
-        base.Attack();
+        StartCoroutine(base.Attack());
         // 발사 갯수에 따른 판 퍼짐 각도
         float minAngle = -(numberofProjectilesPerShot / 2f) * multipleProjectilesAngel + 0.5f * multipleProjectilesAngel;
 
