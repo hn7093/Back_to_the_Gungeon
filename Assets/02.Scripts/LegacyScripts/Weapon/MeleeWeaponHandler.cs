@@ -14,7 +14,7 @@ public class MeleeWeaponHandler : WeaponHandler
         collideBoxSize = collideBoxSize * WeaponSize;
     }
 
-    public override void Attack()
+    public override IEnumerator Attack()
     {
         base.Attack();
         // 사각형에 포함되는지 검사
@@ -44,6 +44,7 @@ public class MeleeWeaponHandler : WeaponHandler
                 }
             }
         }
+        yield return null;
     }
 
     public override void Rotate(bool isLeft)

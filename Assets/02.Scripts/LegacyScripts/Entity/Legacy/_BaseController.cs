@@ -35,7 +35,7 @@ public class _BaseController : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _animationHandler = GetComponent<AnimationHandler>();
+        _animationHandler = gameObject.GetComponentInChildren<AnimationHandler>();
         _statHandler = GetComponent<StatHandler>();
 
         // 무기 찾기
@@ -90,7 +90,15 @@ public class _BaseController : MonoBehaviour
         }
         // 이동
         _rigidbody.velocity = direction;
-        _animationHandler.Move(direction);
+        if (_animationHandler != null)
+        {
+            Debug.Log("not null");
+            _animationHandler.Move(direction);
+        }
+        else
+        {
+            Debug.Log("null : " + gameObject.name);
+        }
     }
 
 

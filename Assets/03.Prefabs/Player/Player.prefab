@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7039390794279678077}
   m_Layer: 0
-  m_Name: WeaponPivot
+  m_Name: LeftPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,11 +43,11 @@ GameObject:
   - component: {fileID: 9122797024187893454}
   - component: {fileID: 7827314434992542260}
   - component: {fileID: 5785361960060355453}
-  - component: {fileID: 221146488936013035}
-  - component: {fileID: 4751124640150744731}
   - component: {fileID: 399115842520943008}
   - component: {fileID: 4283206665749601927}
   - component: {fileID: 3015449442597529560}
+  - component: {fileID: 823289006127443763}
+  - component: {fileID: 4568997377719081644}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -70,6 +70,8 @@ Transform:
   m_Children:
   - {fileID: 3015819534793668391}
   - {fileID: 7039390794279678077}
+  - {fileID: 5842081719208786552}
+  - {fileID: 4640773423721414939}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &9122797024187893454
@@ -165,37 +167,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &221146488936013035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952174516467699637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1aae09a58d082540bae7ee35665bf57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  characterRenderer: {fileID: 8687477439490743302}
-  weaponPivot: {fileID: 7039390794279678077}
-  weaponPrefab: {fileID: 0}
-  weaponData: {fileID: 0}
---- !u!114 &4751124640150744731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952174516467699637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 698fe52986302344fa8590f0279124db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &399115842520943008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +225,40 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &823289006127443763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952174516467699637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd42a297cafa3c64792712552cedad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterRenderer: {fileID: 8687477439490743302}
+  rightHandRenderer: {fileID: 0}
+  leftHandRenderer: {fileID: 0}
+  weaponRenderer: {fileID: 0}
+  weaponPrefab: {fileID: 0}
+  rightHandPivot: {fileID: 5842081719208786552}
+  leftHandPivot: {fileID: 7039390794279678077}
+  weaponPivot: {fileID: 4640773423721414939}
+  weaponData: {fileID: 0}
+  closestEnemy: {fileID: 0}
+--- !u!114 &4568997377719081644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952174516467699637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e316169d75c2e4e8e7b4365a2d8527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1396306343875902197
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40ad113150481b54f938d77441344e84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -338,3 +343,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3797502142935224273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5842081719208786552}
+  m_Layer: 0
+  m_Name: RightPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5842081719208786552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797502142935224273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2372148238762006840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3935243794810561753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4640773423721414939}
+  m_Layer: 0
+  m_Name: WeaponPiviot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4640773423721414939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935243794810561753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2372148238762006840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

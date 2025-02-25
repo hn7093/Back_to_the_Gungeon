@@ -43,9 +43,6 @@ public class ProjectileController : MonoBehaviour
             // 지속 시간 종료
             DestroyProjectile(transform.position, false);
         }
-
-        _rigidbody.velocity = direction * rangeWeaponHandler.Speed;
-
     }
     public void Init(Vector2 direction, RangeWeaponHandler weaponHandler)
     {
@@ -67,7 +64,9 @@ public class ProjectileController : MonoBehaviour
         {
             pivot.localRotation = Quaternion.Euler(0, 0, 0);
         }
-
+        _rigidbody.velocity = Vector2.zero;
+        _rigidbody.velocity = direction.normalized * rangeWeaponHandler.Speed;
+        Debug.Log(_rigidbody.velocity.magnitude);
         isReady = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
