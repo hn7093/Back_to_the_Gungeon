@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.SocialPlatforms.Impl;
 
 
 // 적 행동 로직
@@ -9,13 +11,31 @@ public class EnemyController : BaseController
     [Header("EnemyInfo")]
     [SerializeField] private float followRange = 15f; // 추적 거리
     [SerializeField] private bool canMove = true;
+    [SerializeField] private bool chase = true;
     private EnemyManager enemyManager;
     private Transform target;
+    private NavMeshAgent agent;
+    Animator animator;
+    public Transform AttackPos;
 
-    
+
+    enum Enemy_State
+    {
+        Idle,
+        Move,
+        Attack,
+        Damage,
+        Death
+    }
+
     public void Init(Transform target)
     {
         this.target = target;
+ 
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
     }
 
     protected float DistanceToTarget()
@@ -43,14 +63,20 @@ public class EnemyController : BaseController
         // 행동 시작
         float distance = DistanceToTarget();
         Vector2 direction = DirectionToTarget();
-
+        //if (chase)
+        {
+            agent.SetDestination(target.position);
+        }
         // 거리에 따라 공격 or 추격
         isAttacking = false;
         if (distance <= followRange)
         {
             // 방향 전환
             lookDirection = direction;
-
+            if (chase)
+            {
+                agent.SetDestination(target.position);
+            }
             // 공격 범위내라면
             if (distance < _weaponHandler.AttackRange)
             {
