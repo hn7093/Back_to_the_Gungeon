@@ -7,12 +7,16 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private LayerMask levelCollisionLayer;
 
     public bool fxOnDestroy;
-
+    [SerializeField] private bool canBounce = true; // 벽 반사 여부
+    private int bounceCtn = 2; // 최대 팅김 횟수
     private RangeWeaponHandler rangeWeaponHandler;
     private float currentDuration;
     private Vector2 direction;
     private bool isReady;
     private Transform pivot;
+
+
+    private float scale = 1.0f; // 데미지 배율
 
     // components
     private Rigidbody2D _rigidbody;
@@ -75,24 +79,44 @@ public class ProjectileController : MonoBehaviour
         // levelCollisionLayer가 10100라면 시프트 후 결과 10000, 00100 모두 OR 후에는 levelCollisionLayer.value와 같다.
         if (levelCollisionLayer.value == (levelCollisionLayer.value | (1 << collision.gameObject.layer)))
         {
-            // 벽면등 배경요소에 닿았다면 삭제
-            DestroyProjectile(collision.ClosestPoint(transform.position) - direction * 0.2f, fxOnDestroy);
+            Debug.Log("벽");
+            if (canBounce && bounceCtn > 0)
+            {
+                // 배율 감소
+                scale *= 0.5f;
+
+                // 팅김 횟수 감소
+                bounceCtn--;
+
+                // 충돌한 벽의 법선 벡터 가져오기
+                Vector2 close = collision.ClosestPoint(transform.position);
+                Vector2 dir = transform.position;
+                Vector2 normal = (dir - close).normalized;
+                // 현재 속도를 법선 방향으로 반사
+                _rigidbody.velocity = Vector2.Reflect(_rigidbody.velocity, normal);
+            }
+            else
+            {
+                // 벽면등 배경요소에 닿았다면 삭제
+                DestroyProjectile(collision.ClosestPoint(transform.position) - direction * 0.2f, fxOnDestroy);
+            }
+
         }
         // target은 rangeWeaponHandler의 레이어
-         if (rangeWeaponHandler.target.value == (rangeWeaponHandler.target.value | (1 << collision.gameObject.layer)))
+        if (rangeWeaponHandler.target.value == (rangeWeaponHandler.target.value | (1 << collision.gameObject.layer)))
         {
             // 목표 오브젝트
             // 데미지 & 넉백
             ResourceController resourceController = collision.GetComponent<ResourceController>();
-            if(resourceController != null)
+            if (resourceController != null)
             {
-                // 데미지
-                resourceController.ChangeHealth(-rangeWeaponHandler.Power);
+                // 배율 적용 데미지
+                resourceController.ChangeHealth(-rangeWeaponHandler.Power * scale);
                 // 넉백
-                if(rangeWeaponHandler.IsOnKnockback)
+                if (rangeWeaponHandler.IsOnKnockback)
                 {
                     BaseController controller = collision.GetComponent<BaseController>();
-                    if(controller != null)
+                    if (controller != null)
                     {
                         controller.ApplyKnockback(transform, rangeWeaponHandler.KnockbackPower, rangeWeaponHandler.KnockbackTime);
                     }
@@ -107,7 +131,7 @@ public class ProjectileController : MonoBehaviour
     private void DestroyProjectile(Vector3 position, bool createFx)
     {
         // 파티클 재생
-        if(createFx)
+        if (createFx)
         {
             ProjectileManager.Instance.CreateImpactParticlesAtPostion(position, rangeWeaponHandler);
         }
