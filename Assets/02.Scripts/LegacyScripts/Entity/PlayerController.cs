@@ -128,7 +128,7 @@ public class PlayerController : BaseController
             }
             else//벽이 있으면 blockedEnemy로 지정
             {
-                if (dis < closestDistance)
+                if (dis < blockedDistance)
                 {
                     blockedDistance = dis;
                     blockedEnemy = enemy.transform;
