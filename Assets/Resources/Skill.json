@@ -1,0 +1,22 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "독화살",
+      "description": "추가적인 데미지가 들어갑니다.",
+      "imagePath": "Skills/skill3"
+    },
+    {
+      "id": 2,
+      "name": "강화",
+      "description": "데미지가 강해집니다.",
+      "imagePath": "Skills/skill2"
+    },
+    {
+      "id": 3,
+      "name": "반사",
+      "description": "총알이 반사됩니다.",
+      "imagePath": "Skills/skill1"
+    }
+  ]
+}
