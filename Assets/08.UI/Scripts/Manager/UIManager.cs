@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Preference
@@ -8,7 +9,8 @@ namespace Preference
         HOME_PAGE,
         MAIN_PAGE,
         SETTINGS_PAGE,
-        GAMEOVER_PAGE
+        GAMEOVER_PAGE,
+        ANGEL_PAGE
     }
     
     [System.Serializable]
@@ -24,6 +26,7 @@ namespace Preference
         protected FileManager fileManager;
         protected AudioManager audioManager;
         protected UIManager uiManager;
+        protected EventManager eventManager;
         
         public void connectUIMnager(UIManager uiManager)
         {
@@ -32,6 +35,7 @@ namespace Preference
             systemManager = SystemManager.Instance;
             fileManager = systemManager.FileManager;
             audioManager = systemManager.AudioManager;
+            eventManager = systemManager.EventManager;
         }
     }
     
@@ -46,18 +50,22 @@ namespace Preference
 
         private void Start()
         {
-            foreach (PageObject page in Pages)
-            {
-                GameObject pageInstance = page.Instance;
-                pageInstance.SetActive(false);
-                pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
-            }
-
+            Clear();
             if (isOpenStartPage)
             {
                 _currentPage = Pages[0];
                 Debug.Log(_currentPage.Instance);
                 _currentPage.Instance.SetActive(true);
+            }
+        }
+
+        public void Clear()
+        {
+            foreach (PageObject page in Pages)
+            {
+                GameObject pageInstance = page.Instance;
+                pageInstance.SetActive(false);
+                pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
             }
         }
 
