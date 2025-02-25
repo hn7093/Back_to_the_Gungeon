@@ -66,10 +66,15 @@ public class BaseController : MonoBehaviour
         if (weaponPrefab != null)
         {
             _weaponHandler = Instantiate(weaponPrefab, weaponPivot);
-            Transform weaponSprite = transform.Find("WeaponSprite");
-            if (weaponSprite != null)
+            Transform[] allChildren = weaponPivot.GetComponentsInChildren<Transform>(true);
+
+            foreach (Transform child in allChildren)
             {
-                SpriteRenderer weaponRenderer = weaponSprite.GetComponent<SpriteRenderer>();
+                if (child.name == "WeaponSprite") //특정 이름과 일치하는 오브젝트 찾기
+                {
+                    weaponRenderer = child.GetComponent<SpriteRenderer>();
+                    break;
+                }
             }
         }
         else
@@ -81,6 +86,7 @@ public class BaseController : MonoBehaviour
         {
             _weaponHandler.Setup(weaponData);
         }
+
     }
 
 
@@ -114,7 +120,7 @@ public class BaseController : MonoBehaviour
             else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
                 lookDirection = Vector3.left;
 
-            Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
+            //Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
         }
         else
         {
@@ -132,7 +138,7 @@ public class BaseController : MonoBehaviour
                 else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
                     weaponLookDirection = Vector3.left;
 
-                Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
+                //Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
             }
             else
             {
@@ -154,7 +160,7 @@ public class BaseController : MonoBehaviour
 
     private void Movement(Vector2 direction)
     {
-        if(_rigidbody == null) return;
+        if (_rigidbody == null) return;
 
         direction = direction * _statHandler.Speed;
 

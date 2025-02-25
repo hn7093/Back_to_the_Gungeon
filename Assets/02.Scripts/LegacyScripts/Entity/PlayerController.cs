@@ -92,11 +92,16 @@ public class PlayerController : BaseController
         enemyList = enemies;
     }
 
+    public void RemoveEnemyList(BaseController enemy)
+    {
+        enemyList.Remove(enemy);
+    }
+
     public void SetCloserTarget()
     {
         if (enemyList == null || enemyList.Count == 0) isAnyEnemy = false;
 
-        Debug.Log("SetCloserTarget : " + enemyList.Count);
+        //Debug.Log("SetCloserTarget : " + enemyList.Count);
         closestEnemy = null;
         float closestDistance = Mathf.Infinity;
         float blockedDistance = Mathf.Infinity;
