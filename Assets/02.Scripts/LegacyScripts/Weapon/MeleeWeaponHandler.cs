@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeWeaponHandler : WeaponHandler
 {
     [Header("Melee Attack Info")]
-    public Vector2 collideBoxSize = Vector2.zero;
+    public Vector2 collideBoxSize = Vector2.one;
     public Vector2 CollideBoxSize { get => collideBoxSize; set => collideBoxSize = value; }
 
     protected override void Start()

@@ -50,7 +50,6 @@ public class WeaponHandler : MonoBehaviour
         Controller = GetComponentInParent<BaseController>();
         animator = GetComponentInChildren<Animator>();
         weaponRenderer = GetComponentInChildren<SpriteRenderer>();
-
         animator.speed = 1.0f / delay;
         transform.localScale = Vector3.one * weaponSize;
     }
