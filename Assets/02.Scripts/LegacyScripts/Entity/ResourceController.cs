@@ -13,7 +13,7 @@ public class ResourceController : MonoBehaviour
     
     private float timeSinceLastChange = float.MaxValue;
 
-    [SerializeField]public float CurrentHealth { get; private set; }
+    [SerializeField] public float CurrentHealth;
     public float MaxHealth => statHandler.Health;
     public AudioClip damageClip;
     private Action<float, float> OnChangeHealth;
@@ -31,14 +31,7 @@ public class ResourceController : MonoBehaviour
 
     private void Update()
     {
-        if (timeSinceLastChange < InvincibleTime)
-        {
-            timeSinceLastChange += Time.deltaTime;
-            if (timeSinceLastChange >= InvincibleTime)
-            {
-                animationHandler.EndInvincibility();
-            }
-        }
+        DisableInvincible();
     }
 
     public bool ChangeHealth(float change)
@@ -85,5 +78,18 @@ public class ResourceController : MonoBehaviour
     public void RemoveHealthChangeEvent(Action<float, float> action)
     {
         OnChangeHealth -= action;
+    }
+
+    public void DisableInvincible()
+    {
+        if (timeSinceLastChange <= InvincibleTime)
+        {
+            timeSinceLastChange += Time.deltaTime;
+            if (timeSinceLastChange >= InvincibleTime)
+            {
+                timeSinceLastChange = InvincibleTime;
+                animationHandler.EndInvincibility();
+            }
+        }
     }
 }
