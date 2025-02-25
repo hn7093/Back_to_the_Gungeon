@@ -8,35 +8,35 @@ public class WeaponHandler : MonoBehaviour
 {
     [Header("Attack Info")]
     public LayerMask target;
-    [SerializeField] private float delay = 1f;
+    private float delay = 1f;
     public float Delay { get => delay; set => delay = value; }
 
-    [SerializeField] private float weaponSize = 1f;
+    private float weaponSize = 1f;
     public float WeaponSize { get => weaponSize; set => weaponSize = value; }
 
-    [SerializeField] private float power = 1f;
+    private float power = 1f;
     public float Power { get => power; set => power = value; }
 
-    [SerializeField] private float speed = 1f;
+    private float speed = 1f;
     public float Speed { get => speed; set => speed = value; }
 
-    [SerializeField] private float attackRange = 10f;
+    private float attackRange = 10f;
     public float AttackRange { get => attackRange; set => attackRange = value; }
 
 
     [Header("Knock Back Info")]
-    [SerializeField] private bool isOnKnockback = false;
+    private bool isOnKnockback = false;
     public bool IsOnKnockback { get => isOnKnockback; set => isOnKnockback = value; }
 
-    [SerializeField] private float knockbackPower = 0.1f;
+    private float knockbackPower = 0.1f;
     public float KnockbackPower { get => knockbackPower; set => knockbackPower = value; }
 
-    [SerializeField] private float knockbackTime = 0.5f;
+    private float knockbackTime = 0.5f;
     public float KnockbackTime { get => knockbackTime; set => knockbackTime = value; }
 
     private static readonly int IsAttack = Animator.StringToHash("OnAttack");
 
-    public AudioClip attackSoundClip;
+    private AudioClip attackSoundClip;
 
     // componets
     protected BaseController Controller { get; private set; }
@@ -50,23 +50,23 @@ public class WeaponHandler : MonoBehaviour
         Controller = GetComponentInParent<BaseController>();
         animator = GetComponentInChildren<Animator>();
         weaponRenderer = GetComponentInChildren<SpriteRenderer>();
-
         animator.speed = 1.0f / delay;
         transform.localScale = Vector3.one * weaponSize;
     }
 
     protected virtual void Start()
     {
-        
+
     }
 
-    public virtual void Attack()
+    public virtual IEnumerator Attack()
     {
         AttackAnimation();
-        if(attackSoundClip != null)
+        if (attackSoundClip != null)
         {
             SoundManager.PlayClip(attackSoundClip);
         }
+        yield return null;
     }
 
     public void AttackAnimation()

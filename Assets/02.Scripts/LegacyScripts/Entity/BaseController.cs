@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,7 +17,8 @@ public class BaseController : MonoBehaviour
     [SerializeField] protected Transform rightHandPivot;
     [SerializeField] protected Transform leftHandPivot;
     [SerializeField] protected Transform weaponPivot;
-    [SerializeField] WeaponSO weaponData;
+    [SerializeField] protected WeaponSO weaponData;
+    [SerializeField] protected float lookOffset = 1.5f;
 
     protected Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get { return movementDirection; } }
@@ -64,6 +66,16 @@ public class BaseController : MonoBehaviour
         if (weaponPrefab != null)
         {
             _weaponHandler = Instantiate(weaponPrefab, weaponPivot);
+            Transform[] allChildren = weaponPivot.GetComponentsInChildren<Transform>(true);
+
+            foreach (Transform child in allChildren)
+            {
+                if (child.name == "WeaponSprite") //특정 이름과 일치하는 오브젝트 찾기
+                {
+                    weaponRenderer = child.GetComponent<SpriteRenderer>();
+                    break;
+                }
+            }
         }
         else
         {
@@ -74,6 +86,7 @@ public class BaseController : MonoBehaviour
         {
             _weaponHandler.Setup(weaponData);
         }
+
     }
 
 
@@ -100,24 +113,40 @@ public class BaseController : MonoBehaviour
     {
         if (closestEnemy != null)
         {
-            lookDirection = (closestEnemy.position - transform.position).normalized;
-            Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
+            lookDirection = (closestEnemy.position - transform.position);
+
+            if (lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
+                lookDirection = Vector3.right;
+            else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
+                lookDirection = Vector3.left;
+
+            //Debug.Log($"Look Direction: {lookDirection}, Closest Enemy: {closestEnemy.name}");
         }
         else
         {
             lookDirection = Vector2.zero;
         }
 
-        if (closestEnemy != null)
+        if (weaponPivot != null)
         {
-            weaponLookDirection = (closestEnemy.position - weaponPivot.position).normalized;
-            Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
+            if (closestEnemy != null)
+            {
+                weaponLookDirection = (closestEnemy.position - weaponPivot.position).normalized;
+
+                if (lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
+                    weaponLookDirection = Vector3.right;
+                else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
+                    weaponLookDirection = Vector3.left;
+
+                //Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
+            }
+            else
+            {
+                weaponLookDirection = Vector2.zero;
+            }
         }
         else
-        {
-            weaponLookDirection = Vector2.zero;
-        }
-
+            return;
 
         rotZ = Mathf.Atan2(weaponLookDirection.y, weaponLookDirection.x) * Mathf.Rad2Deg;
     }
@@ -131,6 +160,8 @@ public class BaseController : MonoBehaviour
 
     private void Movement(Vector2 direction)
     {
+        if (_rigidbody == null) return;
+
         direction = direction * _statHandler.Speed;
 
 
@@ -153,6 +184,7 @@ public class BaseController : MonoBehaviour
 
         if (weaponRenderer != null)
             weaponRenderer.flipY = _isLeft;
+
 
         if (leftHandPivot != null)
             RotatePivot(leftHandPivot, _isLeft, initialLeftHandPivotPos);

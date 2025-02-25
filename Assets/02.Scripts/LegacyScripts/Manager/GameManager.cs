@@ -29,11 +29,11 @@ public class GameManager : MonoBehaviour
         else
         {
             isFirstLoading = false;
-            playerResourceController = player.GetComponent<ResourceController>();
+            //playerResourceController = player.GetComponent<ResourceController>();                           
             //_playerResourceController.RemoveHealthChangeEvent(uiManager.ChangePlayerHP);
             //_playerResourceController.AddHealthChangeEvent(uiManager.ChangePlayerHP);
-            playerResourceController.RemoveHealthChangeEvent(UIManager.Instance.ChangePlayerHP);
-            playerResourceController.AddHealthChangeEvent(UIManager.Instance.ChangePlayerHP);
+            //playerResourceController.RemoveHealthChangeEvent(UIManager.Instance.ChangePlayerHP);
+            //playerResourceController.AddHealthChangeEvent(UIManager.Instance.ChangePlayerHP);
         }
     }
 

@@ -10,6 +10,7 @@ public class StatHandler : MonoBehaviour
     public int Health
     {
         get => health;
+
         set => health = Mathf.Clamp(value, 0, 100);
     }
 
