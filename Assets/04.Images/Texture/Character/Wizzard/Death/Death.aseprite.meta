@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09620dc1d641e2745a65aea7a2d12af6
+guid: 58ab299332a7b8f45839a5af1bf839a4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638759558604345474
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Run_Frame_0
+  - name: Death_Frame_0
     originalName: 
-    pivot: {x: 0.50000006, y: 0.4440584}
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 37
+      width: 25
+      height: 32
+    spriteID: 27574d29b9db3b84fbfa3165a380e647
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 37}
+  - name: Death_Frame_1
+    originalName: 
+    pivot: {x: 0.51442045, y: 0.53605133}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 41
-      width: 23
-      height: 29
-    spriteID: 272db4eed797d7b41b012dec3d708902
+      x: 37
+      y: 37
+      width: 25
+      height: 30
+    spriteID: 260477ae654930243a700b5aacbf0ba6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,59 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 41}
-  - name: Run_Frame_1
+    uvTransform: {x: 37, y: 37}
+  - name: Death_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 43
-      width: 15
-      height: 28
-    spriteID: 1ebffbffcc17ae74eaa71fb3cc46fe44
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 36, y: 43}
-  - name: Run_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 78
-      width: 17
-      height: 31
-    spriteID: 32b3bc79ce5415a44974db958233e9f7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 78}
-  - name: Run_Frame_3
-    originalName: 
-    pivot: {x: 0.5075106, y: 0.4440585}
+    pivot: {x: 0.50487185, y: 0.6009435}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 24
-      height: 29
-    spriteID: d81d2787bff4d284e80a7d5a9fc2451e
+      width: 37
+      height: 25
+    spriteID: 7211fa08711b490439166168d8d63456
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,18 +181,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Run_Frame_4
+  - name: Death_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4909872, y: 0.99835587}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 36
-      y: 79
-      width: 15
-      height: 28
-    spriteID: e56eb845779c7ad47b437a65b1139fd5
+      x: 70
+      y: 37
+      width: 40
+      height: 17
+    spriteID: 4d10a01798ea9cf47a9e23006594088c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,19 +200,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 36, y: 79}
-  - name: Run_Frame_5
+    uvTransform: {x: 70, y: 37}
+  - name: Death_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.50858366, y: 1.2339009}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 36
+      x: 4
+      y: 77
+      width: 42
+      height: 14
+    spriteID: f5fc9d91b2b630646977ab05423f4836
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 77}
+  - name: Death_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 1.0407693}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 49
       y: 4
-      width: 16
-      height: 31
-    spriteID: 84ea30880d6a28542bc441246f070b4a
+      width: 42
+      height: 16
+    spriteID: bacea54530b29444c89192b23137059a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,116 +240,68 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 36, y: 4}
+    uvTransform: {x: 49, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1912097461
-    name: Run
+    guid: -814945124
+    name: Death
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Run_Frame_0
+    - name: Death_Frame_0
       frameIndex: 0
       cellRect:
-        x: 21
-        y: 2
-        width: 23
-        height: 29
-      spriteId: 272db4eed797d7b41b012dec3d708902
-    - name: Run_Frame_1
+        x: 4
+        y: 0
+        width: 25
+        height: 32
+      spriteId: 27574d29b9db3b84fbfa3165a380e647
+    - name: Death_Frame_1
       frameIndex: 1
       cellRect:
-        x: 25
+        x: 8
         y: 0
-        width: 15
-        height: 28
-      spriteId: 1ebffbffcc17ae74eaa71fb3cc46fe44
-    - name: Run_Frame_2
+        width: 25
+        height: 30
+      spriteId: 260477ae654930243a700b5aacbf0ba6
+    - name: Death_Frame_2
       frameIndex: 2
       cellRect:
-        x: 23
-        y: 1
-        width: 17
-        height: 31
-      spriteId: 32b3bc79ce5415a44974db958233e9f7
-    - name: Run_Frame_3
+        x: 9
+        y: 0
+        width: 37
+        height: 25
+      spriteId: 7211fa08711b490439166168d8d63456
+    - name: Death_Frame_3
       frameIndex: 3
       cellRect:
-        x: 21
-        y: 2
-        width: 24
-        height: 29
-      spriteId: d81d2787bff4d284e80a7d5a9fc2451e
-    - name: Run_Frame_4
+        x: 11
+        y: 0
+        width: 40
+        height: 17
+      spriteId: 4d10a01798ea9cf47a9e23006594088c
+    - name: Death_Frame_4
       frameIndex: 4
       cellRect:
-        x: 25
+        x: 9
         y: 0
-        width: 15
-        height: 28
-      spriteId: e56eb845779c7ad47b437a65b1139fd5
-    - name: Run_Frame_5
+        width: 42
+        height: 14
+      spriteId: f5fc9d91b2b630646977ab05423f4836
+    - name: Death_Frame_5
       frameIndex: 5
       cellRect:
-        x: 24
-        y: 1
-        width: 16
-        height: 31
-      spriteId: 84ea30880d6a28542bc441246f070b4a
+        x: 9
+        y: 0
+        width: 42
+        height: 16
+      spriteId: bacea54530b29444c89192b23137059a
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Android
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 64, y: 32}

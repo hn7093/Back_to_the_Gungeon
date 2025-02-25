@@ -11,15 +11,35 @@ public class AnimationHandler : MonoBehaviour
     private static readonly int IsDeath = Animator.StringToHash("IsDeath");
 
     protected Animator animator;
+    
 
     protected virtual void Awake()
+    {
+        Init();
+    }
+
+    public void Init()
     {
         animator = GetComponentInChildren<Animator>();
     }
 
     public void Move(Vector2 obj)
     {
-        animator.SetBool(IsMoving, obj.magnitude > 0.5f);//이동속도가  0.5f 이상일때 이동애니메이션
+        if (animator == null)
+        {
+            Debug.LogError(" Animator is NULL in AnimationHandler!");
+            return;
+        }
+
+        if (animator.runtimeAnimatorController == null)
+        {
+            Debug.LogError(" AnimatorController is not assigned to Animator!");
+            return;
+        }
+
+        Debug.Log($" Move called with magnitude: {obj.magnitude}");
+
+        animator.SetBool(IsMoving, obj.magnitude > 0.5f);
     }
 
     public void EndInvincibility()
@@ -45,4 +65,5 @@ public class AnimationHandler : MonoBehaviour
     {
         animator.SetBool(IsDamage, false);
     }
+
 }
