@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -65,6 +66,11 @@ public class BaseController : MonoBehaviour
         if (weaponPrefab != null)
         {
             _weaponHandler = Instantiate(weaponPrefab, weaponPivot);
+            Transform weaponSprite = transform.Find("WeaponSprite");
+            if (weaponSprite != null)
+            {
+                SpriteRenderer weaponRenderer = weaponSprite.GetComponent<SpriteRenderer>();
+            }
         }
         else
         {
@@ -115,22 +121,26 @@ public class BaseController : MonoBehaviour
             lookDirection = Vector2.zero;
         }
 
-        if (closestEnemy != null)
+        if (weaponPivot != null)
         {
-            weaponLookDirection = (closestEnemy.position - weaponPivot.position).normalized;
+            if (closestEnemy != null)
+            {
+                weaponLookDirection = (closestEnemy.position - weaponPivot.position).normalized;
 
-            if (lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
-                weaponLookDirection = Vector3.right;
-            else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
-                weaponLookDirection = Vector3.left;
+                if (lookDirection.magnitude < lookOffset && lookDirection.x >= 0)
+                    weaponLookDirection = Vector3.right;
+                else if (lookDirection.magnitude < lookOffset && lookDirection.x < 0)
+                    weaponLookDirection = Vector3.left;
 
-            Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
+                Debug.Log($"Look Direction: {weaponLookDirection}, Closest Enemy: {closestEnemy.name}");
+            }
+            else
+            {
+                weaponLookDirection = Vector2.zero;
+            }
         }
         else
-        {
-            weaponLookDirection = Vector2.zero;
-        }
-
+            return;
 
         rotZ = Mathf.Atan2(weaponLookDirection.y, weaponLookDirection.x) * Mathf.Rad2Deg;
     }
@@ -144,6 +154,8 @@ public class BaseController : MonoBehaviour
 
     private void Movement(Vector2 direction)
     {
+        if(_rigidbody == null) return;
+
         direction = direction * _statHandler.Speed;
 
 
@@ -166,6 +178,7 @@ public class BaseController : MonoBehaviour
 
         if (weaponRenderer != null)
             weaponRenderer.flipY = _isLeft;
+
 
         if (leftHandPivot != null)
             RotatePivot(leftHandPivot, _isLeft, initialLeftHandPivotPos);

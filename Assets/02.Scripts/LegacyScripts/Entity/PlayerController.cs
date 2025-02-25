@@ -23,10 +23,19 @@ public class PlayerController : BaseController
     private float dragThreshold = 1f;
     private controlType currentControllType;
     private string controlTypeKey = "controlTypeKey";
+    private bool isAnyEnemy = false;
+
 
     private void Start()
     {
         currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        SetCloserTarget();
+        HandleAttackDelay();
     }
 
     protected override void HandleAction()
@@ -83,9 +92,9 @@ public class PlayerController : BaseController
         enemyList = enemies;
     }
 
-    public bool SetCloserTarget()
+    public void SetCloserTarget()
     {
-        if (enemyList == null || enemyList.Count == 0) return false;
+        if (enemyList == null || enemyList.Count == 0) isAnyEnemy = false;
 
         Debug.Log("SetCloserTarget : " + enemyList.Count);
         closestEnemy = null;
@@ -102,7 +111,7 @@ public class PlayerController : BaseController
             // 비교용으로 차이의 제곱을 사용 - 제곱근 생략
             float dis = (enemy.transform.position - weaponPivot.position).sqrMagnitude;
             Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
-            RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("wall", "innerwall"));
+            RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("Wall", "innerWall"));
 
             if(hit.collider == null)//벽이 없으면 bestEnemy로 지정
             {
@@ -125,21 +134,24 @@ public class PlayerController : BaseController
         if (bestEnemy != null)
         {
             closestEnemy = bestEnemy;
-            return true;
+            isAnyEnemy = true;
         }
         else if (blockedEnemy != null)
         {
             closestEnemy = blockedEnemy;
-            return true;
+            isAnyEnemy = true;
         }
         else
-            return false;
+            isAnyEnemy = false;
     }
 
     protected override void HandleAttackDelay()
     {
         if (_weaponHandler == null)
+        {
+            Debug.Log("weaponHandler is null");
             return;
+        }
 
         if (timeSinceLastAttack <= _weaponHandler.Delay)
         {
@@ -147,7 +159,7 @@ public class PlayerController : BaseController
         }
 
         // 공격 가능 여부 확인
-        if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && SetCloserTarget())
+        if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && isAnyEnemy)
         {
             timeSinceLastAttack = 0;
             Attack();
