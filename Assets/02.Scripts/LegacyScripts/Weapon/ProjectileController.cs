@@ -7,8 +7,9 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private LayerMask levelCollisionLayer;
 
     public bool fxOnDestroy;
-    [SerializeField] private bool canBounce = true; // 벽 반사 여부
+    private bool canBounce = false; // 벽 반사 여부
     private int bounceCtn = 2; // 최대 팅김 횟수
+    private bool canThrough = false; // 적 관통 여부
     private RangeWeaponHandler rangeWeaponHandler;
     private float currentDuration;
     private Vector2 direction;
@@ -16,7 +17,7 @@ public class ProjectileController : MonoBehaviour
     private Transform pivot;
 
 
-    private float scale = 1.0f; // 데미지 배율
+    public float scale = 1.0f; // 데미지 배율
 
     // components
     private Rigidbody2D _rigidbody;
@@ -73,17 +74,22 @@ public class ProjectileController : MonoBehaviour
         Debug.Log(_rigidbody.velocity.magnitude);
         isReady = true;
     }
+    // 반사 여부 설정
+    public void SetBounce(bool isBouce) => canBounce = isBouce; 
+
+    // 통과 여부 설정
+    public void SetThrough(bool isThrough) => canThrough = isThrough;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // levelCollisionLayer는 여러 레이어를 포함 할 수 있으므로, collision의 레이어만큼 1에 시프트 후 OR 연산을 한다.
         // levelCollisionLayer가 10100라면 시프트 후 결과 10000, 00100 모두 OR 후에는 levelCollisionLayer.value와 같다.
         if (levelCollisionLayer.value == (levelCollisionLayer.value | (1 << collision.gameObject.layer)))
         {
-            Debug.Log("벽");
             if (canBounce && bounceCtn > 0)
             {
+                // 팅길 수 있고 최대 횟수를 넘지 않았다면
                 // 배율 감소
-                scale *= 0.5f;
+                scale = 0.5f;
 
                 // 팅김 횟수 감소
                 bounceCtn--;
@@ -122,8 +128,17 @@ public class ProjectileController : MonoBehaviour
                     }
                 }
             }
-            // 삭제
-            DestroyProjectile(collision.ClosestPoint(transform.position), fxOnDestroy);
+            
+            if (canThrough)
+            {
+                // 관통탄이면 배율 감소, 삭제 안함
+                scale = 0.67f;
+            }
+            else
+            {
+                // 삭제
+                DestroyProjectile(collision.ClosestPoint(transform.position), fxOnDestroy);
+            }
         }
     }
 
