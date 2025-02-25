@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+
+public enum controlType
+{
+    keyboard = 0,
+    mouse
+}
 
 public class PlayerController : BaseController
 {
@@ -14,9 +21,21 @@ public class PlayerController : BaseController
     private Vector2 currentTouchPosition;
     private bool isDragging = false;
     private float dragThreshold = 1f;
+    private controlType currentControllType;
+    private string controlTypeKey = "controlTypeKey";
+
+    private void Start()
+    {
+        currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+    }
 
     protected override void HandleAction()
-    { HandleKeyboardInput(); }
+    {
+        if (currentControllType == 0)
+            HandleKeyboardInput();
+        else
+            HandleMouseInput();
+    }
 
     protected void HandleKeyboardInput()
     {
@@ -67,32 +86,54 @@ public class PlayerController : BaseController
     public bool SetCloserTarget()
     {
         if (enemyList == null || enemyList.Count == 0) return false;
+
         Debug.Log("SetCloserTarget : " + enemyList.Count);
         closestEnemy = null;
         float closestDistance = Mathf.Infinity;
+        float blockedDistance = Mathf.Infinity;
+        Transform bestEnemy = null;
+        Transform blockedEnemy = null;
+
         foreach (var enemy in enemyList)
         {
             // 활성화 된 오브젝트일 때만
             if (!enemy.gameObject.activeSelf) continue;
 
             // 비교용으로 차이의 제곱을 사용 - 제곱근 생략
-            float dis = (enemy.transform.position - transform.position).sqrMagnitude;
-            if (dis < closestDistance)
+            float dis = (enemy.transform.position - weaponPivot.position).sqrMagnitude;
+            Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("wall", "innerwall"));
+
+            if(hit.collider == null)//벽이 없으면 bestEnemy로 지정
             {
-                closestDistance = dis;
-                closestEnemy = enemy.transform;
+                if(dis < closestDistance)
+                {
+                    closestDistance = dis;
+                    bestEnemy = enemy.transform;
+                }
+            }
+            else//벽이 있으면 blockedEnemy로 지정
+            {
+                if (dis < closestDistance)
+                {
+                    blockedDistance = dis;
+                    blockedEnemy = enemy.transform;
+                }
             }
         }
-        if (closestEnemy == null)
+
+        if (bestEnemy != null)
         {
-            return false;
-        }
-        else
-        {
-            LookDirection = closestEnemy.transform.position - transform.position;
-            targetEntity = closestEnemy;
+            closestEnemy = bestEnemy;
             return true;
         }
+        else if (blockedEnemy != null)
+        {
+            closestEnemy = blockedEnemy;
+            return true;
+        }
+        else
+            return false;
     }
 
     protected override void HandleAttackDelay()
