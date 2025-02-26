@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 3961733113385475109}
   - component: {fileID: 8665106621588436983}
   - component: {fileID: 7604575858566846227}
+  - component: {fileID: 4048598512159999672}
   m_Layer: 11
   m_Name: WallOut
   m_TagString: Untagged
@@ -1163,6 +1164,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &4048598512159999672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136649636408231226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1353088188257638937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1295586984051607561}
   - component: {fileID: 4862969414976666062}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,7 +1376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644680254541967503}
   - component: {fileID: 519484321009728784}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1462,8 @@ GameObject:
   - component: {fileID: 9146922116194200944}
   - component: {fileID: 4588031545716993145}
   - component: {fileID: 1809132171752057502}
-  m_Layer: 0
+  - component: {fileID: 2497247092620283139}
+  m_Layer: 11
   m_Name: CollisionOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,6 +2376,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &2497247092620283139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376224996514812332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &3135250469454625111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,7 +2405,7 @@ GameObject:
   - component: {fileID: 2509496343770259296}
   - component: {fileID: 1477180003182694162}
   - component: {fileID: 7006301191803883288}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Map_Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,6 +2433,7 @@ Transform:
   - {fileID: 4413907447992734620}
   - {fileID: 6605205197809501763}
   - {fileID: 5966635153876903745}
+  - {fileID: 1848181332297568964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &2724560578687099398
@@ -2498,7 +2533,8 @@ GameObject:
   - component: {fileID: 6630017141642069169}
   - component: {fileID: 3167342756555618272}
   - component: {fileID: 7369637660478558226}
-  m_Layer: 20
+  - component: {fileID: 158665419769597547}
+  m_Layer: 11
   m_Name: PF Props Wooden Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2618,6 +2654,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0975325, y: 0.6116116}
   m_EdgeRadius: 0
+--- !u!114 &158665419769597547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653535544677233959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &3689252324321642344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2681,7 @@ GameObject:
   - component: {fileID: 3440825664577187239}
   - component: {fileID: 749588066526447299}
   - component: {fileID: 3199340950909522202}
+  - component: {fileID: 531749566520811784}
   m_Layer: 12
   m_Name: WallIn
   m_TagString: Untagged
@@ -3042,6 +3095,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &531749566520811784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3689252324321642344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &6024508237863898770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3122,7 @@ GameObject:
   - component: {fileID: 7023187902101492565}
   - component: {fileID: 3950790741751787817}
   - component: {fileID: 155396306649293109}
+  - component: {fileID: 2124611837108143368}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -6638,6 +6708,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &2124611837108143368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024508237863898770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &6551022960745889206
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,7 +6734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2382488500979918436}
   - component: {fileID: 4315934483658313548}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6731,7 +6817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4413907447992734620}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PF Gate T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6771,7 +6857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7713656760465366285}
   - component: {fileID: 4594247695768682613}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6857,7 +6943,8 @@ GameObject:
   - component: {fileID: 293885537623775910}
   - component: {fileID: 4006929270708711444}
   - component: {fileID: 630288941479420520}
-  m_Layer: 0
+  - component: {fileID: 1228473319435280486}
+  m_Layer: 12
   m_Name: CollisionIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7306,6 +7393,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1228473319435280486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787969099199358909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8000213150226203579
 GameObject:
   m_ObjectHideFlags: 0
@@ -7316,7 +7419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3705478960831447605}
   - component: {fileID: 2552361292800391519}
-  m_Layer: 21
+  m_Layer: 11
   m_Name: Collider T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7393,7 +7496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3491626432246895457}
   - component: {fileID: 3677679393759265819}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7478,7 +7581,7 @@ GameObject:
   - component: {fileID: 1566230939203140429}
   - component: {fileID: 7368626342552230278}
   - component: {fileID: 6437793690191695028}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: PF Props Wooden Gate Opened
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7616,7 +7719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2323553062382401130}
   - component: {fileID: 8541750714050072973}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7693,7 +7796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6877314359112104482}
   - component: {fileID: 619927304250309661}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7833,4 +7936,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
     type: 3}
   m_PrefabInstance: {fileID: 6615591527173920763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8202284894346619422
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7088830807264857223}
+    m_Modifications:
+    - target: {fileID: 4767085076242325700, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_Name
+      value: NavMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395514249206224928, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 3e8b8df46ffbf7745ae9025138ae208e,
+        type: 2}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3823f034318a454797d4318cb140488, type: 3}
+--- !u!4 &1848181332297568964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+    type: 3}
+  m_PrefabInstance: {fileID: 8202284894346619422}
   m_PrefabAsset: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6262656481289759615}
   - component: {fileID: 3376569478804923531}
   - component: {fileID: 721733649231235010}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollisionOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2809,7 +2809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6835985012224161517}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PF Gate T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6755,7 +6755,7 @@ GameObject:
   - component: {fileID: -4998210723080960580}
   - component: {fileID: 4430120894680016991}
   - component: {fileID: 2080229626806036309}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Map_Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

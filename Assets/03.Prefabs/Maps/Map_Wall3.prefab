@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4107273025360060940}
   - component: {fileID: 203290476440078728}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7267024292050509557}
   - component: {fileID: 3208558558149967843}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 6496438209526950588}
   - component: {fileID: 4001540535726393674}
   - component: {fileID: 8065782925541836957}
+  - component: {fileID: 8935212049867629111}
   m_Layer: 12
   m_Name: WallIn
   m_TagString: Untagged
@@ -425,6 +426,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &8935212049867629111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949801186546210212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &983229991208757102
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8185596406841535762}
   - component: {fileID: 4328736526210706260}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,6 +537,7 @@ GameObject:
   - component: {fileID: 5504962518571075648}
   - component: {fileID: 7624150115688670637}
   - component: {fileID: 6851127394502827387}
+  - component: {fileID: 2203167732586745493}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -4105,6 +4123,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &2203167732586745493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941559409534217290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2232675649893289427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,6 +4150,7 @@ GameObject:
   - component: {fileID: 6748253728262730185}
   - component: {fileID: 7582325515404869443}
   - component: {fileID: 5490363377884004433}
+  - component: {fileID: 5145199700443346495}
   m_Layer: 11
   m_Name: WallOut
   m_TagString: Untagged
@@ -5193,6 +5228,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &5145199700443346495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232675649893289427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2442878596986307639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5205,7 +5256,8 @@ GameObject:
   - component: {fileID: 7424866029979249466}
   - component: {fileID: 7290042826263894273}
   - component: {fileID: 3748276537211678439}
-  m_Layer: 0
+  - component: {fileID: 4715691596567569734}
+  m_Layer: 11
   m_Name: CollisionOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6118,6 +6170,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &4715691596567569734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442878596986307639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2452369639930269727
 GameObject:
   m_ObjectHideFlags: 0
@@ -6129,7 +6197,7 @@ GameObject:
   - component: {fileID: 1680046027408435136}
   - component: {fileID: 836511020416595155}
   - component: {fileID: 6675736399769519313}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: PF Props Wooden Gate Opened
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6267,7 +6335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5962089202045261519}
   - component: {fileID: 1909075671399591336}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6453,7 +6521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7437441077511811887}
   - component: {fileID: 664053388388723837}
-  m_Layer: 21
+  m_Layer: 11
   m_Name: Collider T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6530,7 +6598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6029205586185293225}
   - component: {fileID: 3650723191375283685}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6616,7 +6684,8 @@ GameObject:
   - component: {fileID: 5545063383687265284}
   - component: {fileID: 3675869235089291901}
   - component: {fileID: 1332601861004349506}
-  m_Layer: 0
+  - component: {fileID: 4423590699166856976}
+  m_Layer: 12
   m_Name: CollisionIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6905,6 +6974,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &4423590699166856976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176432344436120987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &6403599267890999143
 GameObject:
   m_ObjectHideFlags: 0
@@ -6918,7 +7003,7 @@ GameObject:
   - component: {fileID: 246515953222264715}
   - component: {fileID: 8233159664929462379}
   - component: {fileID: 5395516957118768957}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Map_Wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6946,6 +7031,7 @@ Transform:
   - {fileID: 3326063695683278779}
   - {fileID: 964162188867227210}
   - {fileID: 1751861846582955695}
+  - {fileID: 2547633430093901030}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &5869740257270394868
@@ -9488,7 +9574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6601799256249491333}
   - component: {fileID: 8539051644459279759}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9566,7 +9652,8 @@ GameObject:
   - component: {fileID: 3454686642411690697}
   - component: {fileID: 3198734653793841205}
   - component: {fileID: 8166927555850217382}
-  m_Layer: 20
+  - component: {fileID: 1186340979347683516}
+  m_Layer: 11
   m_Name: PF Props Wooden Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9686,6 +9773,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0975325, y: 0.6116116}
   m_EdgeRadius: 0
+--- !u!114 &1186340979347683516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339556264840989203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7922385786096349563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,7 +9799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3695447573362405280}
   - component: {fileID: 8823956371835006989}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9854,7 +9957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3326063695683278779}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PF Gate T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9884,3 +9987,83 @@ Transform:
   - {fileID: 1680046027408435136}
   m_Father: {fileID: 2657451178932999113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5415950861164074044
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2657451178932999113}
+    m_Modifications:
+    - target: {fileID: 4767085076242325700, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_Name
+      value: NavMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395514249206224928, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 7928444d6a9d09b499c8441df03d9d0e,
+        type: 2}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3823f034318a454797d4318cb140488, type: 3}
+--- !u!4 &2547633430093901030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+    type: 3}
+  m_PrefabInstance: {fileID: 5415950861164074044}
+  m_PrefabAsset: {fileID: 0}

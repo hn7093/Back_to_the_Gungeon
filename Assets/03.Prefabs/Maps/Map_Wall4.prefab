@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4973825123610039476}
   - component: {fileID: 2202000308658438830}
   - component: {fileID: 4722250131941553352}
-  m_Layer: 0
+  - component: {fileID: 8361216202769213833}
+  m_Layer: 11
   m_Name: CollisionOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,6 +926,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &8361216202769213833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278904146570512147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &325157902883328643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,8 +3399,8 @@ GameObject:
   - component: {fileID: 1454634616907189715}
   - component: {fileID: 6682219024015278428}
   - component: {fileID: 1062541278474264696}
-  m_Layer: 0
-  m_Name: Map_Wall3 1
+  m_Layer: 11
+  m_Name: Map_Wall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3410,6 +3427,7 @@ Transform:
   - {fileID: 9197878520238869056}
   - {fileID: 6586960948346580292}
   - {fileID: 6596055899356993590}
+  - {fileID: 1049491622784736410}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1791540382935850115
@@ -3610,7 +3628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4942460058808872045}
   - component: {fileID: 6141547879319138343}
-  m_Layer: 21
+  m_Layer: 11
   m_Name: Collider T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3688,6 +3706,7 @@ GameObject:
   - component: {fileID: 2987479141953646638}
   - component: {fileID: 1340129448093280640}
   - component: {fileID: 9084306457688946491}
+  - component: {fileID: 636501048738064241}
   m_Layer: 12
   m_Name: WallIn
   m_TagString: Untagged
@@ -3997,6 +4016,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &636501048738064241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983542884539087187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &3330257346281902629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,7 +4042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5994559130724209779}
   - component: {fileID: 5070377382705851913}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4091,7 +4126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119045900285823274}
   - component: {fileID: 197687720742304587}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4175,7 +4210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9161220412713475990}
   - component: {fileID: 7089886434511878179}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4259,7 +4294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613343507553152345}
   - component: {fileID: 1792543576617643490}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4343,7 +4378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5962470378005823119}
   - component: {fileID: 3747381142685585028}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4420,7 +4455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7947510342706331390}
   - component: {fileID: 8914822622067683500}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4505,7 +4540,7 @@ GameObject:
   - component: {fileID: 1776725098754817066}
   - component: {fileID: 2281130312915387462}
   - component: {fileID: 6544590705434576270}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: PF Props Wooden Gate Opened
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4642,7 +4677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9197878520238869056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PF Gate T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4682,7 +4717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1719881028173312895}
   - component: {fileID: 2449501991612489652}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4835,6 +4870,7 @@ GameObject:
   - component: {fileID: 4577124219438121856}
   - component: {fileID: 4740684676763765750}
   - component: {fileID: 3460609488877430333}
+  - component: {fileID: 6371782565089259764}
   m_Layer: 11
   m_Name: WallOut
   m_TagString: Untagged
@@ -5912,6 +5948,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &6371782565089259764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617287900916822486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7768829893572978355
 GameObject:
   m_ObjectHideFlags: 0
@@ -5924,7 +5976,8 @@ GameObject:
   - component: {fileID: 1658585475397875998}
   - component: {fileID: 4672372384598649190}
   - component: {fileID: 449740372889451308}
-  m_Layer: 0
+  - component: {fileID: 7862269459502486189}
+  m_Layer: 12
   m_Name: CollisionIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6253,6 +6306,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &7862269459502486189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768829893572978355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8199551190753383127
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,7 +6333,8 @@ GameObject:
   - component: {fileID: 1922356841280467489}
   - component: {fileID: 1494258559118507604}
   - component: {fileID: 7793777289776065016}
-  m_Layer: 20
+  - component: {fileID: 3962505620104417430}
+  m_Layer: 11
   m_Name: PF Props Wooden Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6384,6 +6454,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0975325, y: 0.6116116}
   m_EdgeRadius: 0
+--- !u!114 &3962505620104417430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199551190753383127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8841463279971458345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6395,6 +6481,7 @@ GameObject:
   - component: {fileID: 2891868431444764760}
   - component: {fileID: 2503565261127499964}
   - component: {fileID: 782896069267944056}
+  - component: {fileID: 2494456171040174693}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -9980,6 +10067,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &2494456171040174693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841463279971458345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1119947259165501319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10042,6 +10145,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10117,6 +10235,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10190,6 +10323,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10265,6 +10413,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10338,6 +10501,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10413,6 +10591,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10486,6 +10679,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10561,6 +10769,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10634,6 +10857,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10709,6 +10947,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10782,6 +11035,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10857,6 +11125,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10867,6 +11150,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: 8728cc48d2747494893fd60426c06f6e,
     type: 3}
   m_PrefabInstance: {fileID: 7379872188189250834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7413728267286012992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7561583182266303777}
+    m_Modifications:
+    - target: {fileID: 4767085076242325700, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_Name
+      value: NavMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395514249206224928, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 4ff4666ae151e4d4b96f093da0da0174,
+        type: 2}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3823f034318a454797d4318cb140488, type: 3}
+--- !u!4 &1049491622784736410 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7526167564633766106, guid: a3823f034318a454797d4318cb140488,
+    type: 3}
+  m_PrefabInstance: {fileID: 7413728267286012992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7460712654461888409
 PrefabInstance:
@@ -10930,6 +11293,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11005,6 +11383,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11079,6 +11472,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11152,6 +11560,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789836, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505908315093, guid: 8728cc48d2747494893fd60426c06f6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
