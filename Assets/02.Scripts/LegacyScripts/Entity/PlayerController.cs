@@ -14,7 +14,9 @@ public enum controlType
 
 public class PlayerController : BaseController
 {
-
+    [SerializeField] List<GameObject> playerSkinPrefabs = new List<GameObject>();
+    [SerializeField] List<GameObject> weaponSkinPrefabs = new List<GameObject>();
+    [SerializeField] protected GameObject currentSkin;
     private List<BaseController> enemyList; // 적 리스트
 
     private Vector2 startTouchPosition;
@@ -22,19 +24,27 @@ public class PlayerController : BaseController
     private bool isDragging = false;
     private float dragThreshold = 1f;
     private controlType currentControllType;
-    private string controlTypeKey = "controlTypeKey";
+    public static readonly string controlTypeKey = "controlTypeKey";
+    public static readonly string skinIndexKey = "skinIndexKey";
+    public static readonly string weaponSkinIndexKey = "weaponSkinIndexKey";
     private bool isAnyEnemy = false;
-
+    private int currentSkinIndex;
 
     private void Start()
     {
         currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+        currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
+        ChangePlayerSkin(currentSkinIndex);
+
     }
 
     protected override void Update()
     {
-        base.Update();
+        HandleAction();
         SetCloserTarget();
+        SetLookDirection();
+        SetIsLeft();
+        Rotate(isLeft);
         HandleAttackDelay();
     }
 
@@ -56,6 +66,8 @@ public class PlayerController : BaseController
 
     private void HandleMouseInput()
     {
+
+
         if (Input.GetMouseButtonDown(0))
         {
             startTouchPosition = Input.mousePosition;
@@ -118,9 +130,9 @@ public class PlayerController : BaseController
             Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("Wall", "innerWall"));
 
-            if(hit.collider == null)//벽이 없으면 bestEnemy로 지정
+            if (hit.collider == null)//벽이 없으면 bestEnemy로 지정
             {
-                if(dis < closestDistance)
+                if (dis < closestDistance)
                 {
                     closestDistance = dis;
                     bestEnemy = enemy.transform;
@@ -176,10 +188,10 @@ public class PlayerController : BaseController
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-        animationHandlers[0].Death();
+        animationHandler.Death();
 
         // 모든 본인과 자식 컴포넌트 비활성화
-        StartCoroutine(DisableComponentsAfterDelay(1f));
+        StartCoroutine(DisableComponentsAfterDelay(2f));
 
         // 게임오버 화면 호출
     }
@@ -192,6 +204,52 @@ public class PlayerController : BaseController
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
+        }
+    }
+
+    public void NextSkin()
+    {
+        int newSkinIndex = (currentSkinIndex + 1) % playerSkinPrefabs.Count;
+        ChangePlayerSkin(newSkinIndex);
+    }
+
+    public void PrevSkin()
+    {
+        int newSkinIndex = (currentSkinIndex - 1 + playerSkinPrefabs.Count) % playerSkinPrefabs.Count;
+        ChangePlayerSkin(newSkinIndex);
+    }
+
+    public void ChangePlayerSkin(int skinIndex)
+    {
+        if (playerSkinPrefabs == null || playerSkinPrefabs.Count == 0) return;
+
+        skinIndex = Mathf.Clamp(skinIndex, 0, playerSkinPrefabs.Count - 1);
+        currentSkinIndex = skinIndex;
+
+        // 
+        PlayerPrefs.SetInt("SelectedSkin", currentSkinIndex);
+        PlayerPrefs.Save();
+
+        if (currentSkin != null)
+        {
+            Destroy(currentSkin);
+        }
+
+
+        currentSkin = Instantiate(playerSkinPrefabs[skinIndex], transform);
+        currentSkin.transform.localPosition = Vector3.zero;
+
+        characterRenderer = currentSkin.GetComponent<SpriteRenderer>();
+        animationHandler = currentSkin.GetComponentInChildren<AnimationHandler>();
+
+        if (animationHandler != null)
+        {
+            animationHandler.Init();  //  새로운 스킨의 Animator 재할당
+            Debug.Log(" AnimationHandler initialized after skin change.");
+        }
+        else
+        {
+            Debug.LogError(" AnimationHandler is NULL after skin change!");
         }
     }
 }

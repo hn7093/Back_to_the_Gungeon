@@ -4,21 +4,17 @@ using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BaseController : MonoBehaviour
+public abstract class BaseController : MonoBehaviour
 {
 
     protected Rigidbody2D _rigidbody;
 
     [SerializeField] protected SpriteRenderer characterRenderer;
-    [SerializeField] protected SpriteRenderer rightHandRenderer;
-    [SerializeField] protected SpriteRenderer leftHandRenderer;
     [SerializeField] protected SpriteRenderer weaponRenderer;
     [SerializeField] public WeaponHandler weaponPrefab;
-    [SerializeField] protected Transform rightHandPivot;
-    [SerializeField] protected Transform leftHandPivot;
     [SerializeField] protected Transform weaponPivot;
     [SerializeField] protected WeaponSO weaponData;
-    [SerializeField] protected float lookOffset = 1.5f;
+    [Range(0,3f)][SerializeField] protected float lookOffset = 1.5f;
 
     protected Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get { return movementDirection; } }
@@ -37,7 +33,7 @@ public class BaseController : MonoBehaviour
     protected bool isLeft = false;
     protected Transform targetEntity; // 타겟 엔티티
     // component
-    protected AnimationHandler[] animationHandlers;
+    protected AnimationHandler animationHandler;
 
     protected StatHandler _statHandler;
     protected WeaponHandler _weaponHandler;
@@ -50,14 +46,14 @@ public class BaseController : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        animationHandlers = GetComponentsInChildren<AnimationHandler>(true);
+        animationHandler = GetComponentInChildren<AnimationHandler>();
         _statHandler = GetComponent<StatHandler>();
 
-        if (leftHandPivot != null)
+        /*if (leftHandPivot != null)
             initialLeftHandPivotPos = leftHandPivot.localPosition;
 
         if (rightHandPivot != null)
-            initialRightHandPivotPos = rightHandPivot.localPosition;
+            initialRightHandPivotPos = rightHandPivot.localPosition;*/
 
         if (weaponPivot != null)
             initialWeaponPivotPos = weaponPivot.localPosition;
@@ -166,17 +162,19 @@ public class BaseController : MonoBehaviour
 
 
         _rigidbody.velocity = direction;
-        foreach (var handler in animationHandlers)
-            if (handler != null)
-                handler.Move(direction);
+
+        if (animationHandler != null)
+            animationHandler.Move(direction);
+        //else
+            //Debug.Log("animationHandler is null");
     }
 
-    private void Rotate(bool _isLeft)//무기 방향을 적에게 돌리고 적위치에 따라 좌우 반전
+    protected void Rotate(bool _isLeft)//무기 방향을 적에게 돌리고 적위치에 따라 좌우 반전
     {
 
         characterRenderer.flipX = _isLeft;
 
-        if (leftHandRenderer != null)
+        /*if (leftHandRenderer != null)
             leftHandRenderer.flipX = _isLeft;
 
         if (rightHandRenderer != null)
@@ -190,7 +188,7 @@ public class BaseController : MonoBehaviour
             RotatePivot(leftHandPivot, _isLeft, initialLeftHandPivotPos);
 
         if (rightHandPivot != null)
-            RotatePivot(rightHandPivot, _isLeft, initialRightHandPivotPos);
+            RotatePivot(rightHandPivot, _isLeft, initialRightHandPivotPos);*/
 
         if (weaponPivot != null)
         {
