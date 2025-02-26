@@ -1,5 +1,5 @@
 {
-  "ability": [
+  "abilities": [
     {
       "name": "전체 체력 증가",
       "method": "increase_max_health",

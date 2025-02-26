@@ -1,12 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Preference
 {
     public class SkillUIElement: MonoBehaviour
     {
-        public string id;
+        public string method;
 
         [HideInInspector] 
         public Button button;
@@ -20,10 +21,10 @@ namespace Preference
             button = GetComponent<Button>();
         }
         
-        public void SetData(SkillType skill)
+        public void SetData(Ability skill)
         {
-            id = skill.id;
-            image.sprite = Resources.Load<Sprite>(skill.imagePath);
+            method = skill.method;
+            image.sprite = Resources.Load<Sprite>(skill.filePath);
             title.text = skill.name;
             description.text = skill.description;
         }

@@ -4,27 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 어빌리티 및 공격 데이터 추가">
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Components/UI/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Components/UI/Button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Arrow_Barrage.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Arrow_Barrage.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Beam.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Beam.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Blackhole.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Blackhole.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Buff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Buff.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Chop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Chop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Claw.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Claw.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Dash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Dash.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Fly.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Fly.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Heal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Heal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_MeteorShower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_MeteorShower.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Pound.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Pound.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_PsycicAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_PsycicAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Punches.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Punches.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Recon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Recon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Reflect.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Reflect.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slash.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slide.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_SpiritArrows.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_SpiritArrows.png.meta" afterDir="false" />
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 이벤트 매니저 추가">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/images.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/images/ui.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/AbilityDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/AbilityDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Mockup/SkillType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Mockup/SkillType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Components/SkillUIElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Components/SkillUIElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Arrow_Barrage.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Arrow_Barrage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Arrow_Barrage.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Arrow_Barrage.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Beam.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Beam.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Beam.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Beam.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Blackhole.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Blackhole.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Blackhole.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Blackhole.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Buff.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Buff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Buff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Buff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Chop.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Chop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Chop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Chop.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Claw.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Claw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Claw.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Claw.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Dash.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Dash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Dash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Dash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Fly.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Fly.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Fly.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Fly.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Heal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Heal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Heal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Heal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_MeteorShower.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_MeteorShower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_MeteorShower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_MeteorShower.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Pound.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Pound.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Pound.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Pound.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_PsycicAttack.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_PsycicAttack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_PsycicAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_PsycicAttack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Punches.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Punches.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Punches.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Punches.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Recon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Recon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Recon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Recon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Reflect.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Reflect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Reflect.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Reflect.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slash.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slide.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slide.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slide.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_SpiritArrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_SpiritArrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_SpiritArrows.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_SpiritArrows.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/abilities.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/data/abilityList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/abilities.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/data/abilityList.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/button_ready_off.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/ui/button_ready_off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/button_ready_off.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/ui/button_ready_off.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/button_ready_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/ui/button_ready_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/button_ready_on.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/ui/button_ready_on.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/map.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/ui/map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/map.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/images/ui/map.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +90,14 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/test.unity.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/ResourceController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/ResourceController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
@@ -71,19 +116,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
@@ -222,7 +267,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740559466592</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: 다이얼로그 UI 추가">
+      <option name="closed" value="true" />
+      <created>1740566553685</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740566553685</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: 이벤트 매니저 추가">
+      <option name="closed" value="true" />
+      <created>1740566654407</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740566654407</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +333,8 @@
     <MESSAGE value="feat: Settings 페이지 UI 변경" />
     <MESSAGE value="feat: 매니저에서 플레이어 정보 등록 메소드 추가" />
     <MESSAGE value="feat: 어빌리티 및 공격 데이터 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 어빌리티 및 공격 데이터 추가" />
+    <MESSAGE value="feat: 다이얼로그 UI 추가" />
+    <MESSAGE value="feat: 이벤트 매니저 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 이벤트 매니저 추가" />
   </component>
 </project>

@@ -1,15 +1,17 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Preference
 {
+    [Serializable]
     public class Ability
     {
-        public string Name;
-        public string Description;
-        public string Method;
-        public string FilePath;
+        public string name;
+        public string description;
+        public string method;
+        public string filePath;
     }
 
     public enum SkillName
