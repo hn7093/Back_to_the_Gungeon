@@ -9,9 +9,16 @@ public class GameStatus
 
 public class FileManager : MonoBehaviour
 {
-    private string _startScene = "";
+    private string _startScene = "MainGame";
     private string _filePath = Application.streamingAssetsPath + "gameData.json";
     // private string _playerPrefName = "GAME_DATA";
+    
+    public static readonly string controlTypeKey = "controlTypeKey";
+
+    public void UpdateControlType()
+    {
+        
+    }
 
     public void StartGame()
     {
