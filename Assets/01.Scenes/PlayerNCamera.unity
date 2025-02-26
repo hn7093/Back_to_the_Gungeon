@@ -2855,7 +2855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.5
-  crosslineIMG: {fileID: 0}
+  crosslineIMG: {fileID: 1882544854}
 --- !u!1 &1724691714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,12 +3020,12 @@ GameObject:
   - component: {fileID: 1882544857}
   - component: {fileID: 1882544856}
   m_Layer: 5
-  m_Name: CrosslineUI (1)
+  m_Name: CrosslineIMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1882544855
 RectTransform:
   m_ObjectHideFlags: 0
