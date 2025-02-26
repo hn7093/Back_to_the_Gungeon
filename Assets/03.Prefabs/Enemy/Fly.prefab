@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1507409987010952646}
   - component: {fileID: 9178823811698831938}
   - component: {fileID: 6862145991675849856}
+  - component: {fileID: 4529297435681232280}
+  - component: {fileID: 5636545719943273166}
   m_Layer: 9
   m_Name: FlySprite
   m_TagString: Untagged
@@ -74,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -4795363162621231457, guid: 6d7cd4f7505dc674c891ca8946cfd98b, type: 3}
+  m_Sprite: {fileID: -4795363162621231457, guid: 6d7cd4f7505dc674c891ca8946cfd98b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,6 +109,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4529297435681232280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508844999255501874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8e2bedbfc1659478a1d4331d805bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target:
+    serializedVersion: 2
+    m_Bits: 128
+  projectileSpawnPosition: {fileID: 6322550568616481253}
+--- !u!114 &5636545719943273166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508844999255501874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edbf271d7fbe664c81261bae658272d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &7240566977619075362
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,11 +181,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5338984132488881729}
   - component: {fileID: 5342493386132187594}
-  - component: {fileID: 4189693774318924065}
   - component: {fileID: 5149349969496120734}
   - component: {fileID: 75012261662523923}
   - component: {fileID: 5370034599769687158}
   - component: {fileID: 2051049446224032285}
+  - component: {fileID: -9081427248736965477}
+  - component: {fileID: -6923194325812893425}
   m_Layer: 9
   m_Name: Fly
   m_TagString: Untagged
@@ -205,7 +240,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1, y: 0}
@@ -221,28 +256,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1}
   m_EdgeRadius: 0
---- !u!195 &4189693774318924065
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850932794299009075}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 0.7
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &5149349969496120734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvincibleTime: 0.5
+  CurrentHealth: 0
   damageClip: {fileID: 0}
 --- !u!114 &75012261662523923
 MonoBehaviour:
@@ -287,11 +301,13 @@ MonoBehaviour:
   rightHandRenderer: {fileID: 0}
   leftHandRenderer: {fileID: 0}
   weaponRenderer: {fileID: 0}
-  weaponPrefab: {fileID: 4721556685115533398, guid: 8efab191f6de3f84a87c68a9ffb2d8e1, type: 3}
+  weaponPrefab: {fileID: 3301584730586787497, guid: 8efab191f6de3f84a87c68a9ffb2d8e1,
+    type: 3}
   rightHandPivot: {fileID: 0}
   leftHandPivot: {fileID: 0}
   weaponPivot: {fileID: 6322550568616481253}
   weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
+  lookOffset: 1.5
   closestEnemy: {fileID: 0}
   followRange: 15
   canMove: 1
@@ -324,3 +340,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-9081427248736965477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850932794299009075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e316169d75c2e4e8e7b4365a2d8527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &-6923194325812893425
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850932794299009075}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

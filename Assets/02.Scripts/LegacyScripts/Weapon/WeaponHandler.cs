@@ -71,6 +71,7 @@ public class WeaponHandler : MonoBehaviour
 
     public void AttackAnimation()
     {
+        Debug.Log("AttackAnimation");
         animator.SetTrigger(IsAttack);
     }
 

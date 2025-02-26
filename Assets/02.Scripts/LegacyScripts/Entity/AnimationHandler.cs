@@ -5,29 +5,41 @@ using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
 {
-
-
-    private static readonly int IsMove = Animator.StringToHash("IsMove");
+    private static readonly int IsMoving = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
-    private static readonly int IsDie = Animator.StringToHash("IsDie");
+    private static readonly int IsAttack = Animator.StringToHash("IsAttack");
+    private static readonly int IsDeath = Animator.StringToHash("IsDeath");
 
     protected Animator animator;
+    
 
     protected virtual void Awake()
+    {
+        Init();
+    }
+
+    public void Init()
     {
         animator = GetComponentInChildren<Animator>();
     }
 
     public void Move(Vector2 obj)
     {
-
         if (animator == null)
         {
-            Debug.LogWarning("Animator is null");
+            Debug.LogError(" Animator is NULL in AnimationHandler!");
             return;
         }
 
-        animator.SetBool(IsMove, obj.magnitude > .5f);//이동속도가  .5f 이상일때 이동애니메이션
+        if (animator.runtimeAnimatorController == null)
+        {
+            Debug.LogError(" AnimatorController is not assigned to Animator!");
+            return;
+        }
+
+        //Debug.Log($" Move called with magnitude: {obj.magnitude}");
+
+        animator.SetBool(IsMoving, obj.magnitude > 0.5f);
     }
 
     public void EndInvincibility()
@@ -36,17 +48,22 @@ public class AnimationHandler : MonoBehaviour
     }
     public void Damage()
     {
-        animator.SetTrigger(IsDamage);
+        animator.SetBool(IsDamage, true);
     }
 
-    public void Die()
+    public void Attack()
     {
-        animator.SetTrigger(IsDie);
+        animator.SetBool(IsAttack, true);
     }
 
-        public void Revive()
+    public void Death()
     {
-        animator.ResetTrigger(IsDie);
+        animator.SetTrigger(IsDeath);
+    }
+
+    public void InvincibilityEnd()
+    {
+        animator.SetBool(IsDamage, false);
     }
 
 }

@@ -16,6 +16,7 @@ public class MeleeWeaponHandler : WeaponHandler
 
     public override IEnumerator Attack()
     {
+        Debug.Log("MeleeWeaponHandler");
         base.Attack();
         // 사각형에 포함되는지 검사
         RaycastHit2D hit = Physics2D.BoxCast(

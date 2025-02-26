@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506056080636158224}
-  - component: {fileID: 4721556685115533398}
   - component: {fileID: 6315123543632479238}
+  - component: {fileID: 3301584730586787497}
   m_Layer: 0
   m_Name: EnemyRangedWeapon
   m_TagString: Untagged
@@ -118,31 +118,6 @@ Transform:
   - {fileID: 8036236606167063331}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4721556685115533398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5829474562085475512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5d9afa60659064c99bb49e4d4cde09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target:
-    serializedVersion: 2
-    m_Bits: 0
-  delay: 1
-  weaponSize: 0.8
-  power: 1
-  speed: 1
-  attackRange: 1.2
-  isOnKnockback: 0
-  knockbackPower: 0.1
-  knockbackTime: 0.5
-  attackSoundClip: {fileID: 0}
-  collideBoxSize: {x: 1, y: 1}
 --- !u!95 &6315123543632479238
 Animator:
   serializedVersion: 5
@@ -164,3 +139,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3301584730586787497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829474562085475512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8e2bedbfc1659478a1d4331d805bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target:
+    serializedVersion: 2
+    m_Bits: 128
+  projectileSpawnPosition: {fileID: 1506056080636158224}
