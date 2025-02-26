@@ -22,6 +22,7 @@ public class WeaponHandler : MonoBehaviour
     private float attackRange = 10f;
     public float AttackRange { get => attackRange; set => attackRange = value; }
 
+    [SerializeField] public WeaponSO weaponData;
 
     [Header("Knock Back Info")]
     private bool isOnKnockback = false;

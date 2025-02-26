@@ -16,7 +16,6 @@ public class StageManager : MonoBehaviour
     {
         if (nextStage == null)
         {
-            Debug.Log("Next Stage Not Found");
             nextStage = FindObjectOfType<NextStage>();
             if(nextStage == null)
                 Debug.LogError("Next Stage Not Found");
@@ -52,22 +51,22 @@ public class StageManager : MonoBehaviour
 
         do // 연속으로 같은 맵이 나오지 않도록 방지한다
         {
-            randomMapIndex = Random.Range(0, stage.Count);
+            randomMapIndex = Random.Range(2, stage.Count);
         } while (randomMapIndex == lastMapIndex);
         
         lastMapIndex = randomMapIndex;
 
         if (stageCount == 0)
         {
-            currentStage = Instantiate(stage[0]);
+            currentStage = Instantiate(stage[2]);
         }
         else if (stageCount % 4 == 0)
         {
-            currentStage = Instantiate(stage[randomMapIndex]); // 보상 맵 출현
+            currentStage = Instantiate(stage[0]); // 보상 맵 출현
         }
         else if (stageCount == 10)
         {
-            currentStage = Instantiate(stage[randomMapIndex]); // 보스 스테이지 지정
+            currentStage = Instantiate(stage[1]); // 보스 스테이지 지정
         }
         else
         {
@@ -81,6 +80,7 @@ public class StageManager : MonoBehaviour
         }
         
         stageCount++;
+        Debug.Log(stageCount);
     }
     
 }
