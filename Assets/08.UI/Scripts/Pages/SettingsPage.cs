@@ -21,11 +21,7 @@ public class SettingsPage : UIMonoBehaviour
         BGMToggle.onValueChanged.AddListener(isChecked => audioManager.TurnBGMOn(isChecked));
         
         // BGM Slider
-        BGMVolumeSlider.onValueChanged.AddListener(volume =>
-        {
-            float normalizedVolume = volume / 100f;
-            audioManager.UpdateBGMVolume(normalizedVolume); // do: setter로 캡슐화 알아보기
-        });
+        BGMVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume));
         BGMVolumeSlider.value = 50f;
         
         // BGM selector
