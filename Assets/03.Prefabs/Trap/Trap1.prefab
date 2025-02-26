@@ -103,6 +103,7 @@ MonoBehaviour:
   trap: {fileID: 3207237451764982884}
   trapEffect: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b,
     type: 3}
+  trapDamage: 20
 --- !u!61 &1867470966439619097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 1, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4598205618948996967
 CanvasRenderer:
