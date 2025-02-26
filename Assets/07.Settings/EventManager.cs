@@ -24,9 +24,12 @@ namespace Preference
         {
             _selectionTask = null;
             UIManager uiManager = SystemManager.Instance.UIManager;
+            PlayerStatusManager playerStatusManager = SystemManager.Instance.PlayerStatusManager;
             
-            uiManager.GoTo(pageType);
+            uiManager.OpenPage(pageType);
             string selectedValue = await GetEventResult();
+            playerStatusManager.IncreaseAbility(selectedValue);
+            
             uiManager.Clear();
             return selectedValue;
         }
