@@ -44,7 +44,7 @@ public class CrosslineUI : MonoBehaviour
 
         Vector3 desirePosition;
         desirePosition = Camera.main.WorldToScreenPoint(player.closestEnemy.position);
-        crosslineIMG.transform.position = Vector3.Lerp(transform.position, desirePosition, smoothSpeed);
+        transform.position = Vector3.Lerp(transform.position, desirePosition, smoothSpeed);
 
     }
 
@@ -59,6 +59,7 @@ public class CrosslineUI : MonoBehaviour
         if (player.closestEnemy != null)
         {
             Debug.Log($"{player.closestEnemy.name} is targeting");
+            SetActiveCrossline();
             return true;
         }
         else
