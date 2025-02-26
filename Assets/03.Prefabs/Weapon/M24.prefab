@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8e2bedbfc1659478a1d4331d805bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponSO: {fileID: 11400000, guid: 566cf0d7087c787479c5f31743888317, type: 2}
   target:
     serializedVersion: 2
     m_Bits: 512
+  weaponData: {fileID: 11400000, guid: 566cf0d7087c787479c5f31743888317, type: 2}
   projectileSpawnPosition: {fileID: 115697322852634292}
 --- !u!212 &7858711774115473874
 SpriteRenderer:

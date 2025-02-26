@@ -49,7 +49,10 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 512
+  weaponData: {fileID: 0}
   projectileSpawnPosition: {fileID: 0}
+  canBounce: 0
+  canThrough: 0
 --- !u!1 &733081926811025575
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +294,7 @@ GameObject:
   - component: {fileID: -5095078333385014566}
   m_Layer: 9
   m_Name: StaticEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,12 +451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 4739062539615930500}
-  rightHandRenderer: {fileID: 0}
-  leftHandRenderer: {fileID: 0}
   weaponRenderer: {fileID: 0}
   weaponPrefab: {fileID: 0}
-  rightHandPivot: {fileID: 0}
-  leftHandPivot: {fileID: 0}
   weaponPivot: {fileID: 3029542260956351055}
   weaponData: {fileID: 0}
   lookOffset: 1.5

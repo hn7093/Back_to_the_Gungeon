@@ -6,6 +6,7 @@ public class CrosslineUI : MonoBehaviour
 {
     PlayerController player;
     [Range(0.01f, 1.5f)][SerializeField] private float smoothSpeed = 0.25f;
+    [SerializeField] private GameObject crosslineIMG;
     private void Awake()
     {
         player = FindObjectOfType<PlayerController>();
@@ -15,7 +16,10 @@ public class CrosslineUI : MonoBehaviour
             return;
         }
 
-        gameObject.SetActive(false);
+        if (crosslineIMG == null)
+        crosslineIMG = GetComponentInChildren<GameObject>();
+
+        crosslineIMG.gameObject.SetActive(false);
     }
 
     private void LateUpdate()
@@ -24,14 +28,14 @@ public class CrosslineUI : MonoBehaviour
             TrackOnTarget();
     }
 
-    public void SetActive()
+    public void SetActiveCrossline()
     {
-        gameObject.SetActive(true);
+        crosslineIMG.gameObject.SetActive(true);
     }
 
-    public void SetActiveFalse()
+    public void SetActiveCrosslineFalse()
     {
-        gameObject.SetActive(false);
+        crosslineIMG.gameObject.SetActive(false);
     }
 
     private void TrackOnTarget()
@@ -55,15 +59,15 @@ public class CrosslineUI : MonoBehaviour
         if (player.closestEnemy != null)
         {
             Debug.Log($"{player.closestEnemy.name} is targeting");
+            SetActiveCrossline();
             return true;
         }
         else
         {
             Debug.Log("enemy is null");
-            if (gameObject.activeSelf)
-                gameObject.SetActive(false);
+            if (crosslineIMG.gameObject.activeSelf)
+                SetActiveCrosslineFalse();
             return false;
-
         }
     }
 }
