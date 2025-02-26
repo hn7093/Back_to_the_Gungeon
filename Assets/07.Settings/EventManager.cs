@@ -20,6 +20,7 @@ namespace Preference
         
         // Task
         // ReSharper disable Unity.PerformanceAnalysis
+        // do: 스킬 정보까지 받아서, 플레이어 능력치 향상 후
         public async Task<string> OpenEventPage(PageType pageType)
         {
             _selectionTask = null;
