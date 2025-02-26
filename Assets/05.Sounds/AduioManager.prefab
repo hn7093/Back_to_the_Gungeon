@@ -50,7 +50,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: bea93a38b71b64b598109b3a3b1a0048, type: 3}
   - name: BGM2
     clip: {fileID: 8300000, guid: 5b1ed8fbe89154eaf96723b6e5f0aad3, type: 3}
-  _audioSource: {fileID: 0}
+  currentBGM:
+    name: 
+    clip: {fileID: 0}
+  soundList: []
+  currentSound:
+    name: 
+    clip: {fileID: 0}
+  currentVfxSoundVolume: 0
 --- !u!82 &811383389932510056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63,7 +70,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

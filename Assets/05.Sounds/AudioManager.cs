@@ -57,6 +57,8 @@ public class AudioManager : MonoBehaviour
             bgmAudioSource.Stop();
             bgmAudioSource.mute = true;
         }
+        
+        bgmAudioSource.time = 0;
     }
     
     // fix: 변수가 특별이 필요 없으나 통일성있게 관리하기
