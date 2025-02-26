@@ -15,6 +15,7 @@ public class SettingsPage : UIMonoBehaviour
     
     public Button ExitButton;
     
+    // fix: 만약 처음에 활성화되면 순서 문제로 에러 발생
     private void Start()
     {
         // Toggle BGMx

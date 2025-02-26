@@ -27,6 +27,7 @@ namespace Preference
         protected AudioManager audioManager;
         protected UIManager uiManager;
         protected EventManager eventManager;
+        protected KeyBinding keyBinding;
         
         public void connectUIMnager(UIManager uiManager)
         {
@@ -36,6 +37,7 @@ namespace Preference
             fileManager = systemManager.FileManager;
             audioManager = systemManager.AudioManager;
             eventManager = systemManager.EventManager;
+            keyBinding = systemManager.KeyBinding;
         }
     }
     
@@ -48,13 +50,13 @@ namespace Preference
         
         public bool isOpenStartPage = false;
 
+        // fix 순서상의 이유로 Start에서 
         private void Start()
         {
             Clear();
             if (isOpenStartPage)
             {
                 _currentPage = Pages[0];
-                Debug.Log(_currentPage.Instance);
                 _currentPage.Instance.SetActive(true);
             }
         }

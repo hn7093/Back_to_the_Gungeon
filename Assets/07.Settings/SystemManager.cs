@@ -13,6 +13,9 @@ namespace Preference
         [HideInInspector] public AudioManager AudioManager;
         [HideInInspector] public UIManager UIManager;
         [HideInInspector] public EventManager EventManager;
+        [HideInInspector] public KeyBinding KeyBinding;
+        
+        [HideInInspector] public PlayerListener PlayerListener;
 
         private void Awake()
         {
@@ -29,6 +32,7 @@ namespace Preference
             AudioManager = GetComponentInChildren<AudioManager>();
             UIManager = GetComponentInChildren<UIManager>();
             EventManager = GetComponentInChildren<EventManager>();
+            KeyBinding = GetComponentInChildren<KeyBinding>();
         }
     }
 }

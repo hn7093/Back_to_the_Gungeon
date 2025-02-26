@@ -17,12 +17,12 @@ public class AudioData
 public class AudioManager : MonoBehaviour
 {
     public List<AudioData> bgmList;
-    public AudioData currentBGM;
+    [HideInInspector] public AudioData currentBGM;
     // 볼륨 변경 로직 필요
     private AudioSource bgmAudioSource;
     
     public List<AudioData> soundList;
-    public AudioData currentSound;
+    [HideInInspector] public AudioData currentSound;
     private AudioSource soundAudioSource;
     public float currentVfxSoundVolume;
     
@@ -78,7 +78,10 @@ public class AudioManager : MonoBehaviour
     
     private void Awake()
     {
-        bgmAudioSource = GetComponent<AudioSource>();
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        // fix: 없는 경우에 대한 예외처리 필요 
+        bgmAudioSource = audioSources[0];
+        soundAudioSource = audioSources[1];
     }
 
     private void Start()

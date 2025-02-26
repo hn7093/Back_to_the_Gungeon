@@ -1,16 +1,33 @@
 {
-  "skills": [
+  "upgrade": [
     {
       "id": 1,
-      "name": "독화살",
-      "description": "추가적인 데미지가 들어갑니다.",
-      "imagePath": "Skills/skill3"
+      "name": "체력 증가",
+      "description": "최대 체력이 증가합니다.",
+      "imagePath": "Upgrade/health"
     },
     {
       "id": 2,
-      "name": "강화",
-      "description": "데미지가 강해집니다.",
-      "imagePath": "Skills/skill2"
+      "name": "공격력 증가",
+      "description": "데미지가 증가합니다."
+    },
+    {
+      "id": 3,
+      "name": "공격 속도 증가",
+      "description": "공격 속도가 증가합니다."
+    }
+  ],
+  
+  "weapon": [
+    {}
+  ],
+  
+  "skills": [
+    {
+      "id": 1,
+      "name": "더블샷",
+      "description": "추가적인 데미지가 들어갑니다.",
+      "imagePath": "Skills/skill3"
     },
     {
       "id": 3,
