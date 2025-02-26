@@ -5129,6 +5129,7 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 512
+  weaponData: {fileID: 11400000, guid: d94ec60edf54f94418757a7a8949de09, type: 2}
   projectileSpawnPosition: {fileID: 5502574336502938745}
 --- !u!212 &1663177032454143453
 SpriteRenderer:

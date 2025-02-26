@@ -15,7 +15,7 @@ public enum controlType
 public class PlayerController : BaseController
 {
     [SerializeField] List<GameObject> playerSkinPrefabs = new List<GameObject>();
-    [SerializeField] List<GameObject> weaponSkinPrefabs = new List<GameObject>();
+    [SerializeField] List<GameObject> weaponPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
     [SerializeField] protected GameObject currentWeapon;
     private List<BaseController> enemyList; // 적 리스트
@@ -258,45 +258,66 @@ public class PlayerController : BaseController
         }
     }
 
-    public void NextWeaponSkin()
+    public void NextWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex + 1) % weaponSkinPrefabs.Count;
+        int newSkinIndex = (currentWeaponIndex + 1) % weaponPrefabs.Count;
         ChangeWeapon(newSkinIndex);
     }
 
-    public void PrevWeaponSkin()
+    public void PrevWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex - 1 + weaponSkinPrefabs.Count) % weaponSkinPrefabs.Count;
+        int newSkinIndex = (currentWeaponIndex - 1 + weaponPrefabs.Count) % weaponPrefabs.Count;
         ChangeWeapon(newSkinIndex);
     }
 
-    public void ChangeWeapon(int weaponSkinIndex)
+    public void ChangeWeapon(int weaponIndex)
     {
-        if (weaponSkinPrefabs == null || weaponSkinPrefabs.Count == 0) return;
+        if (weaponPrefabs == null || weaponPrefabs.Count == 0) return;
 
-        weaponSkinIndex = Mathf.Clamp(weaponSkinIndex, 0, weaponSkinPrefabs.Count - 1);
-        currentSkinIndex = weaponSkinIndex;
+        weaponIndex = Mathf.Clamp(weaponIndex, 0, weaponPrefabs.Count - 1);
+        currentSkinIndex = weaponIndex;
 
         // 
         PlayerPrefs.SetInt(weaponIndexKey, currentSkinIndex);
         PlayerPrefs.Save();
 
-        if (currentWeapon != null)
-        {
-            Destroy(currentWeapon);
-        }
+        ClearWeapon();
 
-        if(_weaponHandler != null)
-        {
-            _weaponHandler = null;
-        }
-
-
-        currentWeapon = Instantiate(weaponSkinPrefabs[weaponSkinIndex], weaponPivot);
-        currentWeapon.transform.localPosition = Vector3.zero;
+        currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponPivot);
 
         _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
+        StartCoroutine(DelayedFindWeaponRenderer());
+
+        if (_weaponHandler != null)
+        {
+            this.weaponData = _weaponHandler.weaponData; // WeaponSO 가져오기
+            Debug.Log("현재 장착한 무기: " + this.weaponData.name);
+            _weaponHandler.Setup(weaponData);
+        }
+        else
+        {
+            Debug.LogError("WeaponHandler를 찾을 수 없습니다!");
+        }
+    }
+
+    public void ClearWeapon()
+    {
+        if (currentWeapon != null)
+            Destroy(currentWeapon);
+
+        if (_weaponHandler != null)
+            _weaponHandler = null;
+
+        if (weaponRenderer != null)
+            weaponRenderer = null;
+
+        if (weaponData != null)
+            weaponData = null;
+    }
+
+    private IEnumerator DelayedFindWeaponRenderer()
+    {
+        yield return null; // 한 프레임 대기
         FindWeaponRenderer();
-        
     }
 }
