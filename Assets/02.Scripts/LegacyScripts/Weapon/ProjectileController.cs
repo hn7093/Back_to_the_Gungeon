@@ -99,6 +99,9 @@ public class ProjectileController : MonoBehaviour
                 Vector2 normal = (dir - close).normalized;
                 // 현재 속도를 법선 방향으로 반사
                 _rigidbody.velocity = Vector2.Reflect(_rigidbody.velocity, normal);
+                // 방향 벡터를 이용해 회전 적용
+                float angle = Mathf.Atan2(_rigidbody.velocity.y, _rigidbody.velocity.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f, 0f, angle);
             }
             else
             {

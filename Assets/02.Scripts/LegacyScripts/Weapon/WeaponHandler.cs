@@ -43,6 +43,7 @@ public class WeaponHandler : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer weaponRenderer;
+    private ParticleSystem particleSystem;
 
     protected virtual void Awake()
     {
@@ -50,6 +51,7 @@ public class WeaponHandler : MonoBehaviour
         Controller = GetComponentInParent<BaseController>();
         animator = GetComponentInChildren<Animator>();
         weaponRenderer = GetComponentInChildren<SpriteRenderer>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
         animator.speed = 1.0f / delay;
         transform.localScale = Vector3.one * weaponSize;
     }
@@ -61,6 +63,15 @@ public class WeaponHandler : MonoBehaviour
 
     public virtual IEnumerator Attack()
     {
+        if (particleSystem != null)
+        {
+            Debug.Log("play");
+            particleSystem.Play();
+        }
+        else
+        {
+            Debug.Log("play null");
+        }
         AttackAnimation();
         if (attackSoundClip != null)
         {

@@ -179,7 +179,6 @@ public class PlayerController : BaseController
         // 공격 가능 여부 확인
         if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && isAnyEnemy)
         {
-            Debug.Log("enter");
             timeSinceLastAttack = 0;
             Attack();
         }
