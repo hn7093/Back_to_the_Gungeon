@@ -10,7 +10,13 @@ namespace Preference
         MAIN_PAGE,
         SETTINGS_PAGE,
         GAMEOVER_PAGE,
-        ANGEL_PAGE
+        ANGEL_PAGE,
+        DEVIL_PAGE,
+        ROULETTE_PAGE,
+        LEVELUP_PAGE,
+        DIALOGUE_PAGE, // 대화 데이터까지 포함하여
+        IVENTORY_PAGE,
+        PAUSE_PAGE,
     }
     
     [System.Serializable]
@@ -69,7 +75,7 @@ namespace Preference
             }
         }
 
-        public void GoTo(PageType pageName)
+        public void OpenPage(PageType pageName)
         {
             _currentPage?.Instance.SetActive(false);
             // 없는 경우에 대한 알림 필요

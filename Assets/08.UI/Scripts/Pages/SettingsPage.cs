@@ -32,6 +32,6 @@ public class SettingsPage : UIMonoBehaviour
         BGMSelector.onValueChanged.AddListener((value) => audioManager.UpdateBGMSourceClip(value));
         
         // Exit Button
-        ExitButton.onClick.AddListener(() => uiManager.GoTo(PageType.HOME_PAGE));
+        ExitButton.onClick.AddListener(() => uiManager.OpenPage(PageType.HOME_PAGE));
     }
 }
