@@ -303,12 +303,14 @@ public class PlayerController : BaseController
     {
         int newSkinIndex = (currentWeaponIndex + 1) % weaponPrefabs.Count;
         ChangeWeapon(newSkinIndex);
+        currentWeaponIndex = newSkinIndex;
     }
 
     public void PrevWeapon()
     {
         int newSkinIndex = (currentWeaponIndex - 1 + weaponPrefabs.Count) % weaponPrefabs.Count;
         ChangeWeapon(newSkinIndex);
+        currentWeaponIndex = newSkinIndex;
     }
 
     public void ChangeWeapon(int weaponIndex)
@@ -325,8 +327,8 @@ public class PlayerController : BaseController
         ClearWeapon();
 
         currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponPivot);
+        Debug.Log("무기 변경: " + weaponIndex);
 
-        
         StartCoroutine(DelayedSetNewWeapon());
 
         
@@ -335,7 +337,10 @@ public class PlayerController : BaseController
     public void ClearWeapon()
     {
         if (currentWeapon != null)
+        {
             Destroy(currentWeapon);
+            currentWeapon = null;
+        }
 
         if (_weaponHandler != null)
             _weaponHandler = null;
@@ -351,6 +356,7 @@ public class PlayerController : BaseController
     {
         yield return null; // 한 프레임 대기
         FindWeaponRenderer();
+        Debug.Log("DelayedSetNewWeapon 실행됨");
         _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
 
         if (_weaponHandler != null)

@@ -676,6 +676,18 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -10}
   minBoundary: {x: 0, y: 0}
   maxBoundary: {x: 0, y: 0}
+--- !u!114 &512834789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4129909171835881359, guid: 85a9aeff90a3da04fadefec9d330ece5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1176048237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd42a297cafa3c64792712552cedad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &562592622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1805543604934140102, guid: 85a9aeff90a3da04fadefec9d330ece5,
@@ -696,7 +708,7 @@ GameObject:
   - component: {fileID: 586708133}
   m_Layer: 5
   m_Name: Button (Legacy) (1)
-  m_TagString: Untagged
+  m_TagString: UIExclude
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,7 +777,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 512834789}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: NextWeapon
         m_Mode: 1
@@ -1559,9 +1571,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3550664897881505643}
+  - {fileID: 101102445}
   - {fileID: 2051957648}
   - {fileID: 586708132}
-  - {fileID: 101102445}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2476,7 +2488,7 @@ GameObject:
   - component: {fileID: 2051957649}
   m_Layer: 5
   m_Name: Button (Legacy)
-  m_TagString: Untagged
+  m_TagString: UIExclude
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2545,7 +2557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 512834789}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: NextSkin
         m_Mode: 1
@@ -2752,6 +2764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TouchUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511163390289243462, guid: 8acceeb13a5f8d34a9daf06c995f2216,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
