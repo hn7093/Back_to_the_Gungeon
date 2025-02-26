@@ -86,7 +86,7 @@ public class RangeWeaponHandler : WeaponHandler
     {
         NumberofProjectilesPerShot += plus;
         // 발당 딜레이 설정
-        if(MultipleDelay == 0)
+        if (MultipleDelay == 0)
         {
             MultipleDelay = 0.1f;
         }

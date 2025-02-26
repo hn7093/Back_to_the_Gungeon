@@ -56,7 +56,8 @@ public class ProjectileController : MonoBehaviour
         this.direction = direction;
         currentDuration = 0;
         transform.localScale = Vector3.one * weaponHandler.BulletSize;
-        _spriteRenderer.color = weaponHandler.ProjectileColor;
+        if (_spriteRenderer != null)
+            _spriteRenderer.color = weaponHandler.ProjectileColor;
 
         // 회전
         transform.right = this.direction;

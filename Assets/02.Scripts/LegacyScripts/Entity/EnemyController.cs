@@ -105,6 +105,10 @@ public class EnemyController : BaseController
             }
         }
     }
+    protected void BaseHandleAction()
+    {
+        base.HandleAction();
+    }
 
     public override void Death()
     {
