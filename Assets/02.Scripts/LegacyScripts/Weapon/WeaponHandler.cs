@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -44,6 +43,7 @@ public class WeaponHandler : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer weaponRenderer;
+    private ParticleSystem particleSystem;
 
     protected virtual void Awake()
     {
@@ -51,6 +51,7 @@ public class WeaponHandler : MonoBehaviour
         Controller = GetComponentInParent<BaseController>();
         animator = GetComponentInChildren<Animator>();
         weaponRenderer = GetComponentInChildren<SpriteRenderer>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
         animator.speed = 1.0f / delay;
         transform.localScale = Vector3.one * weaponSize;
     }
@@ -62,6 +63,10 @@ public class WeaponHandler : MonoBehaviour
 
     public virtual IEnumerator Attack()
     {
+        if (particleSystem != null)
+        {
+            particleSystem.Play();
+        }
         AttackAnimation();
         if (attackSoundClip != null)
         {
@@ -94,4 +99,7 @@ public class WeaponHandler : MonoBehaviour
         KnockbackTime = weaponData.knockbackTime;
         attackSoundClip = weaponData.attackSoundClip;
     }
+    public virtual void AddFrontBullet(int plus){}
+    public virtual void SetBounce(bool canBounce){}
+    public virtual void SetThrough(bool canThrough){}
 }
