@@ -99,7 +99,33 @@ public class WeaponHandler : MonoBehaviour
         KnockbackTime = weaponData.knockbackTime;
         attackSoundClip = weaponData.attackSoundClip;
     }
+    // 공격력 퍼센트 증가
+    public void AddPower(float percent)
+    {
+        // 곱연산 증가
+        Power += Power * (percent / 100f);
+    }
+
+    // 공격 속도 퍼센트 증가
+    public void AddAttackSpeed(float percent)
+    {
+        // 곱연산 감소, 최소 값 0.1
+        Delay = Mathf.Max(Delay - (Delay * (percent / 100f)), 0.1f);
+    }
+
+    // 발사체 수 증가
     public virtual void AddFrontBullet(int plus){}
+    
+    // 벽 반사
     public virtual void SetBounce(bool canBounce){}
+
+    // 몹 통과
     public virtual void SetThrough(bool canThrough){}
+
+    // 이어서 쏘는 경우 산탄으로 변경
+    public virtual void SetSpread(){}
+
+
+    // 산탄으로 쏘는 경우 이어서 쏘도록 변경
+    public virtual void SetFocus(){}
 }

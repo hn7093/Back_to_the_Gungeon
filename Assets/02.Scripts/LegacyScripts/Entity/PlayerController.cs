@@ -50,21 +50,6 @@ public class PlayerController : BaseController
         Rotate(isLeft);
         SetIsAttacking();
         HandleAttackDelay();
-        // 임시 테스트
-        /*
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            _weaponHandler.AddFrontBullet(1);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _weaponHandler.SetBounce(true);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _weaponHandler.SetThrough(true);
-        }
-        */
     }
 
     protected override void HandleAction()
@@ -334,4 +319,64 @@ public class PlayerController : BaseController
         yield return null; // 한 프레임 대기
         FindWeaponRenderer();
     }
+
+    // 능력치 변경 모음
+    #region Status Change
+
+    // 체력 증가
+    public void ChangeHealth(int value)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            resourceController.ChangeHealth(value);
+        }
+    }
+
+    // 최대 체력 증가, changeHealth가 참이면 회복까지 진행
+    public void AddMaxHP(int addHealth, bool changeHealth = false)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            resourceController.AddMaxHealth(addHealth, changeHealth);
+        }
+    }
+    // 공격력 증가
+    public void AddPower(int percent)
+    {
+        _weaponHandler.AddPower(percent);
+    }
+    // 공격 속도 증가
+    public void AddAttackSpeed(int percent)
+    {
+        _weaponHandler.AddAttackSpeed(percent);
+    }
+    // 이동 속도 증가
+    public void AddSpeed(int value)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            resourceController.AddSpeed(value);
+        }
+    }
+
+    // 발사 탄수 증가
+    public void AddBullet(int value)
+    {
+        _weaponHandler.AddFrontBullet(value);
+    }
+
+    // 총알 벽 반사
+    public void SetBounce(bool canBounce)
+    {
+        _weaponHandler.SetBounce(canBounce);
+    }
+    // 총알 적 통과
+    public void SetThrough(bool canThrough)
+    {
+        _weaponHandler.SetThrough(canThrough);
+    }
+    #endregion
 }
