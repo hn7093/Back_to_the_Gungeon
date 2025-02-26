@@ -25,6 +25,9 @@ public class ProjectileManager : MonoBehaviour
         GameObject obj = Instantiate(origin, startPosition, Quaternion.identity);
         ProjectileController projectileController = obj.GetComponent<ProjectileController>();
         projectileController?.Init(direction, rangeWeaponHandler);
+        // 반사, 관통 설정
+        projectileController.SetBounce(rangeWeaponHandler.canBounce);
+        projectileController.SetThrough(rangeWeaponHandler.canThrough);
     }
 
     // 파티클 재생

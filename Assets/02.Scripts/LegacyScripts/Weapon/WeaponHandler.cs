@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -65,12 +64,7 @@ public class WeaponHandler : MonoBehaviour
     {
         if (particleSystem != null)
         {
-            Debug.Log("play");
             particleSystem.Play();
-        }
-        else
-        {
-            Debug.Log("play null");
         }
         AttackAnimation();
         if (attackSoundClip != null)

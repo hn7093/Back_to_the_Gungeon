@@ -31,6 +31,10 @@ public class RangeWeaponHandler : WeaponHandler
     private Color projectileColor;
     public Color ProjectileColor { get { return projectileColor; } set => projectileColor = value; }
 
+    // 관통
+    public bool canBounce = false;
+    public bool canThrough = false;
+
     protected override void Start()
     {
         base.Start();
@@ -75,5 +79,26 @@ public class RangeWeaponHandler : WeaponHandler
         MultipleProjectilesAngel = weaponData.multipleProjectilesAngel;
         ProjectileColor = weaponData.projectileColor;
         MultipleDelay = weaponData.multipleDelay;
+    }
+
+    // 발사수 증가
+    public void AddFrontBullet(int plus)
+    {
+        NumberofProjectilesPerShot += plus;
+        // 발당 딜레이 설정
+        if(MultipleDelay == 0)
+        {
+            MultipleDelay = 0.1f;
+        }
+    }
+    // 반사 설정
+    public void SetBounce(bool canBounce)
+    {
+        this.canBounce = canBounce;
+    }
+    // 관통 설정
+    public void SetThrough(bool canThrough)
+    {
+        this.canThrough = canThrough;
     }
 }

@@ -6046,13 +6046,13 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponData
       value: 
-      objectReference: {fileID: 11400000, guid: 566cf0d7087c787479c5f31743888317,
+      objectReference: {fileID: 11400000, guid: fee8391598deb2a4a9a8a2be19a9efbd,
         type: 2}
     - target: {fileID: 6931967021985217789, guid: 2eaa4fb13b6a51c43a43c383009cff11,
         type: 3}
       propertyPath: weaponPrefab
       value: 
-      objectReference: {fileID: 5675182064883406293, guid: 36074238b8dd8eb4fa1a9dcc5ae0e4f0,
+      objectReference: {fileID: 6982903620204352071, guid: 0d881b715e4a4b1489d9179ebb304c13,
         type: 3}
     - target: {fileID: 8275012826134100534, guid: 2eaa4fb13b6a51c43a43c383009cff11,
         type: 3}
