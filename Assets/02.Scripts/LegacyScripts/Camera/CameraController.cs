@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -12,8 +13,9 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()//부드러운 카메라 추적을 위해 lerp와 lateUpdate 사용
     {
-        
         Vector3 desiredPosition = player.transform.position + offset;
+        desiredPosition.x = Mathf.Clamp(player.transform.position.x, minBoundary.x, maxBoundary.x) + offset.x;
+        desiredPosition.y = Mathf.Clamp(player.transform.position.y, minBoundary.y, maxBoundary.y) + offset.y;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
     }

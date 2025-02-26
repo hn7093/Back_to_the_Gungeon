@@ -3,25 +3,12 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class AnimationHandler : MonoBehaviour
+public class PlayerAnimationHandler : BaseAnimationController
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
     private static readonly int IsAttack = Animator.StringToHash("IsAttack");
-    private static readonly int IsDeath = Animator.StringToHash("IsDeath");
-
-    protected Animator animator;
-    
-
-    protected virtual void Awake()
-    {
-        Init();
-    }
-
-    public void Init()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
+    private static readonly int IsDie = Animator.StringToHash("IsDie");
 
     public void Move(Vector2 obj)
     {
@@ -58,7 +45,8 @@ public class AnimationHandler : MonoBehaviour
 
     public void Death()
     {
-        animator.SetTrigger(IsDeath);
+        Debug.Log("player dead");
+        animator.SetTrigger(IsDie);
     }
 
     public void InvincibilityEnd()

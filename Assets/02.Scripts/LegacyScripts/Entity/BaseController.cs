@@ -33,7 +33,7 @@ public abstract class BaseController : MonoBehaviour
     protected bool isLeft = false;
     protected Transform targetEntity; // Å¸°Ù ¿£Æ¼Æ¼
     // component
-    protected AnimationHandler animationHandler;
+    protected PlayerAnimationHandler animationHandler;
 
     protected StatHandler _statHandler;
     protected WeaponHandler _weaponHandler;
@@ -46,7 +46,7 @@ public abstract class BaseController : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        animationHandler = GetComponentInChildren<AnimationHandler>();
+        animationHandler = GetComponentInChildren<PlayerAnimationHandler>();
         _statHandler = GetComponent<StatHandler>();
 
         /*if (leftHandPivot != null)
@@ -205,6 +205,7 @@ public abstract class BaseController : MonoBehaviour
         {
             RotatePivot(weaponPivot, _isLeft, initialWeaponPivotPos);
             weaponPivot.rotation = Quaternion.Euler(0f, 0f, rotZ);
+            //Debug.Log("weapon rotate");
         }
     }
 
@@ -247,6 +248,9 @@ public abstract class BaseController : MonoBehaviour
         knockback = -(other.position - transform.position).normalized * power;
     }
 
+    public virtual void Damage() { }
+
+    public virtual void DisableInvincible() { }
     public virtual void Death()
     {
         _rigidbody.velocity = Vector3.zero;

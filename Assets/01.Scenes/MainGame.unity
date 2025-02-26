@@ -762,8 +762,8 @@ MonoBehaviour:
   player: {fileID: 1334739775}
   smoothSpeed: 0.025
   offset: {x: 0, y: 0, z: -10}
-  minBoundary: {x: 0, y: 0}
-  maxBoundary: {x: 0, y: 0}
+  minBoundary: {x: 0, y: -2}
+  maxBoundary: {x: 0, y: 5}
 --- !u!1 &1990179529
 GameObject:
   m_ObjectHideFlags: 0

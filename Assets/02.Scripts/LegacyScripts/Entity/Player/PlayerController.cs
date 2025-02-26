@@ -32,8 +32,14 @@ public class PlayerController : BaseController
     private int currentSkinIndex;
     private int currentWeaponIndex;
 
+    private ResourceController resourceController;
+    private WeaponPivotAnimationHandler weaponPivotAnimationHandler;
+
     private void Start()
     {
+        resourceController = GetComponent<ResourceController>();
+        weaponPivotAnimationHandler = GetComponentInChildren<WeaponPivotAnimationHandler>();
+
         currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
         currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
         ChangePlayerSkin(currentSkinIndex);
@@ -202,12 +208,23 @@ public class PlayerController : BaseController
         }
     }
 
+    public override void Damage()
+    {
+        animationHandler.Damage();
+    }
+
+    public override void DisableInvincible() 
+    { 
+        animationHandler.EndInvincibility();
+    }
+
     public override void Death()
     {
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
         animationHandler.Death();
+        weaponPivotAnimationHandler.Death();
 
         // 모든 본인과 자식 컴포넌트 비활성화
         StartCoroutine(DisableComponentsAfterDelay(2f));
@@ -218,8 +235,8 @@ public class PlayerController : BaseController
     private IEnumerator DisableComponentsAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        weaponPivot.gameObject.SetActive(false);
 
-        // 모든 본인과 자식 컴포넌트 비활성화
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
@@ -258,8 +275,18 @@ public class PlayerController : BaseController
         currentSkin = Instantiate(playerSkinPrefabs[skinIndex], transform);
         currentSkin.transform.localPosition = Vector3.zero;
 
+        StartCoroutine(DelayedSetNewSkin());
+        
+        
+
+        
+    }
+
+    private IEnumerator DelayedSetNewSkin()
+    {
+        yield return null; // 한 프레임 대기
         characterRenderer = currentSkin.GetComponent<SpriteRenderer>();
-        animationHandler = currentSkin.GetComponentInChildren<AnimationHandler>();
+        animationHandler = currentSkin.GetComponentInChildren<PlayerAnimationHandler>();
 
         if (animationHandler != null)
         {
@@ -268,7 +295,7 @@ public class PlayerController : BaseController
         }
         else
         {
-            Debug.LogError(" AnimationHandler is NULL after skin change!");
+            Debug.Log(" AnimationHandler is NULL after skin change!");
         }
     }
 
@@ -299,19 +326,10 @@ public class PlayerController : BaseController
 
         currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponPivot);
 
-        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
-        StartCoroutine(DelayedFindWeaponRenderer());
+        
+        StartCoroutine(DelayedSetNewWeapon());
 
-        if (_weaponHandler != null)
-        {
-            this.weaponData = _weaponHandler.weaponData; // WeaponSO 가져오기
-            Debug.Log("현재 장착한 무기: " + this.weaponData.name);
-            _weaponHandler.Setup(weaponData);
-        }
-        else
-        {
-            Debug.LogError("WeaponHandler를 찾을 수 없습니다!");
-        }
+        
     }
 
     public void ClearWeapon()
@@ -329,9 +347,21 @@ public class PlayerController : BaseController
             weaponData = null;
     }
 
-    private IEnumerator DelayedFindWeaponRenderer()
+    private IEnumerator DelayedSetNewWeapon()
     {
         yield return null; // 한 프레임 대기
         FindWeaponRenderer();
+        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
+
+        if (_weaponHandler != null)
+        {
+            this.weaponData = _weaponHandler.weaponData; // WeaponSO 가져오기
+            Debug.Log("현재 장착한 무기: " + this.weaponData.name);
+            _weaponHandler.Setup(weaponData);
+        }
+        else
+        {
+            Debug.Log("WeaponHandler를 찾을 수 없습니다!");
+        }
     }
 }

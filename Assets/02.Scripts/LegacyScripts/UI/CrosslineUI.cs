@@ -58,7 +58,7 @@ public class CrosslineUI : MonoBehaviour
 
         if (player.closestEnemy != null)
         {
-            Debug.Log($"{player.closestEnemy.name} is targeting");
+            //Debug.Log($"{player.closestEnemy.name} is targeting");
             SetActiveCrossline();
             return true;
         }
