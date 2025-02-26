@@ -33,6 +33,7 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
         float radius = joystickBackground.sizeDelta.x / 2;
         inputVector = Vector2.ClampMagnitude(dragPosition / radius, 1.0f);
         joystickHandle.anchoredPosition = inputVector * radius;
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
