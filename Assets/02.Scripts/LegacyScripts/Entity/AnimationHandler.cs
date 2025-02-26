@@ -37,7 +37,7 @@ public class AnimationHandler : MonoBehaviour
             return;
         }
 
-        Debug.Log($" Move called with magnitude: {obj.magnitude}");
+        //Debug.Log($" Move called with magnitude: {obj.magnitude}");
 
         animator.SetBool(IsMoving, obj.magnitude > 0.5f);
     }

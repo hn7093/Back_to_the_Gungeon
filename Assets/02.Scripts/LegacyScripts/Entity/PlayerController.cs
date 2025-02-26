@@ -15,6 +15,7 @@ public enum controlType
 public class PlayerController : BaseController
 {
     [SerializeField] List<GameObject> playerSkinPrefabs = new List<GameObject>();
+    [SerializeField] List<GameObject> weaponSkinPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
     private List<BaseController> enemyList; // 적 리스트
 
@@ -23,8 +24,9 @@ public class PlayerController : BaseController
     private bool isDragging = false;
     private float dragThreshold = 1f;
     private controlType currentControllType;
-    private string controlTypeKey = "controlTypeKey";
-    private string skinIndexKey = "skinIndexKey";
+    public static readonly string controlTypeKey = "controlTypeKey";
+    public static readonly string skinIndexKey = "skinIndexKey";
+    public static readonly string weaponSkinIndexKey = "weaponSkinIndexKey";
     private bool isAnyEnemy = false;
     private int currentSkinIndex;
 
@@ -38,8 +40,11 @@ public class PlayerController : BaseController
 
     protected override void Update()
     {
-        base.Update();
+        HandleAction();
         SetCloserTarget();
+        SetLookDirection();
+        SetIsLeft();
+        Rotate(isLeft);
         HandleAttackDelay();
     }
 
