@@ -19,6 +19,8 @@ TagManager:
   - Enemy
   - EnemyAttack
   - Wall
+  - InnerWall
+  - Trap
   - 
   - 
   - 
@@ -27,9 +29,7 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
+  - 
   - 
   - 
   - 

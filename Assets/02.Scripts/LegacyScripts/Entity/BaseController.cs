@@ -14,7 +14,7 @@ public abstract class BaseController : MonoBehaviour
     [SerializeField] public WeaponHandler weaponPrefab;
     [SerializeField] protected Transform weaponPivot;
     [SerializeField] protected WeaponSO weaponData;
-    [Range(0,3f)][SerializeField] protected float lookOffset = 1.5f;
+    [Range(0, 3f)][SerializeField] protected float lookOffset = 1.5f;
 
     protected Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get { return movementDirection; } }
@@ -166,7 +166,7 @@ public abstract class BaseController : MonoBehaviour
         if (animationHandler != null)
             animationHandler.Move(direction);
         //else
-            //Debug.Log("animationHandler is null");
+        //Debug.Log("animationHandler is null");
     }
 
     protected void Rotate(bool _isLeft)//무기 방향을 적에게 돌리고 적위치에 따라 좌우 반전
@@ -179,16 +179,17 @@ public abstract class BaseController : MonoBehaviour
 
         if (rightHandRenderer != null)
             rightHandRenderer.flipX = _isLeft;
+            */
 
         if (weaponRenderer != null)
             weaponRenderer.flipY = _isLeft;
 
+        /*
+                if (leftHandPivot != null)
+                    RotatePivot(leftHandPivot, _isLeft, initialLeftHandPivotPos);
 
-        if (leftHandPivot != null)
-            RotatePivot(leftHandPivot, _isLeft, initialLeftHandPivotPos);
-
-        if (rightHandPivot != null)
-            RotatePivot(rightHandPivot, _isLeft, initialRightHandPivotPos);*/
+                if (rightHandPivot != null)
+                    RotatePivot(rightHandPivot, _isLeft, initialRightHandPivotPos);*/
 
         if (weaponPivot != null)
         {
@@ -226,7 +227,7 @@ public abstract class BaseController : MonoBehaviour
 
     protected virtual void Attack()
     {
-        _weaponHandler?.Attack();
+        StartCoroutine(_weaponHandler?.Attack());
     }
 
     public void ApplyKnockback(Transform other, float power, float duration)

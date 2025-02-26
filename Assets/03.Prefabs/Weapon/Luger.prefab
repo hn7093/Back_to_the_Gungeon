@@ -5126,7 +5126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8e2bedbfc1659478a1d4331d805bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: d94ec60edf54f94418757a7a8949de09, type: 2}
+  weaponSO: {fileID: 11400000, guid: d94ec60edf54f94418757a7a8949de09, type: 2}
   target:
     serializedVersion: 2
     m_Bits: 512

@@ -229,6 +229,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   fxOnDestroy: 1
-  canBounce: 0
-  canThrough: 0
+  canBounce: 1
+  canThrough: 1
   scale: 1

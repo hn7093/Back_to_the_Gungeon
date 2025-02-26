@@ -7,9 +7,9 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private LayerMask levelCollisionLayer;
 
     public bool fxOnDestroy;
-    private bool canBounce = false; // 벽 반사 여부
+    [SerializeField] private bool canBounce = false; // 벽 반사 여부
     private int bounceCtn = 2; // 최대 팅김 횟수
-    private bool canThrough = false; // 적 관통 여부
+    [SerializeField] private bool canThrough = false; // 적 관통 여부
     private RangeWeaponHandler rangeWeaponHandler;
     private float currentDuration;
     private Vector2 direction;
@@ -71,11 +71,10 @@ public class ProjectileController : MonoBehaviour
         }
         _rigidbody.velocity = Vector2.zero;
         _rigidbody.velocity = direction.normalized * rangeWeaponHandler.Speed;
-        Debug.Log(_rigidbody.velocity.magnitude);
         isReady = true;
     }
     // 반사 여부 설정
-    public void SetBounce(bool isBouce) => canBounce = isBouce; 
+    public void SetBounce(bool isBouce) => canBounce = isBouce;
 
     // 통과 여부 설정
     public void SetThrough(bool isThrough) => canThrough = isThrough;
@@ -128,7 +127,7 @@ public class ProjectileController : MonoBehaviour
                     }
                 }
             }
-            
+
             if (canThrough)
             {
                 // 관통탄이면 배율 감소, 삭제 안함
