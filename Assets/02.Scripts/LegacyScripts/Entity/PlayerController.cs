@@ -50,6 +50,21 @@ public class PlayerController : BaseController
         Rotate(isLeft);
         SetIsAttacking();
         HandleAttackDelay();
+        // 임시 테스트
+        /*
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            _weaponHandler.AddFrontBullet(1);
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            _weaponHandler.SetBounce(true);
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            _weaponHandler.SetThrough(true);
+        }
+        */
     }
 
     protected override void HandleAction()

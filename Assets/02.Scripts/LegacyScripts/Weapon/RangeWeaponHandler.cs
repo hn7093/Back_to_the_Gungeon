@@ -82,7 +82,7 @@ public class RangeWeaponHandler : WeaponHandler
     }
 
     // 발사수 증가
-    public void AddFrontBullet(int plus)
+    public override void AddFrontBullet(int plus)
     {
         NumberofProjectilesPerShot += plus;
         // 발당 딜레이 설정
@@ -92,12 +92,12 @@ public class RangeWeaponHandler : WeaponHandler
         }
     }
     // 반사 설정
-    public void SetBounce(bool canBounce)
+    public override void SetBounce(bool canBounce)
     {
         this.canBounce = canBounce;
     }
     // 관통 설정
-    public void SetThrough(bool canThrough)
+    public override void SetThrough(bool canThrough)
     {
         this.canThrough = canThrough;
     }

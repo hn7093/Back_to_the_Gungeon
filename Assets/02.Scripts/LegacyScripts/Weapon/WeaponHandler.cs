@@ -99,4 +99,7 @@ public class WeaponHandler : MonoBehaviour
         KnockbackTime = weaponData.knockbackTime;
         attackSoundClip = weaponData.attackSoundClip;
     }
+    public virtual void AddFrontBullet(int plus){}
+    public virtual void SetBounce(bool canBounce){}
+    public virtual void SetThrough(bool canThrough){}
 }
