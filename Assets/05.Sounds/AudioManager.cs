@@ -18,11 +18,17 @@ public class AudioManager : MonoBehaviour
 {
     public List<AudioData> bgmList;
     public AudioData currentBGM;
-    
     // 볼륨 변경 로직 필요
-    public AudioSource _audioSource;
+    private AudioSource bgmAudioSource;
+    
+    public List<AudioData> soundList;
+    public AudioData currentSound;
+    private AudioSource soundAudioSource;
+    public float currentVfxSoundVolume;
+    
 
-    public void ChangeBGM(int number)
+
+    public void UpdateBGMSourceClip(int number)
     {
         if (number < 0 || number >= bgmList.Count)
         {
@@ -31,42 +37,49 @@ public class AudioManager : MonoBehaviour
         }
         
         currentBGM = bgmList[number];
-        _audioSource.clip = currentBGM.clip;
-        _audioSource.Play();
+        bgmAudioSource.clip = currentBGM.clip;
+        bgmAudioSource.Play();
     }
     
-    public void ChangeBGM(string name)
+    public void UpdateBGMSourceClip(string name)
     {
         if (bgmList.Select(list => list.name).Contains(name))
         {
-            _audioSource.clip = bgmList.Find(list => list.name == name).clip;
+            bgmAudioSource.clip = bgmList.Find(list => list.name == name).clip;
             
-            _audioSource.Stop();
-            _audioSource.Play();
+            bgmAudioSource.Stop();
+            bgmAudioSource.Play();
         }
-        // if (bgmList.Select(list => list.name).ToList().Contains(name))
-        // {
-            // Debug.LogError("cannot found BGM source");
-            // return;
-        // }
-        
-        // _audioSource.clip = bgmList.Find(list => list.name == name).clip;
-        // _audioSource.Play();
     }
 
     public void TurnBGMOn(bool isOn)
     {
-        if(isOn) _audioSource.Play();
-        else _audioSource.Stop();
+        if(isOn) bgmAudioSource.Play();
+        else bgmAudioSource.Stop();
+    }
+    
+    // fix: 변수가 특별이 필요 없으나 통일성있게 관리하기
+    public void UpdateBGMVolume(float value)
+    {
+        if (bgmAudioSource)
+        {
+            bgmAudioSource.volume = Mathf.Clamp01(value / 100f);
+        }
+    }
+
+    public void PlayVFXSoundByName(string name)
+    {
+        AudioClip selectedSoundClip = soundList.Find(sound => sound.name == name).clip;
+        soundAudioSource.PlayOneShot(selectedSoundClip, currentVfxSoundVolume);
     }
     
     private void Awake()
     {
-        _audioSource = GetComponent<AudioSource>();
+        bgmAudioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
-        ChangeBGM(0);
+        UpdateBGMSourceClip(0);
     }
 }
