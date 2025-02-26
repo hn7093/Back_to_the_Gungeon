@@ -20,6 +20,13 @@ public class Trap : MonoBehaviour
             ParticleSystem particleSystem = effect.GetComponent<ParticleSystem>();
             
             // 닿은 플레이어에게 데미지
+            ResourceController resourceController = collision.gameObject.GetComponent<ResourceController>();
+            if (resourceController != null)
+            {
+                float damage = -10f;
+                resourceController.ChangeHealth(damage);
+                Debug.Log("Player take trap Damage!");
+            }
             
             if (particleSystem != null)
             {

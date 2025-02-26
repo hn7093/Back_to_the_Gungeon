@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class ExplodeBarrel : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private float explodingPower;
+    [SerializeField] private GameObject player; // 플레이어 인식
+    [SerializeField] private float explodingPower; // 밀어내는 힘
+    [SerializeField] private float explodingDamage = -20f;
     
     public GameObject effect; // 이펙트
     public float explosionRadius = 3f;
@@ -36,6 +37,13 @@ public class ExplodeBarrel : MonoBehaviour
                 rb.AddForce(forceDirection * explodingPower, ForceMode2D.Impulse); // 오브젝트 반대 방향으로 힘 적용
                 Debug.Log($"💥 폭발 범위 내 감지된 오브젝트: {obj.gameObject.name}");
                 Debug.Log($"➡ 적용된 힘: {forceDirection * explodingPower}");
+            }
+            
+            ResourceController resourceController = obj.gameObject.GetComponent<ResourceController>();
+            if (resourceController != null)
+            {
+                resourceController.ChangeHealth(explodingDamage);
+                Debug.Log("Player take explode Damage!");
             }
         }
         

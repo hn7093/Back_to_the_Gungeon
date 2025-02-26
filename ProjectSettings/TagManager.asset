@@ -18,8 +18,8 @@ TagManager:
   - PlayerAttack
   - Enemy
   - EnemyAttack
-  - WallOut
-  - WallIn
+  - Wall
+  - InnerWall
   - Trap
   - 
   - 

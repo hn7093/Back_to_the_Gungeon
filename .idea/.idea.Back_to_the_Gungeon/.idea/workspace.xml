@@ -5,40 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Components/Skill.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Components/Skill.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/RoulletePage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/RoulletePage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/08.UI/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/Gui_parts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/Gui_parts/button_ready_off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/Gui_parts/button_ready_off.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/Gui_parts/button_ready_on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/Gui_parts/button_ready_on.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Skills/skill4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/test.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/test.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mono_crash.3c9a6d7d5c.0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mono_crash.3c9a6d7d5c.1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mono_crash.3c9a6d7d5c.2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/AbilitySelect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/AbilitySelect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AbilitySelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AbilitySelect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/GameStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/GameStage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/WeaponTestScene.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/WeaponTestScene.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/ExplodeBarrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/ExplodeBarrel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/Trap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/Trap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/test.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,19 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;2550224/1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "PGT-Level",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
