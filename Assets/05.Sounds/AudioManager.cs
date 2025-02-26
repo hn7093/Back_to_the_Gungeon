@@ -43,19 +43,20 @@ public class AudioManager : MonoBehaviour
     
     public void UpdateBGMSourceClip(string name)
     {
-        if (bgmList.Select(list => list.name).Contains(name))
-        {
-            bgmAudioSource.clip = bgmList.Find(list => list.name == name).clip;
-            
-            bgmAudioSource.Stop();
-            bgmAudioSource.Play();
-        }
+        if (!bgmList.Select(list => list.name).Contains(name)) { Debug.LogError("cannot found BGM source"); return; }
+        bgmAudioSource.clip = bgmList.Find(list => list.name == name).clip;
     }
 
     public void TurnBGMOn(bool isOn)
     {
-        if(isOn) bgmAudioSource.Play();
-        else bgmAudioSource.Stop();
+        if (isOn) {
+            if(!bgmAudioSource.isPlaying) bgmAudioSource.Play();
+            bgmAudioSource.mute = false;
+        }
+        else {
+            bgmAudioSource.Stop();
+            bgmAudioSource.mute = true;
+        }
     }
     
     // fix: 변수가 특별이 필요 없으나 통일성있게 관리하기
