@@ -1,17 +1,19 @@
 using Preference;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class StartGamePage : UIMonoBehaviour
 {
-    public Button StartGameBtn;
-    public Button SettingsBtn;
-    public Button LoadBtn;
-    public Button ExitBtn;
+    public Button StartGameButton;
+    public Button SettingsButton;
+    public Button LoadButton;
+    public Button ExitButton;
 
     private void Start()
     {
-        SettingsBtn.onClick.AddListener(() => uiManager.GoTo(PageType.SETTINGS_PAGE));
-        ExitBtn.onClick.AddListener(() => fileManager.ExitGame());
+        StartGameButton.onClick.AddListener(() => fileManager.StartGame());
+        SettingsButton.onClick.AddListener(() => uiManager.GoTo(PageType.SETTINGS_PAGE));
+        ExitButton.onClick.AddListener(() => fileManager.ExitGame());
     }
 }
