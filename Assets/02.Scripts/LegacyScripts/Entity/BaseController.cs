@@ -59,29 +59,7 @@ public abstract class BaseController : MonoBehaviour
             initialWeaponPivotPos = weaponPivot.localPosition;
 
         // 무기 찾기
-        if (weaponPrefab != null)
-        {
-            _weaponHandler = Instantiate(weaponPrefab, weaponPivot);
-            Transform[] allChildren = weaponPivot.GetComponentsInChildren<Transform>(true);
-
-            foreach (Transform child in allChildren)
-            {
-                if (child.name == "WeaponSprite") //특정 이름과 일치하는 오브젝트 찾기
-                {
-                    weaponRenderer = child.GetComponent<SpriteRenderer>();
-                    break;
-                }
-            }
-        }
-        else
-        {
-            _weaponHandler = GetComponentInChildren<WeaponHandler>();
-        }
-        // 무기 정보 적용 예시
-        if (weaponData != null)
-        {
-            _weaponHandler.Setup(weaponData);
-        }
+        InitWeapon();
 
     }
 
@@ -102,6 +80,38 @@ public abstract class BaseController : MonoBehaviour
         if (knockbackDuration > 0.0f)
         {
             knockbackDuration -= Time.fixedDeltaTime;
+        }
+    }
+
+    protected virtual void InitWeapon()
+    {
+        if (weaponPrefab != null)
+        {
+            _weaponHandler = Instantiate(weaponPrefab, weaponPivot);
+            FindWeaponRenderer();
+        }
+        else
+        {
+            _weaponHandler = GetComponentInChildren<WeaponHandler>();
+        }
+        // 무기 정보 적용 예시
+        if (weaponData != null)
+        {
+            _weaponHandler.Setup(weaponData);
+        }
+    }
+
+    protected virtual void FindWeaponRenderer()
+    {
+        Transform[] allChildren = weaponPivot.GetComponentsInChildren<Transform>(true);
+
+        foreach (Transform child in allChildren)
+        {
+            if (child.name == "WeaponSprite") //특정 이름과 일치하는 오브젝트 찾기
+            {
+                weaponRenderer = child.GetComponent<SpriteRenderer>();
+                break;
+            }
         }
     }
 

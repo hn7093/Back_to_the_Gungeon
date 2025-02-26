@@ -17,6 +17,7 @@ public class PlayerController : BaseController
     [SerializeField] List<GameObject> playerSkinPrefabs = new List<GameObject>();
     [SerializeField] List<GameObject> weaponSkinPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
+    [SerializeField] protected GameObject currentWeapon;
     private List<BaseController> enemyList; // 적 리스트
 
     private Vector2 startTouchPosition;
@@ -26,16 +27,18 @@ public class PlayerController : BaseController
     private controlType currentControllType;
     public static readonly string controlTypeKey = "controlTypeKey";
     public static readonly string skinIndexKey = "skinIndexKey";
-    public static readonly string weaponSkinIndexKey = "weaponSkinIndexKey";
+    public static readonly string weaponIndexKey = "weaponIndexKey";
     private bool isAnyEnemy = false;
     private int currentSkinIndex;
+    private int currentWeaponIndex;
 
     private void Start()
     {
         currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
         currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
         ChangePlayerSkin(currentSkinIndex);
-
+        currentWeaponIndex = PlayerPrefs.GetInt(weaponIndexKey, 0);
+        ChangeWeapon(currentWeaponIndex);
     }
 
     protected override void Update()
@@ -229,7 +232,7 @@ public class PlayerController : BaseController
         currentSkinIndex = skinIndex;
 
         // 
-        PlayerPrefs.SetInt("SelectedSkin", currentSkinIndex);
+        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
         PlayerPrefs.Save();
 
         if (currentSkin != null)
@@ -253,5 +256,47 @@ public class PlayerController : BaseController
         {
             Debug.LogError(" AnimationHandler is NULL after skin change!");
         }
+    }
+
+    public void NextWeaponSkin()
+    {
+        int newSkinIndex = (currentWeaponIndex + 1) % weaponSkinPrefabs.Count;
+        ChangeWeapon(newSkinIndex);
+    }
+
+    public void PrevWeaponSkin()
+    {
+        int newSkinIndex = (currentWeaponIndex - 1 + weaponSkinPrefabs.Count) % weaponSkinPrefabs.Count;
+        ChangeWeapon(newSkinIndex);
+    }
+
+    public void ChangeWeapon(int weaponSkinIndex)
+    {
+        if (weaponSkinPrefabs == null || weaponSkinPrefabs.Count == 0) return;
+
+        weaponSkinIndex = Mathf.Clamp(weaponSkinIndex, 0, weaponSkinPrefabs.Count - 1);
+        currentSkinIndex = weaponSkinIndex;
+
+        // 
+        PlayerPrefs.SetInt(weaponIndexKey, currentSkinIndex);
+        PlayerPrefs.Save();
+
+        if (currentWeapon != null)
+        {
+            Destroy(currentWeapon);
+        }
+
+        if(_weaponHandler != null)
+        {
+            _weaponHandler = null;
+        }
+
+
+        currentWeapon = Instantiate(weaponSkinPrefabs[weaponSkinIndex], weaponPivot);
+        currentWeapon.transform.localPosition = Vector3.zero;
+
+        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
+        FindWeaponRenderer();
+        
     }
 }
