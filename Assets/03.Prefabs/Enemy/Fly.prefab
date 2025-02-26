@@ -298,13 +298,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 9178823811698831938}
-  rightHandRenderer: {fileID: 0}
-  leftHandRenderer: {fileID: 0}
   weaponRenderer: {fileID: 0}
   weaponPrefab: {fileID: 3301584730586787497, guid: 8efab191f6de3f84a87c68a9ffb2d8e1,
     type: 3}
-  rightHandPivot: {fileID: 0}
-  leftHandPivot: {fileID: 0}
   weaponPivot: {fileID: 6322550568616481253}
   weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
   lookOffset: 1.5

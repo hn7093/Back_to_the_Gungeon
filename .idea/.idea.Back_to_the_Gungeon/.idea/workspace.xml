@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/GameStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/GameStage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Trap/Trap1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Trap/Trap1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/ExplodeBarrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/ExplodeBarrel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Fly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Fly.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Default.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Default.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Reward.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Reward.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +130,7 @@
       <workItem from="1740377460149" duration="22537000" />
       <workItem from="1740442282584" duration="5813000" />
       <workItem from="1740453932038" duration="21872000" />
+      <workItem from="1740549979919" duration="2990000" />
     </task>
     <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
       <option name="closed" value="true" />

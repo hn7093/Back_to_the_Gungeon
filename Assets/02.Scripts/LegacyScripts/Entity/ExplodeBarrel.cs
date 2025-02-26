@@ -30,13 +30,18 @@ public class ExplodeBarrel : MonoBehaviour
 
         foreach (Collider2D obj in objects)
         {
-            Rigidbody2D rb = obj.GetComponent<Rigidbody2D>(); 
-            if (rb != null)
+            
+            BaseController baseController = obj.GetComponent<BaseController>();
+            //Rigidbody2D rb = obj.GetComponent<Rigidbody2D>(); 
+            if (baseController != null)
             {
-                Vector2 forceDirection = (obj.transform.position - transform.position).normalized; // 폭발 중심에서 객체로 향하는 벡터 계산
-                rb.AddForce(forceDirection * explodingPower, ForceMode2D.Impulse); // 오브젝트 반대 방향으로 힘 적용
-                Debug.Log($"💥 폭발 범위 내 감지된 오브젝트: {obj.gameObject.name}");
-                Debug.Log($"➡ 적용된 힘: {forceDirection * explodingPower}");
+                float knockbackPower = explodingPower;
+                float knockbackDuration = 1f;
+                //Vector2 forceDirection = (obj.transform.position - transform.position).normalized; // 폭발 중심에서 객체로 향하는 벡터 계산
+                //rb.AddForce(forceDirection * explodingPower, ForceMode2D.Impulse); // 오브젝트 반대 방향으로 힘 적용
+                baseController.ApplyKnockback(transform, knockbackPower, knockbackDuration);
+                Debug.Log($"폭발 범위 내 감지된 오브젝트: {obj.gameObject.name}");
+                //Debug.Log($"➡ 적용된 힘: {forceDirection * explodingPower}");
             }
             
             ResourceController resourceController = obj.gameObject.GetComponent<ResourceController>();
