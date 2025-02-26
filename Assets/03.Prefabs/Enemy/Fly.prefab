@@ -124,7 +124,10 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 128
+  weaponData: {fileID: 0}
   projectileSpawnPosition: {fileID: 6322550568616481253}
+  canBounce: 0
+  canThrough: 0
 --- !u!114 &5636545719943273166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +143,7 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 128
+  weaponData: {fileID: 0}
 --- !u!1 &7240566977619075362
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +193,7 @@ GameObject:
   - component: {fileID: -6923194325812893425}
   m_Layer: 9
   m_Name: Fly
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,13 +302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 9178823811698831938}
-  rightHandRenderer: {fileID: 0}
-  leftHandRenderer: {fileID: 0}
   weaponRenderer: {fileID: 0}
   weaponPrefab: {fileID: 3301584730586787497, guid: 8efab191f6de3f84a87c68a9ffb2d8e1,
     type: 3}
-  rightHandPivot: {fileID: 0}
-  leftHandPivot: {fileID: 0}
   weaponPivot: {fileID: 6322550568616481253}
   weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
   lookOffset: 1.5

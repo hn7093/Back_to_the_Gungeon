@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCollisionLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 6144
   fxOnDestroy: 1
   canBounce: 1
   canThrough: 1
