@@ -5,13 +5,13 @@ namespace Preference
 {
     public class PlayerManager
     {
-        private StatHandler _statHandler;
-        private ResourceController _resourceController;
+        public StatHandler StatHandler;
+        public ResourceController ResourceController;
 
         public void RegistryInfo(GameObject player)
         {
-            _statHandler = player.GetComponent<StatHandler>();
-            _resourceController = player.GetComponent<ResourceController>();
+            StatHandler = player.GetComponent<StatHandler>();
+            ResourceController = player.GetComponent<ResourceController>();
         }
     }
 }

@@ -4,12 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: Settings 페이지 UI 변경">
-      <change afterPath="$PROJECT_DIR$/Assets/07.Settings/PlayerInformation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/07.Settings/PlayerInformation.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 어빌리티 및 공격 데이터 추가">
       <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Components/UI/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Prefabs/Components/UI/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Arrow_Barrage.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Arrow_Barrage.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Beam.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Beam.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Blackhole.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Blackhole.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Buff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Buff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Chop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Chop.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Claw.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Claw.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Dash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Dash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Fly.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Fly.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Heal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Heal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_MeteorShower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_MeteorShower.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Pound.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Pound.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_PsycicAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_PsycicAttack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Punches.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Punches.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Recon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Recon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Reflect.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Reflect.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_Slide.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_SpiritArrows.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/UI_Skill_Icon_SpiritArrows.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +206,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740554337196</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: 매니저에서 플레이어 정보 등록 메소드 추가">
+      <option name="closed" value="true" />
+      <created>1740557837456</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740557837456</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: 어빌리티 및 공격 데이터 추가">
+      <option name="closed" value="true" />
+      <created>1740559466592</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740559466592</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +270,8 @@
     <MESSAGE value="feat: 스킬 선택 UI에서 스킬 랜덤 호출" />
     <MESSAGE value="feat: resource 파일 추가" />
     <MESSAGE value="feat: Settings 페이지 UI 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Settings 페이지 UI 변경" />
+    <MESSAGE value="feat: 매니저에서 플레이어 정보 등록 메소드 추가" />
+    <MESSAGE value="feat: 어빌리티 및 공격 데이터 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 어빌리티 및 공격 데이터 추가" />
   </component>
 </project>
