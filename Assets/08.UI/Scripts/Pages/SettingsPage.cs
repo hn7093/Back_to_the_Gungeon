@@ -21,11 +21,7 @@ public class SettingsPage : UIMonoBehaviour
         BGMToggle.onValueChanged.AddListener(isChecked => audioManager.TurnBGMOn(isChecked));
         
         // BGM Slider
-        BGMVolumeSlider.onValueChanged.AddListener(volume =>
-        {
-        float normalizedVolume = volume / 100f;
-        audioManager._audioSource.volume = normalizedVolume; // do: setter로 캡슐화 알아보기
-        });
+        BGMVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume));
         BGMVolumeSlider.value = 50f;
         
         // BGM selector
@@ -33,7 +29,7 @@ public class SettingsPage : UIMonoBehaviour
         BGMSelector.options.AddRange(audioManager.bgmList.Select(list => new TMP_Dropdown.OptionData(list.name)));
         BGMSelector.value = audioManager.bgmList.FindIndex(list => list.name == audioManager.currentBGM.name);
         BGMSelector.RefreshShownValue();
-        BGMSelector.onValueChanged.AddListener((value) => audioManager.ChangeBGM(value));
+        BGMSelector.onValueChanged.AddListener((value) => audioManager.UpdateBGMSourceClip(value));
         
         // Exit Button
         ExitButton.onClick.AddListener(() => uiManager.GoTo(PageType.HOME_PAGE));
