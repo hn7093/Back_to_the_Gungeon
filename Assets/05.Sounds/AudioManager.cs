@@ -47,18 +47,25 @@ public class AudioManager : MonoBehaviour
         bgmAudioSource.clip = bgmList.Find(list => list.name == name).clip;
     }
 
-    public void TurnBGMOn(bool isOn)
+    public void TurnOn(bool isOn, string type)
     {
+        AudioSource selectedAudioSource = type switch
+        {
+            "BGM" => bgmAudioSource,
+            "VFX" => soundAudioSource,
+            _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
+        };
+       
         if (isOn) {
-            if(!bgmAudioSource.isPlaying) bgmAudioSource.Play();
-            bgmAudioSource.mute = false;
+            if(!selectedAudioSource.isPlaying) selectedAudioSource.Play();
+            selectedAudioSource.mute = false;
         }
         else {
-            bgmAudioSource.Stop();
-            bgmAudioSource.mute = true;
+            selectedAudioSource.Stop();
+            selectedAudioSource.mute = true;
         }
         
-        bgmAudioSource.time = 0;
+        selectedAudioSource.time = 0;
     }
     
     // fix: 변수가 특별이 필요 없으나 통일성있게 관리하기

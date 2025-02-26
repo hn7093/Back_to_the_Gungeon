@@ -10,16 +10,18 @@ public class SettingsPage : UIMonoBehaviour
     public Slider BGMVolumeSlider;
     public TMP_Dropdown BGMSelector;
     
-    // public Toggle VFXToggle;
-    // public Slider VFXVolumeSlider;
-    
+    public Toggle VFXToggle;
+    public Slider VFXVolumeSlider;
+
+    public TMP_Dropdown KeyTypeSelector;
+
     public Button ExitButton;
     
     // fix: 만약 처음에 활성화되면 순서 문제로 에러 발생
     private void Start()
     {
-        // Toggle BGMx
-        BGMToggle.onValueChanged.AddListener(isChecked => audioManager.TurnBGMOn(isChecked));
+        // Toggle BGM
+        BGMToggle.onValueChanged.AddListener(isChecked => audioManager.TurnOn(isChecked, "BGM"));
         
         // BGM Slider
         BGMVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume));
@@ -31,6 +33,12 @@ public class SettingsPage : UIMonoBehaviour
         BGMSelector.value = audioManager.bgmList.FindIndex(list => list.name == audioManager.currentBGM.name);
         BGMSelector.RefreshShownValue();
         BGMSelector.onValueChanged.AddListener((value) => audioManager.UpdateBGMSourceClip(value));
+        
+        // VFX Toggle
+        VFXToggle.onValueChanged.AddListener(isChecked => audioManager.TurnOn(isChecked, "VFX"));
+        
+        // KeyType Selector
+        KeyTypeSelector.onValueChanged.AddListener(value => keyBinding.UpdateKeyType(value));
         
         // Exit Button
         ExitButton.onClick.AddListener(() => uiManager.GoTo(PageType.HOME_PAGE));

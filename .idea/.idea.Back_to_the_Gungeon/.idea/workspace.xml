@@ -4,48 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Abilities/NPC.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Abilities/NPC.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Abilities/ResourceUpdateController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Abilities/ResourceUpdateController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/07.Settings/QuestManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/07.Settings/QuestManager.cs.meta" afterDir="false" />
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 로비 씬 내 매니저 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Patch - URP 2D Lit.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/05.Sounds/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05.Sounds/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/KeyBinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/KeyBinding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/JoyStick.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/JoyStick.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/AbilitySelect.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/AbilitySelect.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Angel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Angel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Devil.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Devil.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Roullete.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Roullete.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Controller.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Controller.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Manager/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740473989578</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: 로비 씬 내 매니저 추가">
+      <option name="closed" value="true" />
+      <created>1740544318050</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740544318050</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +243,7 @@
     <MESSAGE value="fix: .idea 파일 삭제" />
     <MESSAGE value="feat: 스킬 선택 UI에서 스킬 랜덤 호출" />
     <MESSAGE value="feat: resource 파일 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: resource 파일 추가" />
+    <MESSAGE value="feat: 로비 씬 내 매니저 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 로비 씬 내 매니저 추가" />
   </component>
 </project>
