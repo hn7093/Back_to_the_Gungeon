@@ -13,6 +13,7 @@ namespace Preference
         [HideInInspector] public AudioManager AudioManager;
         [HideInInspector] public UIManager UIManager;
         [HideInInspector] public EventManager EventManager;
+        [HideInInspector] public PlayerManager PlayerManager;
 
         private void Awake()
         {
@@ -29,6 +30,17 @@ namespace Preference
             AudioManager = GetComponentInChildren<AudioManager>();
             UIManager = GetComponentInChildren<UIManager>();
             EventManager = GetComponentInChildren<EventManager>();
+        }
+
+        public void RegisterPlayer(GameObject player)
+        {
+            if (PlayerManager == null) PlayerManager = new PlayerManager();
+            if (!player.GetComponent<StatHandler>() || !player.GetComponent<ResourceController>()) {
+                Debug.LogError("game object is missing stat handler and resource controller");
+                return;
+            }
+            PlayerManager.RegistryInfo(player);
+
         }
     }
 }
