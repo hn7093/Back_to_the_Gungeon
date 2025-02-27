@@ -7,13 +7,14 @@ public class StartGamePage : UIMonoBehaviour
 {
     public Button StartGameButton;
     public Button SettingsButton;
-    public Button LoadButton;
+    // public Button InventoryButton;
+    public Button ChangeSkinButton;
     public Button ExitButton;
 
     private void Start()
     {
         StartGameButton.onClick.AddListener(() => fileManager.StartGame());
-        SettingsButton.onClick.AddListener(() => uiManager.GoTo(PageType.SETTINGS_PAGE));
+        SettingsButton.onClick.AddListener(() => uiManager.OpenPage(PageType.SETTINGS_PAGE));
         ExitButton.onClick.AddListener(() => fileManager.ExitGame());
     }
 }

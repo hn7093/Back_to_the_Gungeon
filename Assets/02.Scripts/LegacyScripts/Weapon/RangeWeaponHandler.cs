@@ -101,4 +101,17 @@ public class RangeWeaponHandler : WeaponHandler
     {
         this.canThrough = canThrough;
     }
+    // 이어서 쏘는 경우 산탄으로 변경
+    public override void SetSpread()
+    {
+        MultipleDelay = 0.0f;
+        MultipleProjectilesAngel = 10.0f;
+    }
+
+    // 산탄으로 쏘는 경우 이어서 쏘도록 변경
+    public override void SetFocus()
+    {
+        MultipleDelay = 0.1f;
+        MultipleProjectilesAngel = 0.0f;
+    }
 }

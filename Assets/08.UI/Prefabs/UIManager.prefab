@@ -44,4 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc484275396d84f208bb9ddd0ebac3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pages: []
+  Pages:
+  - PageName: 0
+    Instance: {fileID: 0}
+  - PageName: 4
+    Instance: {fileID: 0}
+  - PageName: 7
+    Instance: {fileID: 0}
+  - PageName: 2
+    Instance: {fileID: 0}
+  - PageName: 4
+    Instance: {fileID: 0}
+  - PageName: 5
+    Instance: {fileID: 0}
+  - PageName: 7
+    Instance: {fileID: 0}
+  - PageName: 3
+    Instance: {fileID: 8863883469188891326, guid: d80aa619d41d84c95a26e4f22e9e21f4,
+      type: 3}
+  isLobby: 1
+  isOpenStartPage: 0
