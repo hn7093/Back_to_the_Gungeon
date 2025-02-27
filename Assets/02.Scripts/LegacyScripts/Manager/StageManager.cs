@@ -8,7 +8,7 @@ public class StageManager : MonoBehaviour
     public GameObject currentStage;
     
     public NextStage nextStage;
-    private int stageCount;
+    public int stageCount;
     private int randomMapIndex;
     private int lastMapIndex = -1; // 첫맵부터 랜덤맵인덱스랑 겹쳐서 같은 맵 판정을 받으면 안되기 때문에 마이너스로 초기화   
     void Start()
@@ -53,22 +53,30 @@ public class StageManager : MonoBehaviour
 
         do // 연속으로 같은 맵이 나오지 않도록 방지한다
         {
-            randomMapIndex = Random.Range(2, stage.Count);
+            randomMapIndex = Random.Range(5, stage.Count);
         } while (randomMapIndex == lastMapIndex);
         
         lastMapIndex = randomMapIndex;
 
         if (stageCount == 0)
         {
-            currentStage = Instantiate(stage[2]);
+            currentStage = Instantiate(stage[4]);
         }
-        else if (stageCount % 4 == 0)
+        else if (stageCount % 4 == 0 && stageCount != 20)
         {
             currentStage = Instantiate(stage[0]); // 보상 맵 출현
         }
         else if (stageCount == 10)
         {
-            currentStage = Instantiate(stage[1]); // 보스 스테이지 지정
+            currentStage = Instantiate(stage[1]); // 매직 보스 스테이지 지정
+        }
+        else if (stageCount == 20)
+        {
+            currentStage = Instantiate(stage[2]); // 데몬 보스 스테이지 지정
+        }
+        else if (stageCount == 21) // 엔딩 스테이지
+        {
+            currentStage = Instantiate(stage[3]); 
         }
         else
         {
@@ -80,9 +88,9 @@ public class StageManager : MonoBehaviour
         {
             Debug.LogError("Cannot found Next Stage");
         }
-        
-        stageCount++;
         Debug.Log(stageCount);
+        stageCount++;
+        
     }
     
 }

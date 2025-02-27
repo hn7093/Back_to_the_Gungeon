@@ -19,7 +19,7 @@ public class InventoryPage : UIMonoBehaviour
         EquipButton.onClick.AddListener(() =>
         {
             int currentWeaponId = PlayerPrefs.GetInt(weaponIndexKey);
-            
+            WeaponManager.Instance.UnlockWeapon(currentWeaponId);
             PlayerController.SetWeapon();
             if (currentWeaponId != PlayerPrefs.GetInt(weaponIndexKey))
             {
