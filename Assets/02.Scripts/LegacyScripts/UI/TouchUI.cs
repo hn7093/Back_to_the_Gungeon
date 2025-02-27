@@ -4,8 +4,8 @@ using UnityEngine.EventSystems;
 
 public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    public RectTransform joystickBackground;  // Á¶ÀÌ½ºÆ½ ¹è°æ
-    public RectTransform joystickHandle;      // Á¶ÀÌ½ºÆ½ ÇÚµé
+    public RectTransform joystickBackground;  // ì¡°ì´ìŠ¤í‹± ë°°ê²½
+    public RectTransform joystickHandle;      // ì¡°ì´ìŠ¤í‹± í•¸ë“¤
     private Vector2 inputVector;
     private bool isJoystickActive = false;
     private ControlType controlType;
@@ -15,16 +15,16 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
     private void Start()
     {
         controlType = (ControlType)PlayerPrefs.GetInt(PlayerController.controlTypeKey, 0);
-        joystickBackground.gameObject.SetActive(false); // ½ÃÀÛÇÒ ¶§ Á¶ÀÌ½ºÆ½ ¼û±â±â
+        joystickBackground.gameObject.SetActive(false); // ì‹œì‘í•  ë•Œ ì¡°ì´ìŠ¤í‹± ìˆ¨ê¸°ê¸°
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (controlType == ControlType.keyboard) return;
-        // Æ¯Á¤ UI ¿ä¼Ò¸¦ Å¬¸¯Çß´ÂÁö È®ÀÎ ÈÄ ¹«½Ã
+        // íŠ¹ì • UI ìš”ì†Œë¥¼ í´ë¦­í–ˆëŠ”ì§€ í™•ì¸ í›„ ë¬´ì‹œ
         if (IsPointerOverUI()) return;
 
-        // ÅÍÄ¡ÇÑ À§Ä¡¿¡¼­ Á¶ÀÌ½ºÆ½ È°¼ºÈ­
+        // í„°ì¹˜í•œ ìœ„ì¹˜ì—ì„œ ì¡°ì´ìŠ¤í‹± í™œì„±í™”
         ShowJoystick(eventData.position);
     }
 
@@ -45,7 +45,7 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
 
         inputVector = Vector2.zero;
         joystickHandle.anchoredPosition = Vector2.zero;
-        joystickBackground.gameObject.SetActive(false); // ÅÍÄ¡ Á¾·á ½Ã Á¶ÀÌ½ºÆ½ ¼û±â±â
+        joystickBackground.gameObject.SetActive(false); // í„°ì¹˜ ì¢…ë£Œ ì‹œ ì¡°ì´ìŠ¤í‹± ìˆ¨ê¸°ê¸°
         isJoystickActive = false;
     }
 
@@ -57,7 +57,7 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
         isJoystickActive = true;
     }
 
-    // Æ¯Á¤ UI ¿ä¼Ò¸¦ Å¬¸¯Çß´ÂÁö È®ÀÎ
+    // íŠ¹ì • UI ìš”ì†Œë¥¼ í´ë¦­í–ˆëŠ”ì§€ í™•ì¸
     private bool IsPointerOverUI()
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
@@ -66,7 +66,7 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
 
         foreach (var result in results)
         {
-            if (result.gameObject.CompareTag("UIExclude")) // Æ¯Á¤ UI ÅÂ±×¸¦ °¡Áø ¿ä¼Ò Á¦¿Ü
+            if (result.gameObject.CompareTag("UIExclude")) // íŠ¹ì • UI íƒœê·¸ë¥¼ ê°€ì§„ ìš”ì†Œ ì œì™¸
             {
                 return true;
             }
