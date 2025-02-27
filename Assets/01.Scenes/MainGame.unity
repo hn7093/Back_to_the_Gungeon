@@ -818,6 +818,9 @@ MonoBehaviour:
   projectilePrefabs:
   - {fileID: 4091714419206822261, guid: 53ae206f90a4b524185762a102843b46, type: 3}
   - {fileID: 4091714419206822261, guid: 67630cfad194e8646966eeaf56611361, type: 3}
+  - {fileID: 4091714419206822261, guid: 9bb6a5d47597b1843b1ae1bc9e53c6ae, type: 3}
+  - {fileID: 4091714419206822261, guid: 0288b4994aedb884fbf3d5a6b376e2b8, type: 3}
+  - {fileID: 4091714419206822261, guid: d797c2d66e5844a45b1b7466cead0d09, type: 3}
   impactParticleSystem: {fileID: 5823693892346372148}
 --- !u!4 &1912782868
 Transform:

@@ -13,6 +13,8 @@ public class StageManager : MonoBehaviour
     private int lastMapIndex = -1; // 첫맵부터 랜덤맵인덱스랑 겹쳐서 같은 맵 판정을 받으면 안되기 때문에 마이너스로 초기화   
     void Start()
     {
+        currentStage = null;
+        
         stageCount = 0;
         if (nextStage == null)
         {
