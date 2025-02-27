@@ -35,6 +35,7 @@ public class TutorialDialogPage : UIMonoBehaviour
         {
             AllTaskDone = true;
             gameObject.SetActive(false);
+            SystemManager.Instance.UIManager.Clear();
             Destroy(gameObject);
         }
     }
