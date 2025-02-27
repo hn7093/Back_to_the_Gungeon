@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/01.Scenes/DevlopScene/MainGame 1.unity.meta
+guid: 3011d630b30cf464cb92ce55040c30a5
+========
+guid: 6b2cac11d5ca88547a76619b1f0bdc83
+folderAsset: yes
+>>>>>>>> origin/dev:Assets/02.Scripts/LegacyScripts/Entity/Player.meta
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
