@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2762d194bff643458d94fb1e0285253, type: 3}
+  m_Name: M92
+  m_EditorClassIdentifier: 
+  weaponName: M92
+  weaponPrefab: {fileID: 2562538819280201347, guid: f71b6a50a40e1b84faa80335e86f5cfb,
+    type: 3}
+  isUnlocked: 0
