@@ -681,7 +681,6 @@ GameObject:
   - component: {fileID: 1755005129}
   - component: {fileID: 1755005127}
   - component: {fileID: 1755005133}
-  - component: {fileID: 1755005134}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -914,18 +913,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1755005134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755005123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8e316169d75c2e4e8e7b4365a2d8527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1305207497556713181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -939,6 +926,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: navigation_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: 568419593980105485, guid: 86ed4b1753c977c4c9b715cc2e1c205d,
+        type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: d561135d81573b144993aa25dfd1b9a7,
+        type: 2}
     - target: {fileID: 7085141262289218897, guid: 86ed4b1753c977c4c9b715cc2e1c205d,
         type: 3}
       propertyPath: m_LocalPosition.x
