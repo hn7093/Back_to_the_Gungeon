@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage/NavMesh-NavMesh 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage/NavMesh-NavMesh 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Barrel2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Barrel2.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
