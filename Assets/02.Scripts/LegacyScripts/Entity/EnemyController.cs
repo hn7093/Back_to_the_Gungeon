@@ -222,7 +222,7 @@ public class EnemyController : BaseController
     public override void Death()
     {
         animationHandler.Death();
-        base.Death();
         EnemyManager.Instance.RemoveEnemyOnDeath(this);
+        base.Death();
     }
 }

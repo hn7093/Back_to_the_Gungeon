@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -18,7 +19,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float timeBetweenWaves = 1f; // 웨이브 당 대기 시간
 
     private Coroutine waveRoutine; // 웨이브 소환 코루틴
-
+    private PlayerController player;
     void Awake()
     {
         if (instance == null)
@@ -33,13 +34,20 @@ public class EnemyManager : MonoBehaviour
         {
             SpawnRandomEnemy();
         }
-        
-        
+
+
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
+    }
+    void Update()
+    {
+        if(player == null)
+            player = FindObjectOfType<PlayerController>();
+        else
+            player.SetEnemyList(activeEnemies);
     }
 
     public void StartWave(int waveCount)
@@ -95,10 +103,13 @@ public class EnemyManager : MonoBehaviour
         GameObject spawnEntity = Instantiate(randomPrefab, new Vector3(randomPosition.x, randomPosition.y), Quaternion.identity);
         EnemyController enemyController = spawnEntity.GetComponent<EnemyController>();
         // 목표를 플레이어로
-        //enemyController.ConnectUIManager(GameManager.Instance.player.transform);
         enemyController.Init(FindObjectOfType<PlayerController>().transform);
         activeEnemies.Add(enemyController);
-
+        StartCoroutine(SetupEnemy());
+    }
+    private IEnumerator SetupEnemy()
+    {
+        yield return null;
         // 플레이어의 타겟 갱신
         FindObjectOfType<PlayerController>().SetEnemyList(activeEnemies);
     }
