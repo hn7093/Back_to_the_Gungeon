@@ -73,6 +73,24 @@ public class PlayerController : BaseController
         */
     }
 
+    public void NextControlType()
+    {
+        int currentControllTypeIndex = (int)currentControllType;
+        currentControllTypeIndex = (currentControllTypeIndex + 1) % 2;
+        currentControllType = (ControlType)currentControllTypeIndex;
+        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
+        PlayerPrefs.Save();
+    }
+
+    public void PreviousControlType()
+    {
+        int currentControllTypeIndex = (int)currentControllType;
+        currentControllTypeIndex = (currentControllTypeIndex - 1 + 2) % 2;
+        currentControllType = (ControlType)currentControllTypeIndex;
+        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
+        PlayerPrefs.Save();
+    }
+
     protected override void HandleAction()
     {
         if (currentControllType == 0)
