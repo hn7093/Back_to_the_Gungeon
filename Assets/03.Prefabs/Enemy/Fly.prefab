@@ -309,6 +309,7 @@ MonoBehaviour:
   weaponPivot: {fileID: 6322550568616481253}
   weaponData: {fileID: 11400000, guid: d94ec60edf54f94418757a7a8949de09, type: 2}
   lookOffset: 1.5
+  triggerCollider: {fileID: 0}
   closestEnemy: {fileID: 0}
   followRange: 15
   attackRange: 5
@@ -316,6 +317,7 @@ MonoBehaviour:
   canMove: 1
   chase: 1
   enemyType: 1
+  target: {fileID: 0}
   AttackPos: {fileID: 6322550568616481253}
 --- !u!50 &2051049446224032285
 Rigidbody2D:

@@ -227,6 +227,7 @@ public class EnemyController : BaseController
             }
             else
             {
+                isRoaming = false;
                 isAttacking = false;
             }
         }
