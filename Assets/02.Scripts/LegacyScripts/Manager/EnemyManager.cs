@@ -112,15 +112,9 @@ public class EnemyManager : MonoBehaviour
         GameObject spawnEntity = Instantiate(randomPrefab, new Vector3(spawnPosition.x, spawnPosition.y), Quaternion.identity);
         EnemyController enemyController = spawnEntity.GetComponent<EnemyController>();
         // 목표를 플레이어로
-        enemyController.Init(player.transform);
         activeEnemies.Add(enemyController);
-        StartCoroutine(SetupEnemy());
-    }
-    private IEnumerator SetupEnemy()
-    {
-        yield return null;
-        // 플레이어의 타겟 갱신
         player.SetEnemyList(activeEnemies);
+        enemyController.Init(player.transform);
     }
 
     void OnDrawGizmosSelected()

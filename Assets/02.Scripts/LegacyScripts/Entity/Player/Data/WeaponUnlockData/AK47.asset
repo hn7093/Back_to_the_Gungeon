@@ -15,4 +15,4 @@ MonoBehaviour:
   weaponName: AK47
   weaponPrefab: {fileID: 7924646925545550593, guid: a3a74ad14324cba4992504ffbbd582ab,
     type: 3}
-  isUnlocked: 0
+  isUnlocked: 1

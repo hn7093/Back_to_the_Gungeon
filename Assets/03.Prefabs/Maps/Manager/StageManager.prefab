@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage:
   - {fileID: 8641816624991601808, guid: 2ed82a1f4d22fbd47b2706c97c2189ec, type: 3}
-  - {fileID: 6146605075607335282, guid: 371e5132e24617c4c934db09eb48fade, type: 3}
+  - {fileID: 3801005857738795882, guid: 24589f4592963c34faf5227179010f83, type: 3}
+  - {fileID: 3315943909040091223, guid: bae7c643125e6c849b5686de663d996d, type: 3}
+  - {fileID: 5782977722656119033, guid: b76bfd126a364fc4b9e48bf4fdd9c846, type: 3}
   - {fileID: 8683872029173957444, guid: cb72b3215d5975b4e8cf5803ef36041b, type: 3}
   - {fileID: 7626775572201589379, guid: 2724984570a60324f85a4bda2833c0ed, type: 3}
   - {fileID: 1538996686217890729, guid: 2c61e4b0ea6d3f848a8a42dfe8b48208, type: 3}
@@ -67,3 +69,4 @@ MonoBehaviour:
   currentStage: {fileID: 8683872029173957444, guid: cb72b3215d5975b4e8cf5803ef36041b,
     type: 3}
   nextStage: {fileID: 0}
+  stageCount: 0

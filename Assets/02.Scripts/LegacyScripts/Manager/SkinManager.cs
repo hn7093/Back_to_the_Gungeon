@@ -12,7 +12,14 @@ public class SkinManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         currentSkinIndex = PlayerPrefs.GetInt(PlayerController.skinIndexKey, 0);
     }
 
