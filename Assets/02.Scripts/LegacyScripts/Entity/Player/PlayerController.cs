@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum controlType
+public enum ControlType
 {
     keyboard = 0,
     mouse
@@ -24,7 +24,7 @@ public class PlayerController : BaseController
     private Vector2 currentTouchPosition;
     private bool isDragging = false;
     private float dragThreshold = 1f;
-    private controlType currentControllType;
+    private ControlType currentControllType;
     public static readonly string controlTypeKey = "controlTypeKey";
     public static readonly string skinIndexKey = "skinIndexKey";
     public static readonly string weaponIndexKey = "weaponIndexKey";
@@ -39,11 +39,11 @@ public class PlayerController : BaseController
     {
         resourceController = GetComponent<ResourceController>();
         weaponPivotAnimationHandler = GetComponentInChildren<WeaponPivotAnimationHandler>();
-
-        currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
-        currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
+        
+        currentControllType = (ControlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+        currentSkinIndex = SkinManager.Instance.CurrentSkinIndex;
         ChangePlayerSkin(currentSkinIndex);
-        currentWeaponIndex = PlayerPrefs.GetInt(weaponIndexKey, 0);
+        currentWeaponIndex = WeaponManager.Instance.CurrentWeaponIndex;
         ChangeWeapon(currentWeaponIndex);
     }
 
@@ -71,6 +71,24 @@ public class PlayerController : BaseController
             _weaponHandler.SetThrough(true);
         }
         */
+    }
+
+    public void NextControlType()
+    {
+        int currentControllTypeIndex = (int)currentControllType;
+        currentControllTypeIndex = (currentControllTypeIndex + 1) % 2;
+        currentControllType = (ControlType)currentControllTypeIndex;
+        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
+        PlayerPrefs.Save();
+    }
+
+    public void PreviousControlType()
+    {
+        int currentControllTypeIndex = (int)currentControllType;
+        currentControllTypeIndex = (currentControllTypeIndex - 1 + 2) % 2;
+        currentControllType = (ControlType)currentControllTypeIndex;
+        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
+        PlayerPrefs.Save();
     }
 
     protected override void HandleAction()
@@ -213,8 +231,8 @@ public class PlayerController : BaseController
         animationHandler.Damage();
     }
 
-    public override void DisableInvincible() 
-    { 
+    public override void DisableInvincible()
+    {
         animationHandler.EndInvincibility();
     }
 
@@ -245,26 +263,22 @@ public class PlayerController : BaseController
 
     public void NextSkin()
     {
-        int newSkinIndex = (currentSkinIndex + 1) % playerSkinPrefabs.Count;
+        int newSkinIndex = (currentSkinIndex + 1) % SkinManager.Instance.allSkins.Count;
         ChangePlayerSkin(newSkinIndex);
     }
 
     public void PrevSkin()
     {
-        int newSkinIndex = (currentSkinIndex - 1 + playerSkinPrefabs.Count) % playerSkinPrefabs.Count;
+        int newSkinIndex = (currentSkinIndex - 1 + SkinManager.Instance.allSkins.Count) % SkinManager.Instance.allSkins.Count;
         ChangePlayerSkin(newSkinIndex);
     }
 
     public void ChangePlayerSkin(int skinIndex)
     {
-        if (playerSkinPrefabs == null || playerSkinPrefabs.Count == 0) return;
 
-        skinIndex = Mathf.Clamp(skinIndex, 0, playerSkinPrefabs.Count - 1);
+        skinIndex = Mathf.Clamp(skinIndex, 0, SkinManager.Instance.allSkins.Count - 1);
         currentSkinIndex = skinIndex;
-
-        // 
-        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
-        PlayerPrefs.Save();
+        SkinManager.Instance.CurrentSkinIndex = skinIndex;
 
         if (currentSkin != null)
         {
@@ -272,14 +286,22 @@ public class PlayerController : BaseController
         }
 
 
-        currentSkin = Instantiate(playerSkinPrefabs[skinIndex], transform);
+        currentSkin = Instantiate(SkinManager.Instance.GetCurrentSkin().skinPrefab, transform);
         currentSkin.transform.localPosition = Vector3.zero;
-
+        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} 장착");
         StartCoroutine(DelayedSetNewSkin());
-        
-        
+    }
 
-        
+    public void SetSkin()
+    {
+        if (!SkinManager.Instance.IsSkinUnlocked(currentSkinIndex)) return;
+        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
+        PlayerPrefs.Save();
+    }
+
+    public void UnlockSkin()
+    {
+        SkinManager.Instance.UnlockSkin(currentSkinIndex);
     }
 
     private IEnumerator DelayedSetNewSkin()
@@ -301,37 +323,41 @@ public class PlayerController : BaseController
 
     public void NextWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex + 1) % weaponPrefabs.Count;
+        int newSkinIndex = (currentWeaponIndex + 1) % WeaponManager.Instance.allWeapons.Count;
         ChangeWeapon(newSkinIndex);
-        currentWeaponIndex = newSkinIndex;
     }
 
     public void PrevWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex - 1 + weaponPrefabs.Count) % weaponPrefabs.Count;
+        int newSkinIndex = (currentWeaponIndex - 1 + WeaponManager.Instance.allWeapons.Count) % WeaponManager.Instance.allWeapons.Count;
         ChangeWeapon(newSkinIndex);
-        currentWeaponIndex = newSkinIndex;
     }
 
     public void ChangeWeapon(int weaponIndex)
     {
         if (weaponPrefabs == null || weaponPrefabs.Count == 0) return;
 
-        weaponIndex = Mathf.Clamp(weaponIndex, 0, weaponPrefabs.Count - 1);
-        currentSkinIndex = weaponIndex;
-
-        // 
-        PlayerPrefs.SetInt(weaponIndexKey, currentSkinIndex);
-        PlayerPrefs.Save();
-
+        weaponIndex = Mathf.Clamp(weaponIndex, 0, WeaponManager.Instance.allWeapons.Count - 1);
+        currentWeaponIndex = weaponIndex;
+        WeaponManager.Instance.CurrentWeaponIndex = currentWeaponIndex;
         ClearWeapon();
 
-        currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponPivot);
+        currentWeapon = Instantiate(WeaponManager.Instance.GetCurrentWeapon().weaponPrefab, weaponPivot);
         Debug.Log("무기 변경: " + weaponIndex);
 
         StartCoroutine(DelayedSetNewWeapon());
+    }
 
-        
+    public void SetWeapon()
+    {
+        if (!WeaponManager.Instance.IsWeaponUnlocked(currentWeaponIndex)) return;
+        PlayerPrefs.SetInt(weaponIndexKey, currentWeaponIndex);
+        PlayerPrefs.Save();
+    }
+
+    public void UnlockWeapon()
+    {
+        WeaponManager.Instance.UnlockWeapon(currentWeaponIndex);
     }
 
     public void ClearWeapon()

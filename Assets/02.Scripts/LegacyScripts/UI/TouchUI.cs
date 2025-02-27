@@ -8,16 +8,19 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
     public RectTransform joystickHandle;      // 조이스틱 핸들
     private Vector2 inputVector;
     private bool isJoystickActive = false;
+    private ControlType controlType;
 
     public Vector2 Direction => inputVector;
 
     private void Start()
     {
+        controlType = (ControlType)PlayerPrefs.GetInt(PlayerController.controlTypeKey, 0);
         joystickBackground.gameObject.SetActive(false); // 시작할 때 조이스틱 숨기기
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (controlType == ControlType.keyboard) return;
         // 특정 UI 요소를 클릭했는지 확인 후 무시
         if (IsPointerOverUI()) return;
 
@@ -33,6 +36,7 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
         float radius = joystickBackground.sizeDelta.x / 2;
         inputVector = Vector2.ClampMagnitude(dragPosition / radius, 1.0f);
         joystickHandle.anchoredPosition = inputVector * radius;
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
