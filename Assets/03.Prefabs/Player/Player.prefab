@@ -131,12 +131,6 @@ MonoBehaviour:
   weaponData: {fileID: 0}
   lookOffset: 1
   closestEnemy: {fileID: 0}
-  playerSkinPrefabs:
-  - {fileID: 5128048467143391939, guid: 979d50fc87ff1a4478af5d37dcdfaece, type: 3}
-  - {fileID: 1604483481732085248, guid: 45bc80dad28508b488f82cf99a9595ec, type: 3}
-  weaponPrefabs:
-  - {fileID: 6110011351621286596, guid: 96ea9b3c155e67d439969832dd72202f, type: 3}
-  - {fileID: 3068870324399637210, guid: 36074238b8dd8eb4fa1a9dcc5ae0e4f0, type: 3}
   currentSkin: {fileID: 0}
   currentWeapon: {fileID: 0}
 --- !u!114 &8142921759286834746
@@ -563,6 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6240120175455629391}
+  - component: {fileID: 3336854274770906780}
   m_Layer: 7
   m_Name: ArmourPivot
   m_TagString: Untagged
@@ -585,6 +580,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4009260071148344988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3336854274770906780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992539236248486968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1f61ed2e5454cf297299ad9ec4eb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5232907372870795082
 GameObject:
   m_ObjectHideFlags: 0

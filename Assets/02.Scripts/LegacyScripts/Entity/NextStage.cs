@@ -10,6 +10,8 @@ public class NextStage : MonoBehaviour
     public GameObject closeDoor;
     public GameObject openDoor;
     
+    BoxCollider2D boxCollider;
+    
     public GameObject player;
     StageManager stageManager;
     public Fade fade;
@@ -23,15 +25,22 @@ public class NextStage : MonoBehaviour
         stageManager = FindObjectOfType<StageManager>();
     }
 
+    void Start()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
+
     public void DoorOpen()
     {
         closeDoor.gameObject.SetActive(false);
+        boxCollider.enabled = true;
         openDoor.gameObject.SetActive(true);
     }
 
     public void DoorClose()
     {
         closeDoor.gameObject.SetActive(true);
+        boxCollider.enabled = false;
         openDoor.gameObject.SetActive(false);
     }
 

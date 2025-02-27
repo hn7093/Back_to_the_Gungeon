@@ -5,20 +5,18 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Preference;
+
 public enum ControlType
 {
-    keyboard = 0,
-    mouse
+    mouse = 0,
+    keyboard
 }
 
 public class PlayerController : BaseController
 {
-    [SerializeField] List<GameObject> playerSkinPrefabs = new List<GameObject>();
-    [SerializeField] List<GameObject> weaponPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
     [SerializeField] protected GameObject currentWeapon;
-    private List<BaseController> enemyList; // ì  ë¦¬ìŠ¤íŠ¸
+    [SerializeField] private List<BaseController> enemyList; // Àû ¸®½ºÆ®
 
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
@@ -32,12 +30,18 @@ public class PlayerController : BaseController
     private int currentSkinIndex;
     private int currentWeaponIndex;
 
+    private ResourceController resourceController;
+    private WeaponPivotAnimationHandler weaponPivotAnimationHandler;
+
     private void Start()
     {
+        resourceController = GetComponent<ResourceController>();
+        weaponPivotAnimationHandler = GetComponentInChildren<WeaponPivotAnimationHandler>();
+
         currentControllType = (ControlType)PlayerPrefs.GetInt(controlTypeKey, 0);
-        currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
+        currentSkinIndex = SkinManager.Instance.CurrentSkinIndex;
         ChangePlayerSkin(currentSkinIndex);
-        currentWeaponIndex = PlayerPrefs.GetInt(weaponIndexKey, 0);
+        currentWeaponIndex = WeaponManager.Instance.CurrentWeaponIndex;
         ChangeWeapon(currentWeaponIndex);
     }
 
@@ -52,9 +56,27 @@ public class PlayerController : BaseController
         HandleAttackDelay();
     }
 
+    public void NextControlType()
+    {
+        int currentControllTypeIndex = (int)currentControllType;
+        currentControllTypeIndex = (currentControllTypeIndex + 1) % 2;
+        currentControllType = (ControlType)currentControllTypeIndex;
+        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
+        PlayerPrefs.Save();
+    }
+
+    public void PreviousControlType()
+    {
+        int currentControllTypeIndex = (int)currentControllType;
+        currentControllTypeIndex = (currentControllTypeIndex - 1 + 2) % 2;
+        currentControllType = (ControlType)currentControllTypeIndex;
+        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
+        PlayerPrefs.Save();
+    }
+
     protected override void HandleAction()
     {
-        if (currentControllType == 0)
+        if (currentControllType == ControlType.keyboard)
             HandleKeyboardInput();
         else
             HandleMouseInput();
@@ -126,15 +148,15 @@ public class PlayerController : BaseController
 
         foreach (var enemy in enemyList)
         {
-            // í™œì„±í™” ëœ ì˜¤ë¸Œì íŠ¸ì¼ ë•Œë§Œ
-            if (!enemy.gameObject.activeSelf) continue;
+            // È°¼ºÈ­ µÈ ¿ÀºêÁ§Æ®ÀÏ ¶§¸¸
+            if (enemy == null || !enemy.gameObject.activeSelf) continue;
 
-            // ë¹„êµìš©ìœ¼ë¡œ ì°¨ì´ì˜ ì œê³±ì„ ì‚¬ìš© - ì œê³±ê·¼ ìƒëµ
+            // ºñ±³¿ëÀ¸·Î Â÷ÀÌÀÇ Á¦°öÀ» »ç¿ë - Á¦°ö±Ù »ı·«
             float dis = (enemy.transform.position - weaponPivot.position).sqrMagnitude;
             Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("Wall", "innerWall"));
 
-            if (hit.collider == null)//ë²½ì´ ì—†ìœ¼ë©´ bestEnemyë¡œ ì§€ì •
+            if (hit.collider == null)//º®ÀÌ ¾øÀ¸¸é bestEnemy·Î ÁöÁ¤
             {
                 if (dis < closestDistance)
                 {
@@ -142,7 +164,7 @@ public class PlayerController : BaseController
                     bestEnemy = enemy.transform;
                 }
             }
-            else//ë²½ì´ ìˆìœ¼ë©´ blockedEnemyë¡œ ì§€ì •
+            else//º®ÀÌ ÀÖÀ¸¸é blockedEnemy·Î ÁöÁ¤
             {
                 if (dis < blockedDistance)
                 {
@@ -179,12 +201,22 @@ public class PlayerController : BaseController
             timeSinceLastAttack += Time.deltaTime;
         }
 
-        // ê³µê²© ê°€ëŠ¥ ì—¬ë¶€ í™•ì¸
+        // °ø°İ °¡´É ¿©ºÎ È®ÀÎ
         if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && isAnyEnemy)
         {
             timeSinceLastAttack = 0;
             Attack();
         }
+    }
+
+    public override void Damage()
+    {
+        animationHandler.Damage();
+    }
+
+    public override void DisableInvincible()
+    {
+        animationHandler.EndInvincibility();
     }
 
     public override void Death()
@@ -193,18 +225,19 @@ public class PlayerController : BaseController
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
         animationHandler.Death();
+        weaponPivotAnimationHandler.Death();
 
-        // ëª¨ë“  ë³¸ì¸ê³¼ ìì‹ ì»´í¬ë„ŒíŠ¸ ë¹„í™œì„±í™”
+        // ¸ğµç º»ÀÎ°ú ÀÚ½Ä ÄÄÆ÷³ÍÆ® ºñÈ°¼ºÈ­
         StartCoroutine(DisableComponentsAfterDelay(2f));
 
-        // ê²Œì„ì˜¤ë²„ í™”ë©´ í˜¸ì¶œ
+        // °ÔÀÓ¿À¹ö È­¸é È£Ãâ
     }
 
     private IEnumerator DisableComponentsAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        weaponPivot.gameObject.SetActive(false);
 
-        // ëª¨ë“  ë³¸ì¸ê³¼ ìì‹ ì»´í¬ë„ŒíŠ¸ ë¹„í™œì„±í™”
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
@@ -213,13 +246,13 @@ public class PlayerController : BaseController
 
     public void NextSkin()
     {
-        int newSkinIndex = (currentSkinIndex + 1) % playerSkinPrefabs.Count;
+        int newSkinIndex = (currentSkinIndex + 1) % SkinManager.Instance.allSkins.Count;
         ChangePlayerSkin(newSkinIndex);
     }
 
     public void PrevSkin()
     {
-        int newSkinIndex = (currentSkinIndex - 1 + playerSkinPrefabs.Count) % playerSkinPrefabs.Count;
+        int newSkinIndex = (currentSkinIndex - 1 + SkinManager.Instance.allSkins.Count) % SkinManager.Instance.allSkins.Count;
         ChangePlayerSkin(newSkinIndex);
     }
 
@@ -238,9 +271,10 @@ public class PlayerController : BaseController
 
         currentSkin = Instantiate(SkinManager.Instance.GetCurrentSkin().skinPrefab, transform);
         currentSkin.transform.localPosition = Vector3.zero;
-        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} ì¥ì°©");
+        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} ÀåÂø");
         StartCoroutine(DelayedSetNewSkin());
     }
+
     public void SetSkin()
     {
         if (!SkinManager.Instance.IsSkinUnlocked(currentSkinIndex)) return;
@@ -255,13 +289,13 @@ public class PlayerController : BaseController
 
     private IEnumerator DelayedSetNewSkin()
     {
-        yield return null; // í•œ í”„ë ˆì„ ëŒ€ê¸°
+        yield return null; // ÇÑ ÇÁ·¹ÀÓ ´ë±â
         characterRenderer = currentSkin.GetComponent<SpriteRenderer>();
         animationHandler = currentSkin.GetComponentInChildren<PlayerAnimationHandler>();
 
         if (animationHandler != null)
         {
-            animationHandler.Init();  //  ìƒˆë¡œìš´ ìŠ¤í‚¨ì˜ Animator ì¬í• ë‹¹
+            animationHandler.Init();  //  »õ·Î¿î ½ºÅ²ÀÇ Animator ÀçÇÒ´ç
             Debug.Log(" AnimationHandler initialized after skin change.");
         }
         else
@@ -269,52 +303,51 @@ public class PlayerController : BaseController
             Debug.Log(" AnimationHandler is NULL after skin change!");
         }
     }
+
     public void NextWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex + 1) % weaponPrefabs.Count;
+        int newSkinIndex = (currentWeaponIndex + 1) % WeaponManager.Instance.allWeapons.Count;
         ChangeWeapon(newSkinIndex);
     }
 
     public void PrevWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex - 1 + weaponPrefabs.Count) % weaponPrefabs.Count;
+        int newSkinIndex = (currentWeaponIndex - 1 + WeaponManager.Instance.allWeapons.Count) % WeaponManager.Instance.allWeapons.Count;
         ChangeWeapon(newSkinIndex);
     }
 
     public void ChangeWeapon(int weaponIndex)
     {
-        if (weaponPrefabs == null || weaponPrefabs.Count == 0) return;
-
-        weaponIndex = Mathf.Clamp(weaponIndex, 0, weaponPrefabs.Count - 1);
-        currentSkinIndex = weaponIndex;
-
-        // 
-        PlayerPrefs.SetInt(weaponIndexKey, currentSkinIndex);
-        PlayerPrefs.Save();
-
+        weaponIndex = Mathf.Clamp(weaponIndex, 0, WeaponManager.Instance.allWeapons.Count - 1);
+        currentWeaponIndex = weaponIndex;
+        WeaponManager.Instance.CurrentWeaponIndex = currentWeaponIndex;
         ClearWeapon();
 
-        currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponPivot);
+        currentWeapon = Instantiate(WeaponManager.Instance.GetCurrentWeapon().weaponPrefab, weaponPivot);
+        Debug.Log("¹«±â º¯°æ: " + weaponIndex);
 
-        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
-        StartCoroutine(DelayedFindWeaponRenderer());
+        StartCoroutine(DelayedSetNewWeapon());
+    }
 
-        if (_weaponHandler != null)
-        {
-            this.weaponData = _weaponHandler.weaponData; // WeaponSO ê°€ì ¸ì˜¤ê¸°
-            Debug.Log("í˜„ì¬ ì¥ì°©í•œ ë¬´ê¸°: " + this.weaponData.name);
-            _weaponHandler.Setup(weaponData);
-        }
-        else
-        {
-            Debug.LogError("WeaponHandlerë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
-        }
+    public void SetWeapon()
+    {
+        if (!WeaponManager.Instance.IsWeaponUnlocked(currentWeaponIndex)) return;
+        PlayerPrefs.SetInt(weaponIndexKey, currentWeaponIndex);
+        PlayerPrefs.Save();
+    }
+
+    public void UnlockWeapon()
+    {
+        WeaponManager.Instance.UnlockWeapon(currentWeaponIndex);
     }
 
     public void ClearWeapon()
     {
         if (currentWeapon != null)
+        {
             Destroy(currentWeapon);
+            currentWeapon = null;
+        }
 
         if (_weaponHandler != null)
             _weaponHandler = null;
@@ -326,15 +359,29 @@ public class PlayerController : BaseController
             weaponData = null;
     }
 
-    private IEnumerator DelayedFindWeaponRenderer()
+    private IEnumerator DelayedSetNewWeapon()
     {
-        yield return null; // í•œ í”„ë ˆì„ ëŒ€ê¸°
+        yield return null; // ÇÑ ÇÁ·¹ÀÓ ´ë±â
         FindWeaponRenderer();
+        Debug.Log("DelayedSetNewWeapon ½ÇÇàµÊ");
+        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
+
+        if (_weaponHandler != null)
+        {
+            this.weaponData = _weaponHandler.weaponData; // WeaponSO °¡Á®¿À±â
+            Debug.Log("ÇöÀç ÀåÂøÇÑ ¹«±â: " + this.weaponData.name);
+            _weaponHandler.Setup(weaponData);
+        }
+        else
+        {
+            Debug.Log("WeaponHandler¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù!");
+        }
     }
 
-    // ëŠ¥ë ¥ì¹˜ ë³€ê²½ ëª¨ìŒ
+
+    // ´É·ÂÄ¡ º¯°æ ¸ğÀ½
     #region Status Change
-    // ì²´ë ¥ ì¦ê°€ - í¼ì„¼íŠ¸
+    // Ã¼·Â Áõ°¡ - ÆÛ¼¾Æ®
     public void ChangeHealth(float value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -344,7 +391,7 @@ public class PlayerController : BaseController
             resourceController.ChangeHealth(healthValue);
         }
     }
-    // ì²´ë ¥ ì¦ê°€ - ì •ìˆ˜
+    // Ã¼·Â Áõ°¡ - Á¤¼ö
     public void ChangeHealth(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -354,7 +401,7 @@ public class PlayerController : BaseController
         }
     }
 
-    // ìµœëŒ€ ì²´ë ¥ ì¦ê°€, changeHealthê°€ ì°¸ì´ë©´ íšŒë³µê¹Œì§€ ì§„í–‰ - í¼ì„¼íŠ¸
+    // ÃÖ´ë Ã¼·Â Áõ°¡, changeHealth°¡ ÂüÀÌ¸é È¸º¹±îÁö ÁøÇà - ÆÛ¼¾Æ®
     public void AddMaxHP(float addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -364,7 +411,7 @@ public class PlayerController : BaseController
             resourceController.AddMaxHealth(healthValue);
         }
     }
-    // ìµœëŒ€ ì²´ë ¥ ì¦ê°€, ì •ìˆ˜
+    // ÃÖ´ë Ã¼·Â Áõ°¡, Á¤¼ö
     public void AddMaxHP(int addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -373,17 +420,17 @@ public class PlayerController : BaseController
             resourceController.AddMaxHealth(addHealth, changeHealth);
         }
     }
-    // ê³µê²©ë ¥ ì¦ê°€ - í¼ì„¼íŠ¸
+    // °ø°İ·Â Áõ°¡ - ÆÛ¼¾Æ®
     public void AddPower(int percent)
     {
         _weaponHandler.AddPower(percent);
     }
-    // ê³µê²© ì†ë„ ì¦ê°€ - í¼ì„¼íŠ¸
+    // °ø°İ ¼Óµµ Áõ°¡ - ÆÛ¼¾Æ®
     public void AddAttackSpeed(int percent)
     {
         _weaponHandler.AddAttackSpeed(percent);
     }
-    // ì´ë™ ì†ë„ ì¦ê°€ - ì •ìˆ˜
+    // ÀÌµ¿ ¼Óµµ Áõ°¡ - Á¤¼ö
     public void AddSpeed(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -394,18 +441,18 @@ public class PlayerController : BaseController
     }
 
 
-    // ë°œì‚¬ íƒ„ìˆ˜ ì¦ê°€
+    // ¹ß»ç Åº¼ö Áõ°¡
     public void AddBullet(int value)
     {
         _weaponHandler.AddFrontBullet(value);
     }
 
-    // ì´ì•Œ ë²½ ë°˜ì‚¬
+    // ÃÑ¾Ë º® ¹İ»ç
     public void SetBounce(bool canBounce)
     {
         _weaponHandler.SetBounce(canBounce);
     }
-    // ì´ì•Œ ì  í†µê³¼
+    // ÃÑ¾Ë Àû Åë°ú
     public void SetThrough(bool canThrough)
     {
         _weaponHandler.SetThrough(canThrough);

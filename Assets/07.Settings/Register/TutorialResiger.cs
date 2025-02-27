@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TutorialEvent : MonoBehaviour
 {
-    [Range(2, 3)]
     public int step;
     private void OnDestroy()
     {
+        Debug.Log(step);
         switch (step)
         {
             case 2:

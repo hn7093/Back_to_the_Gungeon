@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponPivotAnimationHandler : BaseAnimationController
+public class WeaponPivotAnimationHandler : BaseAnimationHandler
 {
     private static readonly int IsDie = Animator.StringToHash("IsDie");
 

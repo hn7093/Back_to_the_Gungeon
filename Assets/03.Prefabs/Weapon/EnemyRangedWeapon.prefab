@@ -154,7 +154,7 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 128
-  weaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
   projectileSpawnPosition: {fileID: 1506056080636158224}
   canBounce: 0
   canThrough: 0
