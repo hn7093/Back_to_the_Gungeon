@@ -1,24 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SocialPlatforms.Impl;
+using static UnityEngine.GraphicsBuffer;
 
+
+public enum EnemyType
+{
+    melee = 0,
+    ranged,
+    boss
+}
 
 // 적 행동 로직
 public class EnemyController : BaseController
 {
     [Header("EnemyInfo")]
     [SerializeField] private float followRange = 15f; // 추적 거리
+    [SerializeField] private float attackRange = 5f;
+    [SerializeField] private float roamRadius = 3f; // 배회 범위
     [SerializeField] private bool canMove = true;
     [SerializeField] private bool chase = true;
-    private EnemyManager enemyManager;
+    [SerializeField] EnemyType enemyType = 0;
+    protected EnemyManager enemyManager;
     private Transform target;
     private NavMeshAgent agent;
     public Transform AttackPos;
     private Vector2 lastPosition;
     protected bool isMove;
+
+    private Vector3 roamTarget; // 배회 위치
+    private bool isRoaming; // 배회 중인지 여부
+    private float attackCooldown = 1f; // 공격 쿨타임
+    private float lastAttackTime;
+
 
     enum Enemy_State
     {
@@ -49,7 +67,7 @@ public class EnemyController : BaseController
 
     protected void Movement()
     {
-
+        if(enemyType == EnemyType.ranged) return;
         //Debug.Log($" Move called with magnitude: {obj.magnitude}");
 
         Vector2 currentPosition = transform.position;
@@ -74,26 +92,33 @@ public class EnemyController : BaseController
     protected override void HandleAction()
     {
         base.HandleAction();
+        if (enemyType == EnemyType.melee)
+            MeleeEnemyAction();
+        else if (enemyType == EnemyType.ranged)
+            RangedEnemyAction();
+    }
 
-        // 목표 없으면 행동 X
-        if (_weaponHandler == null || target == null)
+    protected void MeleeEnemyAction()
+    {
+    // 목표 없으면 행동 X
+    if (_weaponHandler == null || target == null)
+    {
+        if (!movementDirection.Equals(Vector2.zero))
         {
-            if (!movementDirection.Equals(Vector2.zero))
-            {
-                movementDirection = Vector2.zero;
-            }
-            return;
+            movementDirection = Vector2.zero;
         }
+        return;
+    }
 
-        // 행동 시작
-        float distance = DistanceToTarget();
-        Vector2 direction = DirectionToTarget();
-        //if (chase)
-        {
-            agent.SetDestination(target.position);
-        }
-        // 거리에 따라 공격 or 추격
-        isAttacking = false;
+    // 행동 시작
+    float distance = DistanceToTarget();
+    Vector2 direction = DirectionToTarget();
+    //if (chase)
+    {
+        agent.SetDestination(target.position);
+    }
+    // 거리에 따라 공격 or 추격
+    isAttacking = false;
         if (distance <= followRange)
         {
             // 방향 전환
@@ -130,6 +155,65 @@ public class EnemyController : BaseController
             }
         }
     }
+
+    protected void RangedEnemyAction()
+    {
+        if (_weaponHandler == null || target == null)
+        {
+            if (!movementDirection.Equals(Vector2.zero))
+            {
+                movementDirection = Vector2.zero;
+            }
+            return;
+        }
+
+        float distance = DistanceToTarget();
+        Vector2 direction = DirectionToTarget();
+
+        if (distance <= followRange)
+        {
+            // 플레이어 근처에서 배회 (Roam)
+            if (!isRoaming && distance > attackRange)
+            {
+                isRoaming = true;
+                roamTarget = GetRoamPosition();
+                agent.SetDestination(roamTarget);
+            }
+
+            // 공격 가능 거리 안이라면 공격
+            if (distance <= attackRange && Time.time - lastAttackTime > attackCooldown)
+            {
+                isAttacking = true;
+                agent.SetDestination(transform.position); // 공격 시 멈추기
+                StartCoroutine(AttackRoutine(direction));
+                animationHandler.Attack();
+                lastAttackTime = Time.time;
+            }
+            else
+            {
+                isAttacking = false;
+            }
+        }
+    }
+
+    private IEnumerator AttackRoutine(Vector2 direction)
+    {
+        if (_weaponHandler != null)
+        {
+            yield return _weaponHandler.Attack();
+        }
+    }
+
+    private Vector3 GetRoamPosition()
+    {
+        // 플레이어 근처에서 랜덤 위치를 배회
+        Vector3 randomDirection = (Random.insideUnitSphere * roamRadius);
+        randomDirection += target.position;
+        NavMeshHit navHit;
+        NavMesh.SamplePosition(randomDirection, out navHit, roamRadius, NavMesh.AllAreas);
+        return navHit.position;
+    }
+
     protected void BaseHandleAction()
     {
         base.HandleAction();
@@ -138,7 +222,7 @@ public class EnemyController : BaseController
     public override void Death()
     {
         animationHandler.Death();
-        base.Death();
         EnemyManager.Instance.RemoveEnemyOnDeath(this);
+        base.Death();
     }
 }

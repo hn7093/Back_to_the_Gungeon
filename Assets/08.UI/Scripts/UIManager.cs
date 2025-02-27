@@ -16,7 +16,7 @@ namespace Preference
         ROULETTE_PAGE,
         STAGE_CLEAR_PAGE,
         DIALOGUE_PAGE, // 대화 데이터까지 포함하여
-        IVENTORY_PAGE,
+        INVENTORY_PAGE,
         PAUSE_PAGE,
         QUEST_PAGE,
         QUEST_COMPLETE_PAGE,
@@ -75,9 +75,12 @@ namespace Preference
             foreach (PageObject page in Pages)
             {
                 GameObject pageInstance = page.Instance;
-                
-                pageInstance.SetActive(false);
-                pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
+
+                if (pageInstance)
+                {
+                    pageInstance?.SetActive(false);
+                    pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
+                }
             }
         }
 
@@ -85,7 +88,9 @@ namespace Preference
         public void OpenPage(PageType pageName)
         {
             // Debug.Log(pageName);
-            _currentPage?.Instance.SetActive(false);
+            if (_currentPage?.Instance) {
+                _currentPage?.Instance?.SetActive(false);
+            }
             
             // hofix: 홈으로 가는 경우로 해둔 목록들, lobby 체크를 통해 비활성화
             if (pageName == PageType.HOME_PAGE && !isLobby) { return; } 

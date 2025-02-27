@@ -8,15 +8,15 @@ using UnityEngine.EventSystems;
 
 public enum ControlType
 {
-    keyboard = 0,
-    mouse
+    mouse = 0,
+    keyboard
 }
 
 public class PlayerController : BaseController
 {
     [SerializeField] protected GameObject currentSkin;
     [SerializeField] protected GameObject currentWeapon;
-    private List<BaseController> enemyList; // 적 리스트
+    [SerializeField] private List<BaseController> enemyList; // 적 리스트
 
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
@@ -54,21 +54,6 @@ public class PlayerController : BaseController
         Rotate(isLeft);
         SetIsAttacking();
         HandleAttackDelay();
-        // 임시 테스트
-        /*
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            _weaponHandler.AddFrontBullet(1);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _weaponHandler.SetBounce(true);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _weaponHandler.SetThrough(true);
-        }
-        */
     }
 
     public void NextControlType()
@@ -91,7 +76,7 @@ public class PlayerController : BaseController
 
     protected override void HandleAction()
     {
-        if (currentControllType == 0)
+        if (currentControllType == ControlType.keyboard)
             HandleKeyboardInput();
         else
             HandleMouseInput();
@@ -164,7 +149,7 @@ public class PlayerController : BaseController
         foreach (var enemy in enemyList)
         {
             // 활성화 된 오브젝트일 때만
-            if (!enemy.gameObject.activeSelf) continue;
+            if (enemy == null || !enemy.gameObject.activeSelf) continue;
 
             // 비교용으로 차이의 제곱을 사용 - 제곱근 생략
             float dis = (enemy.transform.position - weaponPivot.position).sqrMagnitude;

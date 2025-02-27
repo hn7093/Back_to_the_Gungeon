@@ -154,24 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target:
     serializedVersion: 2
-    m_Bits: 0
-  delay: 1
-  weaponSize: 1
-  power: 1
-  speed: 1
-  attackRange: 10
-  isOnKnockback: 0
-  knockbackPower: 0.1
-  knockbackTime: 0.5
-  attackSoundClip: {fileID: 0}
+    m_Bits: 128
+  weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
   projectileSpawnPosition: {fileID: 5816003107495249121}
-  bulletIndex: 0
-  bulletSize: 1
-  duration: 0
-  spread: 0
-  numberofProjectilesPerShot: 0
-  multipleProjectilesAngel: 0
-  projectileColor: {r: 0, g: 0, b: 0, a: 0}
+  canBounce: 0
+  canThrough: 0
 --- !u!1 &5974213904799879648
 GameObject:
   m_ObjectHideFlags: 0
