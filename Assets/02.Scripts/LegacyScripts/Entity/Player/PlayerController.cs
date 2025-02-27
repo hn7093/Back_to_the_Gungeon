@@ -14,8 +14,6 @@ public enum ControlType
 
 public class PlayerController : BaseController
 {
-    [SerializeField] List<GameObject> playerSkinPrefabs = new List<GameObject>();
-    [SerializeField] List<GameObject> weaponPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
     [SerializeField] protected GameObject currentWeapon;
     private List<BaseController> enemyList; // 적 리스트
@@ -335,8 +333,6 @@ public class PlayerController : BaseController
 
     public void ChangeWeapon(int weaponIndex)
     {
-        if (weaponPrefabs == null || weaponPrefabs.Count == 0) return;
-
         weaponIndex = Mathf.Clamp(weaponIndex, 0, WeaponManager.Instance.allWeapons.Count - 1);
         currentWeaponIndex = weaponIndex;
         WeaponManager.Instance.CurrentWeaponIndex = currentWeaponIndex;
