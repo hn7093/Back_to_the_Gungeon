@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 조작모드 변경">
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="fix: UI 관련 일괄 수정">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/NPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/Register/NPCRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/Register/NPCRegister.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/07.Settings/Register/TutorialResiger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/Register/TutorialResiger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/DieTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/DieTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/TutorialDialogPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/TutorialDialogPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -349,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740642818070</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix: UI 관련 일괄 수정">
+      <option name="closed" value="true" />
+      <created>1740645341429</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1740645341429</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +407,7 @@
     <MESSAGE value="workspace.xml 파일 변경 사항 저장" />
     <MESSAGE value="fix: 로비 씬 변경" />
     <MESSAGE value="feat: 조작모드 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 조작모드 변경" />
+    <MESSAGE value="fix: UI 관련 일괄 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: UI 관련 일괄 수정" />
   </component>
 </project>

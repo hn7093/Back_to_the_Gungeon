@@ -15,13 +15,13 @@ public class NPCRegister : MonoBehaviour
             if (npcType == NPCType.ANGEL)
             {
                 await SystemManager.Instance.EventManager.OpenEventPage(PageType.ANGEL_PAGE);
-                Destroy(gameObject);
+                if(gameObject) Destroy(gameObject);
             }
 
             if (npcType == NPCType.DEVIL)
             {
                 await SystemManager.Instance.EventManager.OpenEventPage(PageType.DEVIL_PAGE);
-                Destroy(gameObject);
+                if(gameObject) Destroy(gameObject);
             }
         }
     }

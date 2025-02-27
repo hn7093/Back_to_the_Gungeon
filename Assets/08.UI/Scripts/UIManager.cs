@@ -76,7 +76,7 @@ namespace Preference
             {
                 GameObject pageInstance = page.Instance;
 
-                if (pageInstance != null)
+                if (pageInstance)
                 {
                     pageInstance?.SetActive(false);
                     pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
