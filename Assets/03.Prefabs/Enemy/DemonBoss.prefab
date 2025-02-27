@@ -119,12 +119,12 @@ GameObject:
   - component: {fileID: 4715975410900441675}
   - component: {fileID: 1231863943420496611}
   - component: {fileID: 180712509757859784}
-  - component: {fileID: 2625925163300391098}
   - component: {fileID: 7493903531096695518}
   - component: {fileID: 937961313174226330}
+  - component: {fileID: 1567146099578590670}
   m_Layer: 0
   m_Name: DemonBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,10 +168,15 @@ MonoBehaviour:
   weaponPivot: {fileID: 0}
   weaponData: {fileID: 0}
   lookOffset: 1.5
+  triggerCollider: {fileID: 0}
   closestEnemy: {fileID: 0}
   followRange: 15
+  attackRange: 5
+  roamRadius: 3
   canMove: 1
   chase: 1
+  enemyType: 0
+  target: {fileID: 0}
   AttackPos: {fileID: 0}
   weaponHandlers:
   - {fileID: 3080419764007351035}
@@ -280,18 +285,6 @@ MonoBehaviour:
   InvincibleTime: 0.5
   CurrentHealth: 0
   damageClip: {fileID: 0}
---- !u!114 &2625925163300391098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990810566253474988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 698fe52986302344fa8590f0279124db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &7493903531096695518
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -335,6 +328,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1567146099578590670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990810566253474988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e713cd8629dd6d54791ab6ddbb011348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1590117309946280354
 GameObject:
   m_ObjectHideFlags: 0
