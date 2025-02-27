@@ -16,7 +16,7 @@ namespace Preference
         ROULETTE_PAGE,
         STAGE_CLEAR_PAGE,
         DIALOGUE_PAGE, // 대화 데이터까지 포함하여
-        IVENTORY_PAGE,
+        INVENTORY_PAGE,
         PAUSE_PAGE,
         QUEST_PAGE,
         QUEST_COMPLETE_PAGE,
