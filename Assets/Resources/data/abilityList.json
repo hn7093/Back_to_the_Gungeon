@@ -35,26 +35,20 @@
     {
       "method": "Double",
       "name": "더블 샷",
-      "description": "한번에 두번 공격이 발생합니다.",
+      "description": "발사체가 두발 늘어납니다.",
       "filePath": "double"
     },
     {
       "method": "Penetration",
-      "name": "투과 샷",
-      "description": "총알이 투과됩니다.",
+      "name": "관통 탄환",
+      "description": "총알이 적을 관통합니다.",
       "filePath": "penetration"
     },
     {
       "method": "Reflection",
-      "name": "반동 샷",
-      "description": "총알이 반사됩니다.",
+      "name": "거울 탄환",
+      "description": "총알이 튕겨납니다.",
       "filePath": "reflection"
-    },
-    {
-      "method": "Multi",
-      "name": "멀티 샷",
-      "description": "한번에 여러발 분사합니다.",
-      "filePath": "Multi"
     }
   ]
 }
