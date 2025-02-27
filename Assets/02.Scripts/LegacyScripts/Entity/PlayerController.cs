@@ -50,64 +50,6 @@ public class PlayerController : BaseController
         Rotate(isLeft);
         SetIsAttacking();
         HandleAttackDelay();
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SystemManager.Instance.EventManager.OpenEventPage(PageType.ANGEL_PAGE).ContinueWith(task =>
-    {
-        Debug.Log(task.Result);
-        switch (int.Parse(task.Result))
-        {
-            case 1:
-
-                break;
-            case 2:
-                Debug.Log("2번");
-                break;
-            case 3:
-                Debug.Log("3번");
-                // 총 반사
-                SetBounce(true);
-                break;
-            case 4:
-                Debug.Log("4번");
-                // 대미지 30 증가
-                AddPower(30);
-                break;
-            case 5:
-                Debug.Log("5번");
-                // 대미지 15% 증가
-                AddPower(15);
-                break;
-            case 6:
-                // 관통
-                SetThrough(true);
-                break;
-            case 7:
-                // 최대 체력 회복 20%
-                AddMaxHP(30.0f);
-                break;
-            case 8:
-                // 체력 회복 30%
-                ChangeHealth(30.0f);
-                break;
-            case 9:
-                // 탄환 증가 1
-                AddBullet(1);
-                break;
-            case 10:
-                // 속도 부스트 3
-                AddSpeed(3);
-                break;
-            case 11:
-                // 공격 속도 부스트 25
-                AddAttackSpeed(25);
-                break;
-
-
-        }
-    });
-
-        }
     }
 
     protected override void HandleAction()
@@ -380,8 +322,7 @@ public class PlayerController : BaseController
 
     // 능력치 변경 모음
     #region Status Change
-
-    // 체력 증가
+    // 체력 증가 - 퍼센트
     public void ChangeHealth(float value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -391,6 +332,7 @@ public class PlayerController : BaseController
             resourceController.ChangeHealth(healthValue);
         }
     }
+    // 체력 증가 - 정수
     public void ChangeHealth(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -400,16 +342,17 @@ public class PlayerController : BaseController
         }
     }
 
-    // 최대 체력 증가, changeHealth가 참이면 회복까지 진행
+    // 최대 체력 증가, changeHealth가 참이면 회복까지 진행 - 퍼센트
     public void AddMaxHP(float addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
         if (resourceController != null)
         {
             int healthValue = (int)(addHealth * resourceController.MaxHealth / 100);
-            resourceController.AddMaxHealth(healthValue, changeHealth);
+            resourceController.AddMaxHealth(healthValue);
         }
     }
+    // 최대 체력 증가, 정수
     public void AddMaxHP(int addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -418,17 +361,17 @@ public class PlayerController : BaseController
             resourceController.AddMaxHealth(addHealth, changeHealth);
         }
     }
-    // 공격력 증가
+    // 공격력 증가 - 퍼센트
     public void AddPower(int percent)
     {
         _weaponHandler.AddPower(percent);
     }
-    // 공격 속도 증가
+    // 공격 속도 증가 - 퍼센트
     public void AddAttackSpeed(int percent)
     {
         _weaponHandler.AddAttackSpeed(percent);
     }
-    // 이동 속도 증가
+    // 이동 속도 증가 - 정수
     public void AddSpeed(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -437,6 +380,7 @@ public class PlayerController : BaseController
             resourceController.AddSpeed(value);
         }
     }
+    
 
     // 발사 탄수 증가
     public void AddBullet(int value)

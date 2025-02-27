@@ -35,11 +35,11 @@ public class MagicBoss : EnemyController
             lastAcitionTime = 0;
             // 랜덤 패턴
             int act = Random.Range(0, 4); // 0~3
-            Debug.Log("act  " + act);
             // 반복 이동
             switch (act)
             {
                 case 0:
+                    // 코투틴중에는 Dotween 사용불가로 미리 호출
                     _rigidbody.DOMove(-lookDirection, 3f);
                     StartCoroutine(Acition0());
                     break;
@@ -61,7 +61,7 @@ public class MagicBoss : EnemyController
     // 공격 패턴
     protected virtual IEnumerator Acition0()
     {
-        actionDuration = 4.0f;
+        actionDuration = 5.0f;
         StartCoroutine(weaponHandlers[0].Attack());
         yield return new WaitForSeconds(1f);
         StartCoroutine(weaponHandlers[0].Attack());
@@ -70,7 +70,7 @@ public class MagicBoss : EnemyController
     }
     protected virtual IEnumerator Acition1()
     {
-        actionDuration = 4.0f;
+        actionDuration = 5.0f;
         StartCoroutine(weaponHandlers[1].Attack());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(weaponHandlers[1].Attack());
@@ -79,7 +79,7 @@ public class MagicBoss : EnemyController
     }
     protected virtual IEnumerator Acition2()
     {
-        actionDuration = 4.0f;
+        actionDuration = 5.0f;
         weaponHandlers[2].SetBounce(true);
         StartCoroutine(weaponHandlers[2].Attack());
         yield return new WaitForSeconds(0.7f);

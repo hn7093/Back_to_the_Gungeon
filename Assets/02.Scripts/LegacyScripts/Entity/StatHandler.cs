@@ -11,7 +11,7 @@ public class StatHandler : MonoBehaviour
     {
         get => health;
 
-        set => health = Mathf.Clamp(value, 0, 100);
+        set => health = Mathf.Clamp(value, 0, 1000);
     }
 
     [Range(1f, 20f)][SerializeField] private float speed = 3;
