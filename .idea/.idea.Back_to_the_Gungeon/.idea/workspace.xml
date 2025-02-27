@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 로비 변경" />
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="fix: UI 로그 제거">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/Register/NPCRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/Register/NPCRegister.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="1" />
+        <entry key="$PROJECT_DIR$" value="2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,22 +27,22 @@
     &quot;assignee&quot;: &quot;junebeomlee&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hn7093/Back_to_the_Gungeon.git",
-    "accountId": "78ea2598-de15-42d5-baf0-21b271dba9ce"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hn7093/Back_to_the_Gungeon.git&quot;,
+    &quot;accountId&quot;: &quot;78ea2598-de15-42d5-baf0-21b271dba9ce&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "hn7093",
-    "repository": "Back_to_the_Gungeon"
+    &quot;owner&quot;: &quot;hn7093&quot;,
+    &quot;repository&quot;: &quot;Back_to_the_Gungeon&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
@@ -56,8 +59,10 @@
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/BaseController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,8 +85,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/QuestEventDetector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/Register/NPCRegister.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
@@ -91,6 +98,8 @@
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -118,7 +127,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "2",
+    "git-widget-placeholder": "1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -273,7 +282,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740639954534</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: 시스템 매니저 프리팹 구조 변경">
+      <option name="closed" value="true" />
+      <created>1740642007984</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740642007984</updated>
+    </task>
+    <task id="LOCAL-00010" summary="리워드 테스트 변경">
+      <option name="closed" value="true" />
+      <created>1740642018044</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740642018044</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: UI 로그 제거">
+      <option name="closed" value="true" />
+      <created>1740642031722</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740642031722</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +355,9 @@
     <MESSAGE value="feat: resource 파일 추가" />
     <MESSAGE value="feat: intro" />
     <MESSAGE value="feat: 로비 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 로비 변경" />
+    <MESSAGE value="feat: 시스템 매니저 프리팹 구조 변경" />
+    <MESSAGE value="리워드 테스트 변경" />
+    <MESSAGE value="fix: UI 로그 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: UI 로그 제거" />
   </component>
 </project>
