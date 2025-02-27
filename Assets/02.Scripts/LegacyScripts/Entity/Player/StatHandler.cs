@@ -6,12 +6,12 @@ using UnityEngine;
 // 기존 체력, 속도 저장소
 public class StatHandler : MonoBehaviour
 {
-    [Range(1, 100)][SerializeField] private int health = 10;
+    [SerializeField] private int health = 10;
     public int Health
     {
         get => health;
 
-        set => health = Mathf.Clamp(value, 0, 100);
+        set => health = Mathf.Max(1, value);
     }
 
     [Range(1f, 20f)][SerializeField] private float speed = 3;
