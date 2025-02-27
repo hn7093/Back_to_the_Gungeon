@@ -1459,6 +1459,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 3994379410515676494, guid: 1071e756a5ed94bfea1a879fd1fbb75f,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4186797401853536324, guid: 1071e756a5ed94bfea1a879fd1fbb75f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1639,6 +1644,16 @@ PrefabInstance:
       propertyPath: EquipButton
       value: 
       objectReference: {fileID: 760818033}
+    - target: {fileID: 7858538099631583852, guid: 1071e756a5ed94bfea1a879fd1fbb75f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858538099631583852, guid: 1071e756a5ed94bfea1a879fd1fbb75f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8400832175071267852, guid: 1071e756a5ed94bfea1a879fd1fbb75f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
