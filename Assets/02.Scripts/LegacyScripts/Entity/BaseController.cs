@@ -181,8 +181,8 @@ public abstract class BaseController : MonoBehaviour
 
     protected void Rotate(bool _isLeft)//무기 방향을 적에게 돌리고 적위치에 따라 좌우 반전
     {
-
-        characterRenderer.flipX = _isLeft;
+        if (characterRenderer != null)
+            characterRenderer.flipX = _isLeft;
 
         /*if (leftHandRenderer != null)
             leftHandRenderer.flipX = _isLeft;
