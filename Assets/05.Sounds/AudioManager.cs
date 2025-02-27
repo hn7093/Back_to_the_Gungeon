@@ -17,6 +17,7 @@ public class AudioData
 public class AudioManager : MonoBehaviour
 {
     public List<AudioData> bgmList;
+    public int currentBGMIndex = 0;
     [HideInInspector] public AudioData currentBGM;
     // 볼륨 변경 로직 필요
     private AudioSource bgmAudioSource;
@@ -35,7 +36,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("cannot found BGM source");
             return;
         }
-        
+        currentBGMIndex = number;
         currentBGM = bgmList[number];
         bgmAudioSource.clip = currentBGM.clip;
         bgmAudioSource.Play();

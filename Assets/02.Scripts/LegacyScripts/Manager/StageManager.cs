@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Preference;
 public class StageManager : MonoBehaviour
 {
     public List<GameObject> stage = new List<GameObject>();
@@ -57,7 +57,17 @@ public class StageManager : MonoBehaviour
         } while (randomMapIndex == lastMapIndex);
         
         lastMapIndex = randomMapIndex;
-
+        // bgm 설정
+        if (stageCount == 10 || stageCount == 20)
+        {
+            int changeBGM = Random.Range(1, 3); //1,2
+            SystemManager.Instance.AudioManager.UpdateBGMSourceClip(changeBGM);
+        }
+        else
+        {
+            if( SystemManager.Instance.AudioManager.currentBGMIndex != 0)
+                SystemManager.Instance.AudioManager.UpdateBGMSourceClip(0);
+        }
         if (stageCount == 0)
         {
             currentStage = Instantiate(stage[4]);
