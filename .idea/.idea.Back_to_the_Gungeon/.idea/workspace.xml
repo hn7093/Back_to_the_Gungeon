@@ -6,22 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Tree 01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Tree 01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Tree 02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Tree 02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Tree 03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Tree 03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/NextStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/NextStage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap1 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap1 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2_Nav.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2_Nav.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
