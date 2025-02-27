@@ -15,4 +15,4 @@ MonoBehaviour:
   weaponName: M92
   weaponPrefab: {fileID: 2562538819280201347, guid: f71b6a50a40e1b84faa80335e86f5cfb,
     type: 3}
-  isUnlocked: 0
+  isUnlocked: 1

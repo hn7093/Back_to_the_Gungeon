@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,14 +6,31 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    StageManager stageManager;
     [SerializeField] private GameObject player;
     [SerializeField] private float smoothSpeed = 0.025f;
     [SerializeField] private Vector3 offset = new Vector3(0,0,-10);
     [SerializeField] private Vector2 minBoundary;
     [SerializeField] private Vector2 maxBoundary;
 
-    void LateUpdate()//ºÎµå·¯¿î Ä«¸Þ¶ó ÃßÀûÀ» À§ÇØ lerp¿Í lateUpdate »ç¿ë
+    private void Start()
     {
+        stageManager = FindObjectOfType<StageManager>();
+    }
+
+    void LateUpdate()//ï¿½Îµå·¯ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ lerpï¿½ï¿½ lateUpdate ï¿½ï¿½ï¿½
+    {
+        if (stageManager != null && (stageManager.stageCount == 11 || stageManager.stageCount == 21))
+        {
+            minBoundary = new Vector2(-2.1f, -0.75f);
+            maxBoundary = new Vector2(2f, 6f);
+        }
+        else
+        {
+            minBoundary = new Vector2(-0.85f, -1.59f);
+            maxBoundary = new Vector2(0.72f, 6.75f);
+        }
+        
         Vector3 desiredPosition = player.transform.position + offset;
         desiredPosition.x = Mathf.Clamp(player.transform.position.x, minBoundary.x, maxBoundary.x) + offset.x;
         desiredPosition.y = Mathf.Clamp(player.transform.position.y, minBoundary.y, maxBoundary.y) + offset.y;

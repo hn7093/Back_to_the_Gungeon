@@ -27,10 +27,10 @@ namespace Preference
                     playerController.ChangeHealth(100);
                     break;
                 case "increase_attack_power": 
-                    playerController.AddPower(10);
+                    playerController.AddPower(30);
                     break;
                 case "increase_attack_speed": 
-                    playerController.AddAttackSpeed(10);
+                    playerController.AddAttackSpeed(30);
                     break;
                 case "increase_move_speed": 
                     playerController.AddSpeed(10);
@@ -39,12 +39,10 @@ namespace Preference
                     playerController.AddBullet(1);
                     break;
                 case "Penetration": 
-                    playerController.SetBounce(true);
-                    break;
-                case "Reflection": 
                     playerController.SetThrough(true);
                     break;
-                case "Multi": 
+                case "Reflection": 
+                    playerController.SetBounce(true);
                     break;
             }
         }

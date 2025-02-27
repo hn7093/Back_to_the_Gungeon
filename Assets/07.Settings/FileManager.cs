@@ -10,7 +10,7 @@ public class GameStatus
 
 public class FileManager : MonoBehaviour
 {
-    private string _startScene = "MainGame";
+    private string _startScene = "Tutorial";
     private string _lobbyScene = "Lobby";
     
     private string _filePath = Application.streamingAssetsPath + "gameData.json";

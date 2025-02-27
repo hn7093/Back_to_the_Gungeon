@@ -1,5 +1,6 @@
 using Preference;
 using TMPro;
+using UnityEngine;
 
 public class TutorialDialogPage : UIMonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TutorialDialogPage : UIMonoBehaviour
     void Start()
     { 
         audioManager.PlayVFXSoundByName("alert");
-        content.text = "방향키로 이동하여 빨간 바닥까지 이동해보세요.";
+        content.text = "방향키로 이동하여 지정된 위치까지 이동해보세요.";
     }
 
     private void Update()
@@ -20,14 +21,14 @@ public class TutorialDialogPage : UIMonoBehaviour
         if (eventManager.isTutorial1Clear)
         {
             audioManager.PlayVFXSoundByName("alert");
-            content.text = "몬스터를 클릭을 통해 처리해보세요.";
+            content.text = "NPC에게 다가가 보상을 받아보세요.";
             eventManager.isTutorial1Clear = false;
         }
         
         if (eventManager.isTutorial2Clear)
         {
             audioManager.PlayVFXSoundByName("alert");
-            content.text = "NPC에게 보상을 받아보세요.";
+            content.text = "문을 통과하여 다음턴으로 이동하세요.";
             eventManager.isTutorial2Clear = false;
         }
 

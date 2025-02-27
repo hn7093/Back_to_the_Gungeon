@@ -47,10 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmList:
+  - name: BGM0
+    clip: {fileID: 8300000, guid: 8cb3e751c35f5394d8622f21c65a52f6, type: 3}
   - name: BGM1
     clip: {fileID: 8300000, guid: bea93a38b71b64b598109b3a3b1a0048, type: 3}
   - name: BGM2
     clip: {fileID: 8300000, guid: 5b1ed8fbe89154eaf96723b6e5f0aad3, type: 3}
+  currentBGMIndex: 0
   currentBGM:
     name: 
     clip: {fileID: 0}
