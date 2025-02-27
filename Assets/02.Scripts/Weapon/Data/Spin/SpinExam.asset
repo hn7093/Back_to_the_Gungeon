@@ -24,7 +24,7 @@ MonoBehaviour:
   knockbackTime: 0.5
   collideBoxSize: {x: 0, y: 0}
   bulletIndex: 0
-  bulletSize: 1
+  bulletSize: 0
   duration: 4
   spread: 10
   numberofProjectilesPerShot: 1

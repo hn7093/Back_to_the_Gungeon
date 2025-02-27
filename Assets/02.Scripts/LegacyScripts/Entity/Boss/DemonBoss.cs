@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
-public class MagicBoss : EnemyController
+public class DemonBoss : EnemyController
 {
     [SerializeField] WeaponHandler[] weaponHandlers;
     private bool ready = false;
     private float lastAcitionTime = 0f;
     private float actionDuration = 2f; // 행동 지속 시간
     private NavMeshAgent agent;
+    private Animator _animator;
     public void Init(Transform target)
     {
         closestEnemy = target;
@@ -17,6 +18,7 @@ public class MagicBoss : EnemyController
     }
     void Start()
     {
+        _animator = GetComponent<Animator>();
         closestEnemy = FindObjectOfType<PlayerController>().transform;
         lookDirection = (closestEnemy.position - transform.position).normalized;
         for (int i = 0; i < weaponHandlers.Length; i++)
@@ -33,6 +35,7 @@ public class MagicBoss : EnemyController
         if (lastAcitionTime > actionDuration)
         {
             lastAcitionTime = 0;
+            _animator.SetBool("IsAttack", false);
             // 랜덤 패턴
             int act = Random.Range(0, 4); // 0~3
             // 반복 이동
@@ -40,26 +43,26 @@ public class MagicBoss : EnemyController
             {
                 case 0:
                     // 코투틴중에는 Dotween 사용불가로 미리 호출
-                    _rigidbody.DOMove(-lookDirection, 3f);
+                    _rigidbody.DOMove(lookDirection, 4f);
                     StartCoroutine(Acition0());
                     break;
                 case 1:
-                    _rigidbody.DOMove(lookDirection, 3f);
+                    _rigidbody.DOMove(lookDirection, 4f);
                     StartCoroutine(Acition1());
                     break;
                 case 2:
                     StartCoroutine(Acition2());
                     break;
                 case 3:
-                    _rigidbody.DOMove(-lookDirection, 3f).SetLoops(3, LoopType.Yoyo);
-                    StartCoroutine(Acition3());
+                    actionDuration = 4.0f;
+                    _animator.SetBool("IsAttack", true);
                     break;
             }
         }
     }
 
     // 공격 패턴
-    protected virtual IEnumerator Acition0()
+    protected IEnumerator Acition0()
     {
         actionDuration = 5.0f;
         StartCoroutine(weaponHandlers[0].Attack());
@@ -68,7 +71,7 @@ public class MagicBoss : EnemyController
         yield return new WaitForSeconds(1f);
         StartCoroutine(weaponHandlers[0].Attack());
     }
-    protected virtual IEnumerator Acition1()
+    protected IEnumerator Acition1()
     {
         actionDuration = 5.0f;
         StartCoroutine(weaponHandlers[1].Attack());
@@ -77,7 +80,7 @@ public class MagicBoss : EnemyController
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(weaponHandlers[1].Attack());
     }
-    protected virtual IEnumerator Acition2()
+    protected IEnumerator Acition2()
     {
         actionDuration = 5.0f;
         weaponHandlers[2].SetBounce(true);
@@ -88,20 +91,22 @@ public class MagicBoss : EnemyController
         StartCoroutine(weaponHandlers[2].Attack());
         weaponHandlers[2].SetBounce(false);
     }
-    protected virtual IEnumerator Acition3()
+    public void Acition4()
     {
-        actionDuration = 7.0f;
+        Debug.Log("Acition4");
         StartCoroutine(weaponHandlers[3].Attack());
-        yield return new WaitForSeconds(4f);
-        StartCoroutine(weaponHandlers[1].Attack());
     }
 
     public override void Death()
     {
-        // 이미지, 충돌체 비활성화
-        characterRenderer.enabled = false;
+        // 충돌체 비활성화
         Collider collider = GetComponentInChildren<Collider>();
         collider.enabled = false;
+        // 2초 후 사망
+        Invoke("DelayedDeath", 2f);
+    }
+    public void DelayedDeath()
+    {
         base.Death();
     }
 }

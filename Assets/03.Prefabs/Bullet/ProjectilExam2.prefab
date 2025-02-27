@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258559827111275538}
   - component: {fileID: 6191317774676768653}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WeaponRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7762000061052770343}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5644421759260171082}
   - component: {fileID: 5499701830661076255}
   - component: {fileID: 378858929830612606}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ProjectilExam2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

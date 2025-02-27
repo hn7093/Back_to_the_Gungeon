@@ -17,10 +17,6 @@ public class SpinWeaponHandler : WeaponHandler
     {
         base.Start();
         piviot = transform.GetChild(0); // 첫번째 자식
-        for (int i = 0; i < spintCount; i++)
-        {
-            AddWeapon();
-        }
         ready = true;
     }
 
@@ -44,6 +40,10 @@ public class SpinWeaponHandler : WeaponHandler
     {
         base.Setup(weaponData);
         spintCount = weaponData.numberOfObejects;
+        for (int i = 0; i < spintCount; i++)
+        {
+            AddWeapon();
+        }
     }
 
     // 무기 수 증가
@@ -63,12 +63,12 @@ public class SpinWeaponHandler : WeaponHandler
 
             // 원의 좌표 계산 (X, Y만 사용하면 2D에서도 사용 가능)
             var position = new Vector3(
-                Mathf.Cos(radian) * 3, // 이후 AttackRange로 수정할것
-                Mathf.Sin(radian) * 3,
+                Mathf.Cos(radian) * 2,
+                Mathf.Sin(radian) * 2,
                 0 // 2D라면 Z는 0
             );
-            Debug.Log(position);
             spinWeaponControllers[i].transform.localPosition = position;
+            spinWeaponControllers[i].transform.localRotation = Quaternion.Euler(0, 0, angle);
         }
     }
 }
