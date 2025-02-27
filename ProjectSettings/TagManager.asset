@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - OpenDoor
+  - UIExclude
   layers:
   - Default
   - TransparentFX

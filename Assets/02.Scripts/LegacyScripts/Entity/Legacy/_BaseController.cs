@@ -26,7 +26,7 @@ public class _BaseController : MonoBehaviour
     protected Transform targetEntity; // 타겟 엔티티
     // component
     protected Rigidbody2D _rigidbody;
-    protected AnimationHandler _animationHandler;
+    protected PlayerAnimationHandler _animationHandler;
     protected StatHandler _statHandler;
     protected WeaponHandler _weaponHandler;
 
@@ -35,7 +35,7 @@ public class _BaseController : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _animationHandler = gameObject.GetComponentInChildren<AnimationHandler>();
+        _animationHandler = gameObject.GetComponentInChildren<PlayerAnimationHandler>();
         _statHandler = GetComponent<StatHandler>();
 
         // 무기 찾기

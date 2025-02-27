@@ -4,38 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="">
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/05.Sounds/AduioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05.Sounds/AduioManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/FileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/FileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Dialog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Dialog.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Quest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Quest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Angel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Devil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Devil.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Prefabs/UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Prefabs/UIManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/DevilPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/DevilPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/GameOverPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/GameOverPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/QuestPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/QuestPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StageClearPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StageClearPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-25.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-25.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-37.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-37.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-45.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-45.wav.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +15,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="0227/2" />
+        <entry key="$PROJECT_DIR$" value="250224/5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -64,18 +33,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/Register/Tutorial2Event.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/08.UI/Scripts/DieTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a1cbff1ff154500b905c9e210c0dc4c176200/dd/7de941d0/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/62/e1e4be74/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/7a/b3082259/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9384495d2a482ac7341d67ca84e16d267d16c62458a9d67a92b119199a9/System.Threading.Tasks.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -87,22 +50,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "0227/3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PGT-Level&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+}</component>
+  <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
+    <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -110,14 +81,22 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -130,7 +109,7 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Unreal 에디터에 연결 후 재생" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -156,9 +135,13 @@
       <workItem from="1740377460149" duration="22537000" />
       <workItem from="1740442282584" duration="5813000" />
       <workItem from="1740453932038" duration="21872000" />
-      <workItem from="1740552020389" duration="2120000" />
-      <workItem from="1740617829242" duration="10000" />
-      <workItem from="1740620811860" duration="11295000" />
+      <workItem from="1740549979919" duration="3908000" />
+      <workItem from="1740556673607" duration="1840000" />
+      <workItem from="1740559277377" duration="988000" />
+      <workItem from="1740565015763" duration="201000" />
+      <workItem from="1740565276186" duration="10000" />
+      <workItem from="1740565297239" duration="3527000" />
+      <workItem from="1740616094340" duration="1640000" />
     </task>
     <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
       <option name="closed" value="true" />
@@ -216,79 +199,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740473989578</updated>
     </task>
-    <task id="LOCAL-00008" summary="feat: Settings 페이지 UI 변경">
-      <option name="closed" value="true" />
-      <created>1740554337196</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1740554337196</updated>
-    </task>
-    <task id="LOCAL-00009" summary="feat: 매니저에서 플레이어 정보 등록 메소드 추가">
-      <option name="closed" value="true" />
-      <created>1740557837456</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1740557837456</updated>
-    </task>
-    <task id="LOCAL-00010" summary="feat: 어빌리티 및 공격 데이터 추가">
-      <option name="closed" value="true" />
-      <created>1740559466592</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1740559466592</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat: 다이얼로그 UI 추가">
-      <option name="closed" value="true" />
-      <created>1740566553685</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1740566553685</updated>
-    </task>
-    <task id="LOCAL-00012" summary="feat: 이벤트 매니저 추가">
-      <option name="closed" value="true" />
-      <created>1740566654407</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1740566654407</updated>
-    </task>
-    <task id="LOCAL-00013" summary="test: NPC 오브젝트 생성">
-      <option name="closed" value="true" />
-      <created>1740568837862</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1740568837862</updated>
-    </task>
-    <task id="LOCAL-00014" summary="test: 리워드 등록 테스트">
-      <option name="closed" value="true" />
-      <created>1740568860080</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1740568860080</updated>
-    </task>
-    <task id="LOCAL-00015" summary="refactor:리소스 정리">
-      <option name="closed" value="true" />
-      <created>1740568900719</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1740568900719</updated>
-    </task>
-    <task id="LOCAL-00016" summary="feat: 스킬과 어빌리티 호출">
-      <option name="closed" value="true" />
-      <created>1740568938933</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1740568938933</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +224,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/feature/ui" />
+                        <option value="2550224/1" />
                       </list>
                     </value>
                   </entry>
@@ -335,15 +246,6 @@
     <MESSAGE value="fix: .idea 파일 삭제" />
     <MESSAGE value="feat: 스킬 선택 UI에서 스킬 랜덤 호출" />
     <MESSAGE value="feat: resource 파일 추가" />
-    <MESSAGE value="feat: Settings 페이지 UI 변경" />
-    <MESSAGE value="feat: 매니저에서 플레이어 정보 등록 메소드 추가" />
-    <MESSAGE value="feat: 어빌리티 및 공격 데이터 추가" />
-    <MESSAGE value="feat: 다이얼로그 UI 추가" />
-    <MESSAGE value="feat: 이벤트 매니저 추가" />
-    <MESSAGE value="test: NPC 오브젝트 생성" />
-    <MESSAGE value="test: 리워드 등록 테스트" />
-    <MESSAGE value="refactor:리소스 정리" />
-    <MESSAGE value="feat: 스킬과 어빌리티 호출" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 스킬과 어빌리티 호출" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: resource 파일 추가" />
   </component>
 </project>

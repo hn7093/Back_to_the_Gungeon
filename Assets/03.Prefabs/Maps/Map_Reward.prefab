@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5533676354328737760}
   - component: {fileID: 7730280043079250940}
   - component: {fileID: 2222238783061876587}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollisionOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,7 +1355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7047314235763209795}
   - component: {fileID: 5942610012660741751}
-  m_Layer: 21
+  m_Layer: 11
   m_Name: Collider T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5028,7 +5028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7614028711857591433}
   - component: {fileID: 9103959467140819068}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5105,7 +5105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871186118210927318}
   - component: {fileID: 1244552703222691848}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Collider R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5183,7 +5183,7 @@ GameObject:
   - component: {fileID: 2897047362221791024}
   - component: {fileID: 8557850293018076425}
   - component: {fileID: 1109619475613872131}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: PF Props Wooden Gate Opened
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5321,7 +5321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8292415893562729867}
   - component: {fileID: 3803452412103734988}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5480,7 +5480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8085311865248922939}
   - component: {fileID: 2525773370334473526}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5564,7 +5564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7074535252332673530}
   - component: {fileID: 2813271070390518625}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5649,7 +5649,7 @@ GameObject:
   - component: {fileID: 7031546785779898197}
   - component: {fileID: 3520217693132760437}
   - component: {fileID: 176027330272160008}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: PF Props Wooden Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5767,7 +5767,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0975325, y: 0.09808707}
+  m_Size: {x: 1.0975325, y: 0.6116116}
   m_EdgeRadius: 0
 --- !u!1 &6947394445403413387
 GameObject:
@@ -5779,7 +5779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30566805139055439}
   - component: {fileID: 6535389238748435388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TX Struct Bridge Gate B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5862,7 +5862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8983223184814165405}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PF Gate T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5905,7 +5905,7 @@ GameObject:
   - component: {fileID: 2281931610755962955}
   - component: {fileID: 1982231139067081056}
   - component: {fileID: 5019181329600415509}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Map_Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5931,6 +5931,7 @@ Transform:
   - {fileID: 8983223184814165405}
   - {fileID: 1340798809658550144}
   - {fileID: 4569340040104960932}
+  - {fileID: 5169974849327327162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1979571475241912895
@@ -6004,7 +6005,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7664919}
+  m_Size: {x: 1, y: 0.56625175}
   m_EdgeRadius: 0
 --- !u!114 &5019181329600415509
 MonoBehaviour:
@@ -6131,7 +6132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8292657130967150970}
   - component: {fileID: 326054703072312079}
-  m_Layer: 20
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8553,6 +8554,80 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!1001 &5673834892079798016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3581849407479257410}
+    m_Modifications:
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407030288567866475, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_Name
+      value: GroundPlus
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9da6deb3234ac84b811cb2aa73f27af, type: 3}
+--- !u!4 &5169974849327327162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+    type: 3}
+  m_PrefabInstance: {fileID: 5673834892079798016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5847125772079330324
 PrefabInstance:
   m_ObjectHideFlags: 0

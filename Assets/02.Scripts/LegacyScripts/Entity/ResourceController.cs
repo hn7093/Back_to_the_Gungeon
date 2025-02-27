@@ -9,8 +9,7 @@ public class ResourceController : MonoBehaviour
 
     private BaseController baseController;
     private StatHandler statHandler;
-    private AnimationHandler animationHandler;
-    
+
     private float timeSinceLastChange = float.MaxValue;
 
     [SerializeField] public float CurrentHealth;
@@ -20,7 +19,6 @@ public class ResourceController : MonoBehaviour
     private void Awake()
     {
         statHandler = GetComponent<StatHandler>();
-        animationHandler = GetComponent<AnimationHandler>();
         baseController = GetComponent<BaseController>();
     }
 
@@ -51,8 +49,8 @@ public class ResourceController : MonoBehaviour
         // 음수 = 데미지
         if (change < 0)
         {
-            animationHandler.Damage();
-            if(damageClip != null)
+            baseController.Damage();
+            if (damageClip != null)
             {
                 SoundManager.PlayClip(damageClip);
             }
@@ -88,21 +86,9 @@ public class ResourceController : MonoBehaviour
             if (timeSinceLastChange >= InvincibleTime)
             {
                 timeSinceLastChange = InvincibleTime;
-                animationHandler.EndInvincibility();
+                baseController.DisableInvincible();
             }
         }
     }
 
-    // 최대 체력 증가, changeHealth가 참이면 회복까지 진행
-    public void AddMaxHealth(int addMax, bool changeHealth = false)
-    {
-        statHandler.Health += addMax;
-        if(changeHealth)
-            ChangeHealth(addMax);
-    }
-    // 스피드 변경
-    public void AddSpeed(int value)
-    {
-        statHandler.Speed += value;
-    }
 }

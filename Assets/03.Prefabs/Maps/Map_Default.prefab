@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6262656481289759615}
   - component: {fileID: 3376569478804923531}
   - component: {fileID: 721733649231235010}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CollisionOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2202,7 +2202,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0005656481, y: 0.049043536}
+  m_Offset: {x: 0.0005656481, y: -0.09040511}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -2213,7 +2213,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0975325, y: 0.09808707}
+  m_Size: {x: 1.0975325, y: 0.6116116}
   m_EdgeRadius: 0
 --- !u!1 &5940593508118215046
 GameObject:
@@ -2809,7 +2809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6835985012224161517}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PF Gate T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6755,7 +6755,7 @@ GameObject:
   - component: {fileID: -4998210723080960580}
   - component: {fileID: 4430120894680016991}
   - component: {fileID: 2080229626806036309}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Map_Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6780,6 +6780,7 @@ Transform:
   - {fileID: 5840972613852123301}
   - {fileID: 6835985012224161517}
   - {fileID: 1760433264548549791}
+  - {fileID: 5322709445765895597}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &6431224890662646777
@@ -6842,7 +6843,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 12.097944}
+  m_Offset: {x: 0, y: 12.135573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6853,7 +6854,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.64151}
+  m_Size: {x: 1, y: 0.56625175}
   m_EdgeRadius: 0
 --- !u!114 &2080229626806036309
 MonoBehaviour:
@@ -6868,3 +6869,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadePanel: {fileID: 5309756252933073528}
+--- !u!1001 &4673859501181887767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1248851623088567171}
+    m_Modifications:
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407030288567866475, guid: e9da6deb3234ac84b811cb2aa73f27af,
+        type: 3}
+      propertyPath: m_Name
+      value: GroundPlus
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9da6deb3234ac84b811cb2aa73f27af, type: 3}
+--- !u!4 &5322709445765895597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 649347920339529914, guid: e9da6deb3234ac84b811cb2aa73f27af,
+    type: 3}
+  m_PrefabInstance: {fileID: 4673859501181887767}
+  m_PrefabAsset: {fileID: 0}
