@@ -133,6 +133,7 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 128
+  weaponData: {fileID: 11400000, guid: 54759460910cf014981108e4b26e4000, type: 2}
   collideBoxSize: {x: 1, y: 1}
 --- !u!95 &-5356487085577855225
 Animator:

@@ -43,7 +43,7 @@ public class SettingsPage : UIMonoBehaviour
         
         ControllerSelector.value = fileManager.GetControlType();
         ControllerSelector.RefreshShownValue();
-        ControllerSelector.onValueChanged.AddListener((value) => fileManager.UpdateControlType(value));
+        ControllerSelector.onValueChanged.AddListener((value) => fileManager.UpdateControlType(value == 1? 0 : 1));
         
         // Exit Button
         ExitButton.onClick.AddListener(() => uiManager.OpenPage(PageType.HOME_PAGE));

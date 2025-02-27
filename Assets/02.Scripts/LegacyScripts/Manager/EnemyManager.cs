@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float timeBetweenWaves = 1f; // 웨이브 당 대기 시간
 
     private Coroutine waveRoutine; // 웨이브 소환 코루틴
-    private PlayerController player;
+    [SerializeField] private PlayerController player;
     void Awake()
     {
         if (instance == null)
@@ -31,6 +31,7 @@ public class EnemyManager : MonoBehaviour
     }
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         // 설정한 수만큼 몬스터 생성
         for (int i = 0; i < monsters; i++)
         {
@@ -46,7 +47,7 @@ public class EnemyManager : MonoBehaviour
     }
     void Update()
     {
-        if(player == null)
+        if (player == null)
             player = FindObjectOfType<PlayerController>();
         else
             player.SetEnemyList(activeEnemies);
@@ -94,7 +95,7 @@ public class EnemyManager : MonoBehaviour
         // 랜덤 오브젝트, 램덤 위치
         GameObject randomPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
         Rect spawnArea;
-        if(spawnPair)
+        if (spawnPair)
         {
             spawnArea = spawnAreas[spawnIdx++];
             spawnIdx = spawnIdx % spawnAreas.Count;
@@ -106,12 +107,12 @@ public class EnemyManager : MonoBehaviour
         Vector2 spawnPosition = new Vector2(
             Random.Range(spawnArea.xMin, spawnArea.xMax),
             Random.Range(spawnArea.yMin, spawnArea.yMax)
-        );  
+        );
         // 생성
         GameObject spawnEntity = Instantiate(randomPrefab, new Vector3(spawnPosition.x, spawnPosition.y), Quaternion.identity);
         EnemyController enemyController = spawnEntity.GetComponent<EnemyController>();
         // 목표를 플레이어로
-        enemyController.Init(FindObjectOfType<PlayerController>().transform);
+        enemyController.Init(player.transform);
         activeEnemies.Add(enemyController);
         StartCoroutine(SetupEnemy());
     }
@@ -119,7 +120,7 @@ public class EnemyManager : MonoBehaviour
     {
         yield return null;
         // 플레이어의 타겟 갱신
-        FindObjectOfType<PlayerController>().SetEnemyList(activeEnemies);
+        player.SetEnemyList(activeEnemies);
     }
 
     void OnDrawGizmosSelected()

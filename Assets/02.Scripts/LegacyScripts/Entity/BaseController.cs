@@ -15,7 +15,9 @@ public abstract class BaseController : MonoBehaviour
     [SerializeField] protected Transform weaponPivot;
     [SerializeField] protected WeaponSO weaponData;
     [Range(0, 3f)][SerializeField] protected float lookOffset = 1.5f;
+    [SerializeField] private BoxCollider2D triggerCollider; // IsTrigger인 BoxCollider2D
 
+    private Vector2 originalOffset; // 초기 offset 저장
     protected Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get { return movementDirection; } }
     protected Vector2 lookDirection = Vector2.zero;
@@ -57,6 +59,9 @@ public abstract class BaseController : MonoBehaviour
 
         if (weaponPivot != null)
             initialWeaponPivotPos = weaponPivot.localPosition;
+
+        if (triggerCollider != null)
+            originalOffset = triggerCollider.offset; // 초기 offset 저장
 
         // 무기 찾기
         InitWeapon();
@@ -194,6 +199,7 @@ public abstract class BaseController : MonoBehaviour
         if (weaponRenderer != null)
             weaponRenderer.flipY = _isLeft;
 
+        UpdateColliderOffset();
         /*
                 if (leftHandPivot != null)
                     RotatePivot(leftHandPivot, _isLeft, initialLeftHandPivotPos);
@@ -223,6 +229,15 @@ public abstract class BaseController : MonoBehaviour
         }
 
         pivot.localPosition = localPos;
+    }
+
+    private void UpdateColliderOffset()
+    {
+        if (triggerCollider != null)
+        {
+            // isLeft가 true이면 X 방향 반전, false이면 원래 위치 유지
+            triggerCollider.offset = new Vector2(isLeft ? -originalOffset.x : originalOffset.x, originalOffset.y);
+        }
     }
 
     protected virtual void SetIsLeft()
