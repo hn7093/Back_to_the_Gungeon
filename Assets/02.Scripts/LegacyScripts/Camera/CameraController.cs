@@ -25,6 +25,11 @@ public class CameraController : MonoBehaviour
             minBoundary = new Vector2(-2.1f, -0.75f);
             maxBoundary = new Vector2(2f, 6f);
         }
+        else
+        {
+            minBoundary = new Vector2(-0.85f, -1.59f);
+            maxBoundary = new Vector2(0.72f, 6.75f);
+        }
         
         Vector3 desiredPosition = player.transform.position + offset;
         desiredPosition.x = Mathf.Clamp(player.transform.position.x, minBoundary.x, maxBoundary.x) + offset.x;
