@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     private static EnemyManager instance;
     public static EnemyManager Instance { get { return instance; } }
 
+    [SerializeField] private int monsters = 1;
     [SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] List<Rect> spawnAreas;
     [SerializeField] private Color gizmoColor = new Color(1, 1, 1, 0.3f);
@@ -27,8 +28,13 @@ public class EnemyManager : MonoBehaviour
     }
     void Start()
     {
-        // test
-        SpawnRandomEnemy();
+        // 설정한 수만큼 몬스터 생성
+        for (int i = 0; i < monsters; i++)
+        {
+            SpawnRandomEnemy();
+        }
+        
+        
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();

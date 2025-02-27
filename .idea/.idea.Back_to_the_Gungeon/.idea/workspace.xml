@@ -7,11 +7,39 @@
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/MainGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/ExplodeBarrel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/ExplodeBarrel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/NextStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/NextStage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Bullet/ProjectilExam4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Goblin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Mushroom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Mushroom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Enemy/Skeleton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Barrel1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Barrel1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Barrel2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Barrel2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Cage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Cage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Default.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Default.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Flower2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Reward.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Reward.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Sniper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Sniper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Trap1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Tree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Wall5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_WallCastle2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Trap/ExplodeBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Prefabs/Trap/ExplodeBarrel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +177,7 @@
       <workItem from="1740565297239" duration="3527000" />
       <workItem from="1740616094340" duration="1640000" />
       <workItem from="1740634300995" duration="1420000" />
-      <workItem from="1740636216744" duration="666000" />
+      <workItem from="1740636216744" duration="5552000" />
     </task>
     <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
       <option name="closed" value="true" />
