@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SocialPlatforms.Impl;
@@ -15,9 +16,9 @@ public class EnemyController : BaseController
     private EnemyManager enemyManager;
     private Transform target;
     private NavMeshAgent agent;
-    Animator animator;
     public Transform AttackPos;
-
+    private Vector2 lastPosition;
+    protected bool isMove;
 
     enum Enemy_State
     {
@@ -31,11 +32,35 @@ public class EnemyController : BaseController
     public void Init(Transform target)
     {
         this.target = target;
- 
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        lastPosition = transform.position;
+        closestEnemy = target;
+    }
 
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+        Movement();
+    }
+
+    protected void Movement()
+    {
+
+        //Debug.Log($" Move called with magnitude: {obj.magnitude}");
+
+        Vector2 currentPosition = transform.position;
+        isMove = (currentPosition != lastPosition);
+
+        if (isMove)
+            animationHandler.Move();
+        else
+            animationHandler.Stop();
+
+        lastPosition = currentPosition;
     }
 
     protected float DistanceToTarget()
@@ -99,7 +124,7 @@ public class EnemyController : BaseController
             }
 
             // 이동
-            if(canMove)
+            if (canMove)
             {
                 movementDirection = direction;
             }
@@ -112,6 +137,7 @@ public class EnemyController : BaseController
 
     public override void Death()
     {
+        animationHandler.Death();
         base.Death();
         EnemyManager.Instance.RemoveEnemyOnDeath(this);
     }

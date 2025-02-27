@@ -2,27 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationHandler : MonoBehaviour
+public class EnemyAnimationHandler : BaseAnimationHandler
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
     private static readonly int IsAttack = Animator.StringToHash("IsAttack");
     private static readonly int IsDeath = Animator.StringToHash("IsDeath");
 
-    protected Animator animator;
+    Vector2 lastPosition;
 
-
-    protected virtual void Awake()
-    {
-        Init();
-    }
-
-    public void Init()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
-
-    public void Move(Vector2 obj)
+    public override void Move()
     {
         if (animator == null)
         {
@@ -36,32 +25,37 @@ public class AnimationHandler : MonoBehaviour
             return;
         }
 
-        //Debug.Log($" Move called with magnitude: {obj.magnitude}");
-
-        animator.SetBool(IsMoving, obj.magnitude > 0.5f);
+        // 애니메이터 파라미터 설정
+        animator.SetBool(IsMoving, true);
     }
 
-    public void EndInvincibility()
+    public override void Stop()
+    {
+        animator.SetBool(IsMoving, false);
+    }
+
+
+    public override void EndInvincibility()
     {
         animator.ResetTrigger(IsDamage);
     }
-    public void Damage()
+    public override void Damage()
     {
         animator.SetTrigger(IsDamage);
     }
 
-    public void Attack()
+    public override void Attack()
     {
-        animator.SetBool(IsAttack, true);
+        animator.SetTrigger(IsAttack);
     }
 
-    public void Death()
+    public override void Death()
     {
         animator.SetTrigger(IsDeath);
     }
 
-    public void InvincibilityEnd()
+    public override void InvincibilityEnd()
     {
-        animator.SetBool(IsDamage, false);
+        animator.ResetTrigger(IsDamage);
     }
 }

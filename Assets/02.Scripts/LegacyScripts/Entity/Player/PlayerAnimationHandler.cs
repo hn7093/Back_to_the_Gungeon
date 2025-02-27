@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class PlayerAnimationHandler : BaseAnimationController
+public class PlayerAnimationHandler : BaseAnimationHandler
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
     private static readonly int IsAttack = Animator.StringToHash("IsAttack");
     private static readonly int IsDie = Animator.StringToHash("IsDie");
 
-    public void Move(Vector2 obj)
+    public override void Move(Vector2 obj)
     {
         if (animator == null)
         {
@@ -29,27 +29,27 @@ public class PlayerAnimationHandler : BaseAnimationController
         animator.SetBool(IsMoving, obj.magnitude > 0.5f);
     }
 
-    public void EndInvincibility()
+    public override void EndInvincibility()
     {
         animator.ResetTrigger(IsDamage);
     }
-    public void Damage()
+    public override void Damage()
     {
         animator.SetTrigger(IsDamage);
     }
 
-    public void Attack()
+    public override void Attack()
     {
         animator.SetBool(IsAttack, true);
     }
 
-    public void Death()
+    public override void Death()
     {
         Debug.Log("player dead");
         animator.SetTrigger(IsDie);
     }
 
-    public void InvincibilityEnd()
+    public override void InvincibilityEnd()
     {
         animator.SetBool(IsDamage, false);
     }
