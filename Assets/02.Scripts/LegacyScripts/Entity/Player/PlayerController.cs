@@ -292,7 +292,7 @@ public class PlayerController : BaseController
         StartCoroutine(DelayedSetNewSkin());
     }
 
-    private void SetSkin()
+    public void SetSkin()
     {
         if (!SkinManager.Instance.IsSkinUnlocked(currentSkinIndex)) return;
         PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
