@@ -15,4 +15,4 @@ MonoBehaviour:
   weaponName: Pistol
   weaponPrefab: {fileID: 3068870324399637210, guid: 63fccf97e83d21545aa9ee1681095279,
     type: 3}
-  isUnlocked: 0
+  isUnlocked: 1

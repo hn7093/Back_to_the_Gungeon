@@ -389,9 +389,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allWeapons:
+  - {fileID: 11400000, guid: b3cc90b2768a0c84392196eb6a299fff, type: 2}
   - {fileID: 11400000, guid: a3b8bcb1aa2099c4f927d7df0a48bc86, type: 2}
+  - {fileID: 11400000, guid: a99accdf8c46b9b41a0d58fb70b8a0f4, type: 2}
+  - {fileID: 11400000, guid: 291e9763fc0cc924782eb5faf42c00b0, type: 2}
+  - {fileID: 11400000, guid: e015027d8ac388b4186a88239f503c27, type: 2}
+  - {fileID: 11400000, guid: a99accdf8c46b9b41a0d58fb70b8a0f4, type: 2}
+  - {fileID: 11400000, guid: 7a7a862288f7b3042ae92d7c34239327, type: 2}
   - {fileID: 11400000, guid: 49f99d93113c78b4fa7129a5b2594de3, type: 2}
-  - {fileID: 11400000, guid: d86844056a8edbf44a5d0ca820febd0b, type: 2}
 --- !u!114 &760818033 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1512241947612301776, guid: 1071e756a5ed94bfea1a879fd1fbb75f,
