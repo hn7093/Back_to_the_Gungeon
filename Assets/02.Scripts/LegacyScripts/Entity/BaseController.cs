@@ -33,7 +33,7 @@ public abstract class BaseController : MonoBehaviour
     protected bool isLeft = false;
     protected Transform targetEntity; // Å¸°Ù ¿£Æ¼Æ¼
     // component
-    protected PlayerAnimationHandler animationHandler;
+    protected BaseAnimationHandler animationHandler;
 
     protected StatHandler _statHandler;
     protected WeaponHandler _weaponHandler;
@@ -46,7 +46,7 @@ public abstract class BaseController : MonoBehaviour
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        animationHandler = GetComponentInChildren<PlayerAnimationHandler>();
+        animationHandler = GetComponentInChildren<BaseAnimationHandler>();
         _statHandler = GetComponent<StatHandler>();
 
         /*if (leftHandPivot != null)
