@@ -18,16 +18,18 @@ public class MagicBoss : EnemyController
     void Start()
     {
         closestEnemy = FindObjectOfType<PlayerController>().transform;
+        closestEnemy.GetComponent<PlayerController>().SetEnemyList(new List<BaseController> { this });
         lookDirection = (closestEnemy.position - transform.position).normalized;
         for (int i = 0; i < weaponHandlers.Length; i++)
         {
             WeaponSO weaponData = weaponHandlers[i].weaponData; // WeaponSO 가져오기
             weaponHandlers[i].Setup(weaponData);
         }
+        ready = true;
     }
     protected override void HandleAction()
     {
-        //if (!ready) return;
+        if (!ready) return;
         base.BaseHandleAction();
         lastAcitionTime += Time.deltaTime;
         if (lastAcitionTime > actionDuration)
@@ -100,7 +102,7 @@ public class MagicBoss : EnemyController
     {
         // 이미지, 충돌체 비활성화
         characterRenderer.enabled = false;
-        Collider collider = GetComponentInChildren<Collider>();
+        Collider2D collider = GetComponentInChildren<Collider2D>();
         collider.enabled = false;
         base.Death();
     }

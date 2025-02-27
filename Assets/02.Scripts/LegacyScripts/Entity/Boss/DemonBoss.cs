@@ -11,6 +11,7 @@ public class DemonBoss : EnemyController
     private float actionDuration = 2f; // 행동 지속 시간
     private NavMeshAgent agent;
     private Animator _animator;
+    //public override void Init(Transform target) 이게 옳지만 버그 이용함
     public void Init(Transform target)
     {
         closestEnemy = target;
@@ -18,18 +19,20 @@ public class DemonBoss : EnemyController
     }
     void Start()
     {
-        _animator = GetComponent<Animator>();
         closestEnemy = FindObjectOfType<PlayerController>().transform;
+        closestEnemy.GetComponent<PlayerController>().SetEnemyList(new List<BaseController> { this });
+        _animator = GetComponent<Animator>();
         lookDirection = (closestEnemy.position - transform.position).normalized;
         for (int i = 0; i < weaponHandlers.Length; i++)
         {
             WeaponSO weaponData = weaponHandlers[i].weaponData; // WeaponSO 가져오기
             weaponHandlers[i].Setup(weaponData);
         }
+        ready = true;
     }
     protected override void HandleAction()
     {
-        //if (!ready) return;
+        if (!ready) return;
         base.BaseHandleAction();
         lastAcitionTime += Time.deltaTime;
         if (lastAcitionTime > actionDuration)
@@ -100,7 +103,7 @@ public class DemonBoss : EnemyController
     public override void Death()
     {
         // 충돌체 비활성화
-        Collider collider = GetComponentInChildren<Collider>();
+        Collider2D collider = GetComponentInChildren<Collider2D>();
         collider.enabled = false;
         // 2초 후 사망
         Invoke("DelayedDeath", 2f);

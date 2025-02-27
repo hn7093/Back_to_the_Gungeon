@@ -27,7 +27,7 @@ public class SpinWeaponHandler : WeaponHandler
         // speed = 회전 속도, attackRange = 반지름, delay는 무시
         float rotationSpeed = Speed * 360f; // 초당 회전 각도
         transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             AddWeapon();
         }
@@ -50,6 +50,7 @@ public class SpinWeaponHandler : WeaponHandler
     public void AddWeapon()
     {
         var obj = Instantiate(spinWeaponPrefab, piviot).GetComponent<SpinWeaponController>();
+        obj.transform.parent = piviot;
         obj.Init(this);
         spinWeaponControllers.Add(obj);
         AlignWeapon();

@@ -7,7 +7,6 @@ public class TutorialEvent : MonoBehaviour
     public int step;
     private void OnDestroy()
     {
-        Debug.Log(step);
         switch (step)
         {
             case 2:
