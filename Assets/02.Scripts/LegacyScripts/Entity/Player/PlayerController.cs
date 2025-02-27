@@ -44,7 +44,7 @@ public class PlayerController : BaseController
     protected override void Update()
     {
         HandleAction();
-        SetCloserTarget();
+        // SetCloserTarget();
         SetLookDirection();
         SetIsLeft();
         Rotate(isLeft);
