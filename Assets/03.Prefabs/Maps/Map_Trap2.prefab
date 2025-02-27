@@ -9505,7 +9505,7 @@ GameObject:
   - component: {fileID: 8654225036795866021}
   - component: {fileID: 6713974576140780976}
   - component: {fileID: 4508296938780113690}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Map_Trap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
