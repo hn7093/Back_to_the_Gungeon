@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="" />
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="123" />
+        <entry key="$PROJECT_DIR$" value="1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,16 +45,30 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Manager/EnemyManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Manager/EnemyManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/03.Prefabs/Weapon/AK47.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/03.Prefabs/Weapon/AK47.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a1cbff1ff154500b905c9e210c0dc4c176200/dd/7de941d0/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/62/e1e4be74/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/7a/b3082259/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,19 +85,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
