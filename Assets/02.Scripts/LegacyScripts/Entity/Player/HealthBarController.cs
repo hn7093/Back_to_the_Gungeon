@@ -37,7 +37,7 @@ public class HealthUIController : MonoBehaviour
         {
             SpriteRenderer renderer = heartObjects[i].GetComponent<SpriteRenderer>();
 
-            if (remainingHealth > healthPerHeart)
+            if (remainingHealth >= healthPerHeart)
                 renderer.sprite = fullHeart;
             else if(remainingHealth > healthPerHeart/2)
                 renderer.sprite = halfHeart;

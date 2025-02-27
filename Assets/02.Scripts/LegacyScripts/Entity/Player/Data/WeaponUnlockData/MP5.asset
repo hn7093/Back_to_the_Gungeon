@@ -15,4 +15,4 @@ MonoBehaviour:
   weaponName: MP5
   weaponPrefab: {fileID: 459059748510497123, guid: 0d881b715e4a4b1489d9179ebb304c13,
     type: 3}
-  isUnlocked: 0
+  isUnlocked: 1

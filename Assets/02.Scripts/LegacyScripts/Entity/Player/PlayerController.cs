@@ -5,7 +5,7 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using Preference;
 public enum ControlType
 {
     mouse = 0,
@@ -238,6 +238,7 @@ public class PlayerController : BaseController
         StartCoroutine(DisableComponentsAfterDelay(2f));
 
         // 게임오버 화면 호출
+        SystemManager.Instance.UIManager.OpenPage(PageType.GAMEOVER_PAGE);
     }
 
     private IEnumerator DisableComponentsAfterDelay(float delay)
