@@ -17,7 +17,7 @@ MonoBehaviour:
   weaponSize: 1
   power: 1
   speed: 1
-  attackRange: 10
+  attackRange: 0.5
   attackSoundClip: {fileID: 0}
   isOnKnockback: 0
   knockbackPower: 0.1

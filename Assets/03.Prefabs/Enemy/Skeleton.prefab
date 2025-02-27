@@ -294,6 +294,7 @@ MonoBehaviour:
   weaponPivot: {fileID: 3610611771654599146}
   weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
   lookOffset: 1.5
+  triggerCollider: {fileID: 1751733816006356734}
   closestEnemy: {fileID: 0}
   followRange: 20
   attackRange: 0.3
