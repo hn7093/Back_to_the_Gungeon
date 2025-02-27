@@ -13,7 +13,7 @@ public class StartGamePage : UIMonoBehaviour
 
     private void Start()
     {
-        StartGameButton.onClick.AddListener(() => fileManager.StartGame());
+        StartGameButton.onClick.AddListener(() => uiManager.OpenPage(PageType.INTRO_PAGE));
         SettingsButton.onClick.AddListener(() => uiManager.OpenPage(PageType.SETTINGS_PAGE));
         ExitButton.onClick.AddListener(() => fileManager.ExitGame());
     }

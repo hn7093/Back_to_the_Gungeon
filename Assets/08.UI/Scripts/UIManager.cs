@@ -7,6 +7,7 @@ namespace Preference
     public enum PageType
     {
         HOME_PAGE,
+        INTRO_PAGE,
         MAIN_PAGE,
         SETTINGS_PAGE,
         GAMEOVER_PAGE,
@@ -74,9 +75,12 @@ namespace Preference
             foreach (PageObject page in Pages)
             {
                 GameObject pageInstance = page.Instance;
-                
-                pageInstance.SetActive(false);
-                pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
+
+                if (pageInstance)
+                {
+                    pageInstance?.SetActive(false);
+                    pageInstance.GetComponent<UIMonoBehaviour>()?.connectUIMnager(this);
+                }
             }
         }
 
@@ -84,12 +88,13 @@ namespace Preference
         public void OpenPage(PageType pageName)
         {
             // Debug.Log(pageName);
-            _currentPage?.Instance.SetActive(false);
+            if (_currentPage?.Instance) {
+                _currentPage?.Instance?.SetActive(false);
+            }
             
             // hofix: 홈으로 가는 경우로 해둔 목록들, lobby 체크를 통해 비활성화
             if (pageName == PageType.HOME_PAGE && !isLobby) { return; } 
             
-            Debug.Log(2);
             // do: 없는 경우에 대한 예외 처리
             _currentPage = Pages.Find(page => page.PageName == pageName);
             _currentPage.Instance.SetActive(true);
