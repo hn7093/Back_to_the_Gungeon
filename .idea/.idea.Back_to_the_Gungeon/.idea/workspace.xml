@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: 로비 변경" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;junebeomlee&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hn7093/Back_to_the_Gungeon.git",
+    "accountId": "78ea2598-de15-42d5-baf0-21b271dba9ce"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "hn7093",
+    "repository": "Back_to_the_Gungeon"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/BaseController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/QuestEventDetector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/08.UI/Scripts/DieTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/Plugins/Demigiant/DOTween/readme.txt.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a1cbff1ff154500b905c9e210c0dc4c176200/dd/7de941d0/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/62/e1e4be74/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/7a/b3082259/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9384495d2a482ac7341d67ca84e16d267d16c62458a9d67a92b119199a9/System.Threading.Tasks.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2tT7YUyQhRATKgfRysoW3j8IF7c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Unity 에디터에 연결">
+    <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unreal 에디터에 연결 후 재생" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="" />
+      <created>1740364258532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740364258532</updated>
+      <workItem from="1740364260574" duration="9245000" />
+      <workItem from="1740377460149" duration="22537000" />
+      <workItem from="1740442282584" duration="5813000" />
+      <workItem from="1740453932038" duration="21872000" />
+      <workItem from="1740549979919" duration="3908000" />
+      <workItem from="1740556673607" duration="1840000" />
+      <workItem from="1740559277377" duration="988000" />
+      <workItem from="1740565015763" duration="201000" />
+      <workItem from="1740565276186" duration="10000" />
+      <workItem from="1740565297239" duration="3527000" />
+      <workItem from="1740616094340" duration="1640000" />
+      <workItem from="1740634300995" duration="1420000" />
+      <workItem from="1740636216744" duration="666000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
+      <option name="closed" value="true" />
+      <created>1740364674343</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740364674343</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: 게임오버 페이지">
+      <option name="closed" value="true" />
+      <created>1740365410207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740365410207</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: 파일 매니저 추가">
+      <option name="closed" value="true" />
+      <created>1740375918568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740375918568</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: UI 매니저 및 전역 관리 관련 파일 추가">
+      <option name="closed" value="true" />
+      <created>1740454088227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740454088227</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: UI 스크립트 연결">
+      <option name="closed" value="true" />
+      <created>1740461170561</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740461170561</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: .idea 파일 삭제">
+      <option name="closed" value="true" />
+      <created>1740461257299</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740461257299</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: 스킬 선택 UI에서 스킬 랜덤 호출">
+      <option name="closed" value="true" />
+      <created>1740473989578</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740473989578</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: 로비 변경">
+      <option name="closed" value="true" />
+      <created>1740639954534</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740639954534</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="2550224/1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: UI 구성 요소 관련" />
+    <MESSAGE value="feat: 게임오버 페이지" />
+    <MESSAGE value="feat: 파일 매니저 추가" />
+    <MESSAGE value="feat: UI 매니저 및 전역 관리 관련 파일 추가" />
+    <MESSAGE value="feat: UI 스크립트 연결" />
+    <MESSAGE value="fix: .idea 파일 삭제" />
+    <MESSAGE value="feat: 스킬 선택 UI에서 스킬 랜덤 호출" />
+    <MESSAGE value="feat: resource 파일 추가" />
+    <MESSAGE value="feat: intro" />
+    <MESSAGE value="feat: 로비 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 로비 변경" />
+  </component>
+</project>
