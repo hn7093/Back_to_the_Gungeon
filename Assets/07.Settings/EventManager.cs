@@ -12,6 +12,7 @@ namespace Preference
 
     public class EventManager: MonoBehaviour
     {
+
         private TaskCompletionSource<string> _selectionTask;
 
         public void NotifyTaskComplete(string value)
