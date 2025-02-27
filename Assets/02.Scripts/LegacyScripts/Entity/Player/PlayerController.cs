@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Preference;
-public enum controlType
+public enum ControlType
 {
     keyboard = 0,
     mouse
@@ -24,7 +24,7 @@ public class PlayerController : BaseController
     private Vector2 currentTouchPosition;
     private bool isDragging = false;
     private float dragThreshold = 1f;
-    private controlType currentControllType;
+    private ControlType currentControllType;
     public static readonly string controlTypeKey = "controlTypeKey";
     public static readonly string skinIndexKey = "skinIndexKey";
     public static readonly string weaponIndexKey = "weaponIndexKey";
@@ -34,7 +34,7 @@ public class PlayerController : BaseController
 
     private void Start()
     {
-        currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+        currentControllType = (ControlType)PlayerPrefs.GetInt(controlTypeKey, 0);
         currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
         ChangePlayerSkin(currentSkinIndex);
         currentWeaponIndex = PlayerPrefs.GetInt(weaponIndexKey, 0);
@@ -225,14 +225,10 @@ public class PlayerController : BaseController
 
     public void ChangePlayerSkin(int skinIndex)
     {
-        if (playerSkinPrefabs == null || playerSkinPrefabs.Count == 0) return;
 
-        skinIndex = Mathf.Clamp(skinIndex, 0, playerSkinPrefabs.Count - 1);
+        skinIndex = Mathf.Clamp(skinIndex, 0, SkinManager.Instance.allSkins.Count - 1);
         currentSkinIndex = skinIndex;
-
-        // 
-        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
-        PlayerPrefs.Save();
+        SkinManager.Instance.CurrentSkinIndex = skinIndex;
 
         if (currentSkin != null)
         {
@@ -240,11 +236,28 @@ public class PlayerController : BaseController
         }
 
 
-        currentSkin = Instantiate(playerSkinPrefabs[skinIndex], transform);
+        currentSkin = Instantiate(SkinManager.Instance.GetCurrentSkin().skinPrefab, transform);
         currentSkin.transform.localPosition = Vector3.zero;
+        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} 장착");
+        StartCoroutine(DelayedSetNewSkin());
+    }
+    public void SetSkin()
+    {
+        if (!SkinManager.Instance.IsSkinUnlocked(currentSkinIndex)) return;
+        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
+        PlayerPrefs.Save();
+    }
 
+    public void UnlockSkin()
+    {
+        SkinManager.Instance.UnlockSkin(currentSkinIndex);
+    }
+
+    private IEnumerator DelayedSetNewSkin()
+    {
+        yield return null; // 한 프레임 대기
         characterRenderer = currentSkin.GetComponent<SpriteRenderer>();
-        animationHandler = currentSkin.GetComponentInChildren<AnimationHandler>();
+        animationHandler = currentSkin.GetComponentInChildren<PlayerAnimationHandler>();
 
         if (animationHandler != null)
         {
@@ -253,10 +266,9 @@ public class PlayerController : BaseController
         }
         else
         {
-            Debug.LogError(" AnimationHandler is NULL after skin change!");
+            Debug.Log(" AnimationHandler is NULL after skin change!");
         }
     }
-
     public void NextWeapon()
     {
         int newSkinIndex = (currentWeaponIndex + 1) % weaponPrefabs.Count;
@@ -380,7 +392,7 @@ public class PlayerController : BaseController
             resourceController.AddSpeed(value);
         }
     }
-    
+
 
     // 발사 탄수 증가
     public void AddBullet(int value)

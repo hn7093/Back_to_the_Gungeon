@@ -6,7 +6,6 @@ using UnityEngine;
 // 기존 체력, 속도 저장소
 public class StatHandler : MonoBehaviour
 {
-    [SerializeField] private int health = 10;
     [Range(1, 1000)][SerializeField] private int health = 10;
     public int Health
     {

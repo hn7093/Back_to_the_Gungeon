@@ -6,33 +6,58 @@ public class AnimationHandler : MonoBehaviour
 {
     private static readonly int IsMoving = Animator.StringToHash("IsMove");
     private static readonly int IsDamage = Animator.StringToHash("IsDamage");
-    private static readonly int Attack = Animator.StringToHash("Attack");
+    private static readonly int IsAttack = Animator.StringToHash("IsAttack");
     private static readonly int IsDeath = Animator.StringToHash("IsDeath");
+
     protected Animator animator;
 
+
     protected virtual void Awake()
+    {
+        Init();
+    }
+
+    public void Init()
     {
         animator = GetComponentInChildren<Animator>();
     }
 
     public void Move(Vector2 obj)
     {
-        animator.SetBool(IsMoving, obj.magnitude > .5f);
+        if (animator == null)
+        {
+            Debug.LogError(" Animator is NULL in AnimationHandler!");
+            return;
+        }
+
+        if (animator.runtimeAnimatorController == null)
+        {
+            Debug.LogError(" AnimatorController is not assigned to Animator!");
+            return;
+        }
+
+        //Debug.Log($" Move called with magnitude: {obj.magnitude}");
+
+        animator.SetBool(IsMoving, obj.magnitude > 0.5f);
     }
 
+    public void EndInvincibility()
+    {
+        animator.ResetTrigger(IsDamage);
+    }
     public void Damage()
     {
-        animator.SetBool(IsDamage, true);
+        animator.SetTrigger(IsDamage);
     }
 
-    public void IsAttack()
+    public void Attack()
     {
-        animator.SetTrigger(Attack);
+        animator.SetBool(IsAttack, true);
     }
 
     public void Death()
     {
-        animator.SetBool(IsDeath, true);
+        animator.SetTrigger(IsDeath);
     }
 
     public void InvincibilityEnd()
