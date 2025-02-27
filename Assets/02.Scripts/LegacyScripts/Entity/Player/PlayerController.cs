@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum controlType
+public enum ControlType
 {
     keyboard = 0,
     mouse
@@ -24,7 +24,7 @@ public class PlayerController : BaseController
     private Vector2 currentTouchPosition;
     private bool isDragging = false;
     private float dragThreshold = 1f;
-    private controlType currentControllType;
+    private ControlType currentControllType;
     public static readonly string controlTypeKey = "controlTypeKey";
     public static readonly string skinIndexKey = "skinIndexKey";
     public static readonly string weaponIndexKey = "weaponIndexKey";
@@ -40,7 +40,7 @@ public class PlayerController : BaseController
         resourceController = GetComponent<ResourceController>();
         weaponPivotAnimationHandler = GetComponentInChildren<WeaponPivotAnimationHandler>();
 
-        currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+        currentControllType = (ControlType)PlayerPrefs.GetInt(controlTypeKey, 0);
         currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
         ChangePlayerSkin(currentSkinIndex);
         currentWeaponIndex = PlayerPrefs.GetInt(weaponIndexKey, 0);
