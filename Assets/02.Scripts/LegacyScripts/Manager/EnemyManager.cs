@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -10,15 +11,17 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private int monsters = 1;
     [SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] List<Rect> spawnAreas;
+    [SerializeField] bool spawnPair = false; // 여러 영역에서 소환시 골고루 소환 여부
     [SerializeField] private Color gizmoColor = new Color(1, 1, 1, 0.3f);
     public List<BaseController> activeEnemies = new List<BaseController>(10);
     private bool enemySpawnComplite; // 생성 코루틴 진행 여부
+    private int spawnIdx = 0; // 스폰 인덱스
 
     [SerializeField] private float timeBetweenSpawns = 0.2f; // 스폰당 대기 시간
     [SerializeField] private float timeBetweenWaves = 1f; // 웨이브 당 대기 시간
 
     private Coroutine waveRoutine; // 웨이브 소환 코루틴
-
+    private PlayerController player;
     void Awake()
     {
         if (instance == null)
@@ -33,13 +36,20 @@ public class EnemyManager : MonoBehaviour
         {
             SpawnRandomEnemy();
         }
-        
-        
+
+
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
         // SpawnRandomEnemy();
+    }
+    void Update()
+    {
+        if(player == null)
+            player = FindObjectOfType<PlayerController>();
+        else
+            player.SetEnemyList(activeEnemies);
     }
 
     public void StartWave(int waveCount)
@@ -83,22 +93,31 @@ public class EnemyManager : MonoBehaviour
 
         // 랜덤 오브젝트, 램덤 위치
         GameObject randomPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
-
-        Rect randomArea = spawnAreas[Random.Range(0, spawnAreas.Count)];
-
-        Vector2 randomPosition = new Vector2(
-            Random.Range(randomArea.xMin, randomArea.xMax),
-            Random.Range(randomArea.yMin, randomArea.yMax)
-        );
-
+        Rect spawnArea;
+        if(spawnPair)
+        {
+            spawnArea = spawnAreas[spawnIdx++];
+            spawnIdx = spawnIdx % spawnAreas.Count;
+        }
+        else
+        {
+            spawnArea = spawnAreas[Random.Range(0, spawnAreas.Count)];
+        }
+        Vector2 spawnPosition = new Vector2(
+            Random.Range(spawnArea.xMin, spawnArea.xMax),
+            Random.Range(spawnArea.yMin, spawnArea.yMax)
+        );  
         // 생성
-        GameObject spawnEntity = Instantiate(randomPrefab, new Vector3(randomPosition.x, randomPosition.y), Quaternion.identity);
+        GameObject spawnEntity = Instantiate(randomPrefab, new Vector3(spawnPosition.x, spawnPosition.y), Quaternion.identity);
         EnemyController enemyController = spawnEntity.GetComponent<EnemyController>();
         // 목표를 플레이어로
-        //enemyController.ConnectUIManager(GameManager.Instance.player.transform);
         enemyController.Init(FindObjectOfType<PlayerController>().transform);
         activeEnemies.Add(enemyController);
-
+        StartCoroutine(SetupEnemy());
+    }
+    private IEnumerator SetupEnemy()
+    {
+        yield return null;
         // 플레이어의 타겟 갱신
         FindObjectOfType<PlayerController>().SetEnemyList(activeEnemies);
     }
