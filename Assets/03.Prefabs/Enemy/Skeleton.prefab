@@ -294,9 +294,12 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 81ddf54358177fc4f82a90f633f0c6e9, type: 2}
   lookOffset: 1.5
   closestEnemy: {fileID: 0}
-  followRange: 15
+  followRange: 1
+  attackRange: 1
+  roamRadius: 3
   canMove: 1
   chase: 1
+  enemyType: 0
   AttackPos: {fileID: 3610611771654599146}
 --- !u!50 &6977115229135878903
 Rigidbody2D:
