@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="fix: 데빌 페이지 체력 감소">
+    <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="feat: resource 파일 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/Inventory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/Inventory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/InventoryPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/InventoryPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/GameStage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/MainGame 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/MainGame 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Prefabs/Maps/Map_Boss.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2" />
+        <entry key="$PROJECT_DIR$" value="250224/5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,90 +36,15 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hn7093/Back_to_the_Gungeon.git&quot;,
     &quot;accountId&quot;: &quot;78ea2598-de15-42d5-baf0-21b271dba9ce&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;hn7093&quot;,
-    &quot;repository&quot;: &quot;Back_to_the_Gungeon&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/BaseController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/QuestEventDetector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/Register/NPCRegister.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/DevilPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/Plugins/Demigiant/DOTween/readme.txt.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a1cbff1ff154500b905c9e210c0dc4c176200/dd/7de941d0/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/62/e1e4be74/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a19d22dcf90a4588a1b2c49c248263ed174000/7a/b3082259/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9384495d2a482ac7341d67ca84e16d267d16c62458a9d67a92b119199a9/System.Threading.Tasks.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -134,7 +60,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "1",
+    "git-widget-placeholder": "PGT-Level",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -143,7 +69,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Attach to Unity Editor.Unity 에디터에 연결">
+  <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\GP\Sparta_Metaverse\Back_to_the_Gungeon -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
@@ -223,7 +149,7 @@
       <workItem from="1740565297239" duration="3527000" />
       <workItem from="1740616094340" duration="1640000" />
       <workItem from="1740634300995" duration="1420000" />
-      <workItem from="1740636216744" duration="666000" />
+      <workItem from="1740636216744" duration="15530000" />
     </task>
     <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
       <option name="closed" value="true" />
@@ -281,95 +207,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740473989578</updated>
     </task>
-    <task id="LOCAL-00008" summary="feat: 로비 변경">
-      <option name="closed" value="true" />
-      <created>1740639954534</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1740639954534</updated>
-    </task>
-    <task id="LOCAL-00009" summary="feat: 시스템 매니저 프리팹 구조 변경">
-      <option name="closed" value="true" />
-      <created>1740642007984</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642007984</updated>
-    </task>
-    <task id="LOCAL-00010" summary="리워드 테스트 변경">
-      <option name="closed" value="true" />
-      <created>1740642018044</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642018044</updated>
-    </task>
-    <task id="LOCAL-00011" summary="fix: UI 로그 제거">
-      <option name="closed" value="true" />
-      <created>1740642031722</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642031722</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fix: NPC 삭제 안되는 점 비동기로 변경">
-      <option name="closed" value="true" />
-      <created>1740642068545</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642068545</updated>
-    </task>
-    <task id="LOCAL-00013" summary="workspace.xml 파일 변경 사항 저장">
-      <option name="closed" value="true" />
-      <created>1740642089191</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642089191</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix: 로비 씬 변경">
-      <option name="closed" value="true" />
-      <created>1740642231600</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642231600</updated>
-    </task>
-    <task id="LOCAL-00015" summary="feat: 조작모드 변경">
-      <option name="closed" value="true" />
-      <created>1740642818070</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1740642818070</updated>
-    </task>
-    <task id="LOCAL-00016" summary="fix: UI 관련 일괄 수정">
-      <option name="closed" value="true" />
-      <created>1740645341429</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1740645341429</updated>
-    </task>
-    <task id="LOCAL-00017" summary="fix: UI 관련 전반 완료">
-      <option name="closed" value="true" />
-      <created>1740645649398</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1740645649398</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fix: 데빌 페이지 체력 감소">
-      <option name="closed" value="true" />
-      <created>1740646679856</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1740646679856</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,18 +254,6 @@
     <MESSAGE value="fix: .idea 파일 삭제" />
     <MESSAGE value="feat: 스킬 선택 UI에서 스킬 랜덤 호출" />
     <MESSAGE value="feat: resource 파일 추가" />
-    <MESSAGE value="feat: intro" />
-    <MESSAGE value="feat: 로비 변경" />
-    <MESSAGE value="feat: 시스템 매니저 프리팹 구조 변경" />
-    <MESSAGE value="리워드 테스트 변경" />
-    <MESSAGE value="fix: UI 로그 제거" />
-    <MESSAGE value="fix: NPC 삭제 안되는 점 비동기로 변경" />
-    <MESSAGE value="workspace.xml 파일 변경 사항 저장" />
-    <MESSAGE value="fix: 로비 씬 변경" />
-    <MESSAGE value="feat: 조작모드 변경" />
-    <MESSAGE value="fix: UI 관련 일괄 수정" />
-    <MESSAGE value="fix: UI 관련 전반 완료" />
-    <MESSAGE value="fix: 데빌 페이지 체력 감소" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 데빌 페이지 체력 감소" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: resource 파일 추가" />
   </component>
 </project>

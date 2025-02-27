@@ -7684,7 +7684,7 @@ GameObject:
   - component: {fileID: 8285207932039702404}
   - component: {fileID: 4056360843524416107}
   m_Layer: 11
-  m_Name: Map_Boss
+  m_Name: Map_Boss_Demon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9484,19 +9484,19 @@ PrefabInstance:
     - target: {fileID: 1980998704554641360, guid: 740df4e53e9659541a9448ed62ff4b5d,
         type: 3}
       propertyPath: enemyPrefabs.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1980998704554641360, guid: 740df4e53e9659541a9448ed62ff4b5d,
         type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 5335222850754396462, guid: b04cee0de43b7d340b8fb7dd86e71ffe,
+      objectReference: {fileID: 990810566253474988, guid: 53766bdd0fa1c2d4398f0a40daafb5bd,
         type: 3}
     - target: {fileID: 1980998704554641360, guid: 740df4e53e9659541a9448ed62ff4b5d,
         type: 3}
       propertyPath: enemyPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 990810566253474988, guid: 53766bdd0fa1c2d4398f0a40daafb5bd,
+      objectReference: {fileID: 5335222850754396462, guid: b04cee0de43b7d340b8fb7dd86e71ffe,
         type: 3}
     - target: {fileID: 1980998704554641360, guid: 740df4e53e9659541a9448ed62ff4b5d,
         type: 3}

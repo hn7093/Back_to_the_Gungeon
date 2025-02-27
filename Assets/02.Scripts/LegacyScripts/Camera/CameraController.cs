@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,8 +11,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Vector3 offset = new Vector3(0,0,-10);
     [SerializeField] private Vector2 minBoundary;
     [SerializeField] private Vector2 maxBoundary;
-
-    void LateUpdate()//ºÎµå·¯¿î Ä«¸Þ¶ó ÃßÀûÀ» À§ÇØ lerp¿Í lateUpdate »ç¿ë
+    void LateUpdate()//ï¿½Îµå·¯ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ lerpï¿½ï¿½ lateUpdate ï¿½ï¿½ï¿½
     {
         Vector3 desiredPosition = player.transform.position + offset;
         desiredPosition.x = Mathf.Clamp(player.transform.position.x, minBoundary.x, maxBoundary.x) + offset.x;
