@@ -5,8 +5,8 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-public enum ControlType
+using Preference;
+public enum controlType
 {
     keyboard = 0,
     mouse
@@ -24,7 +24,7 @@ public class PlayerController : BaseController
     private Vector2 currentTouchPosition;
     private bool isDragging = false;
     private float dragThreshold = 1f;
-    private ControlType currentControllType;
+    private controlType currentControllType;
     public static readonly string controlTypeKey = "controlTypeKey";
     public static readonly string skinIndexKey = "skinIndexKey";
     public static readonly string weaponIndexKey = "weaponIndexKey";
@@ -32,18 +32,12 @@ public class PlayerController : BaseController
     private int currentSkinIndex;
     private int currentWeaponIndex;
 
-    private ResourceController resourceController;
-    private WeaponPivotAnimationHandler weaponPivotAnimationHandler;
-
     private void Start()
     {
-        resourceController = GetComponent<ResourceController>();
-        weaponPivotAnimationHandler = GetComponentInChildren<WeaponPivotAnimationHandler>();
-        
-        currentControllType = (ControlType)PlayerPrefs.GetInt(controlTypeKey, 0);
-        currentSkinIndex = SkinManager.Instance.CurrentSkinIndex;
+        currentControllType = (controlType)PlayerPrefs.GetInt(controlTypeKey, 0);
+        currentSkinIndex = PlayerPrefs.GetInt(skinIndexKey, 0);
         ChangePlayerSkin(currentSkinIndex);
-        currentWeaponIndex = WeaponManager.Instance.CurrentWeaponIndex;
+        currentWeaponIndex = PlayerPrefs.GetInt(weaponIndexKey, 0);
         ChangeWeapon(currentWeaponIndex);
     }
 
@@ -56,39 +50,6 @@ public class PlayerController : BaseController
         Rotate(isLeft);
         SetIsAttacking();
         HandleAttackDelay();
-        // 임시 테스트
-        /*
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            _weaponHandler.AddFrontBullet(1);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _weaponHandler.SetBounce(true);
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _weaponHandler.SetThrough(true);
-        }
-        */
-    }
-
-    public void NextControlType()
-    {
-        int currentControllTypeIndex = (int)currentControllType;
-        currentControllTypeIndex = (currentControllTypeIndex + 1) % 2;
-        currentControllType = (ControlType)currentControllTypeIndex;
-        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
-        PlayerPrefs.Save();
-    }
-
-    public void PreviousControlType()
-    {
-        int currentControllTypeIndex = (int)currentControllType;
-        currentControllTypeIndex = (currentControllTypeIndex - 1 + 2) % 2;
-        currentControllType = (ControlType)currentControllTypeIndex;
-        PlayerPrefs.SetInt(controlTypeKey, currentControllTypeIndex);
-        PlayerPrefs.Save();
     }
 
     protected override void HandleAction()
@@ -226,23 +187,12 @@ public class PlayerController : BaseController
         }
     }
 
-    public override void Damage()
-    {
-        animationHandler.Damage();
-    }
-
-    public override void DisableInvincible()
-    {
-        animationHandler.EndInvincibility();
-    }
-
     public override void Death()
     {
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
         animationHandler.Death();
-        weaponPivotAnimationHandler.Death();
 
         // 모든 본인과 자식 컴포넌트 비활성화
         StartCoroutine(DisableComponentsAfterDelay(2f));
@@ -253,8 +203,8 @@ public class PlayerController : BaseController
     private IEnumerator DisableComponentsAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        weaponPivot.gameObject.SetActive(false);
 
+        // 모든 본인과 자식 컴포넌트 비활성화
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
@@ -263,22 +213,26 @@ public class PlayerController : BaseController
 
     public void NextSkin()
     {
-        int newSkinIndex = (currentSkinIndex + 1) % SkinManager.Instance.allSkins.Count;
+        int newSkinIndex = (currentSkinIndex + 1) % playerSkinPrefabs.Count;
         ChangePlayerSkin(newSkinIndex);
     }
 
     public void PrevSkin()
     {
-        int newSkinIndex = (currentSkinIndex - 1 + SkinManager.Instance.allSkins.Count) % SkinManager.Instance.allSkins.Count;
+        int newSkinIndex = (currentSkinIndex - 1 + playerSkinPrefabs.Count) % playerSkinPrefabs.Count;
         ChangePlayerSkin(newSkinIndex);
     }
 
     public void ChangePlayerSkin(int skinIndex)
     {
+        if (playerSkinPrefabs == null || playerSkinPrefabs.Count == 0) return;
 
-        skinIndex = Mathf.Clamp(skinIndex, 0, SkinManager.Instance.allSkins.Count - 1);
+        skinIndex = Mathf.Clamp(skinIndex, 0, playerSkinPrefabs.Count - 1);
         currentSkinIndex = skinIndex;
-        SkinManager.Instance.CurrentSkinIndex = skinIndex;
+
+        // 
+        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
+        PlayerPrefs.Save();
 
         if (currentSkin != null)
         {
@@ -286,29 +240,11 @@ public class PlayerController : BaseController
         }
 
 
-        currentSkin = Instantiate(SkinManager.Instance.GetCurrentSkin().skinPrefab, transform);
+        currentSkin = Instantiate(playerSkinPrefabs[skinIndex], transform);
         currentSkin.transform.localPosition = Vector3.zero;
-        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} 장착");
-        StartCoroutine(DelayedSetNewSkin());
-    }
 
-    public void SetSkin()
-    {
-        if (!SkinManager.Instance.IsSkinUnlocked(currentSkinIndex)) return;
-        PlayerPrefs.SetInt(skinIndexKey, currentSkinIndex);
-        PlayerPrefs.Save();
-    }
-
-    public void UnlockSkin()
-    {
-        SkinManager.Instance.UnlockSkin(currentSkinIndex);
-    }
-
-    private IEnumerator DelayedSetNewSkin()
-    {
-        yield return null; // 한 프레임 대기
         characterRenderer = currentSkin.GetComponent<SpriteRenderer>();
-        animationHandler = currentSkin.GetComponentInChildren<PlayerAnimationHandler>();
+        animationHandler = currentSkin.GetComponentInChildren<AnimationHandler>();
 
         if (animationHandler != null)
         {
@@ -317,19 +253,19 @@ public class PlayerController : BaseController
         }
         else
         {
-            Debug.Log(" AnimationHandler is NULL after skin change!");
+            Debug.LogError(" AnimationHandler is NULL after skin change!");
         }
     }
 
     public void NextWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex + 1) % WeaponManager.Instance.allWeapons.Count;
+        int newSkinIndex = (currentWeaponIndex + 1) % weaponPrefabs.Count;
         ChangeWeapon(newSkinIndex);
     }
 
     public void PrevWeapon()
     {
-        int newSkinIndex = (currentWeaponIndex - 1 + WeaponManager.Instance.allWeapons.Count) % WeaponManager.Instance.allWeapons.Count;
+        int newSkinIndex = (currentWeaponIndex - 1 + weaponPrefabs.Count) % weaponPrefabs.Count;
         ChangeWeapon(newSkinIndex);
     }
 
@@ -337,36 +273,36 @@ public class PlayerController : BaseController
     {
         if (weaponPrefabs == null || weaponPrefabs.Count == 0) return;
 
-        weaponIndex = Mathf.Clamp(weaponIndex, 0, WeaponManager.Instance.allWeapons.Count - 1);
-        currentWeaponIndex = weaponIndex;
-        WeaponManager.Instance.CurrentWeaponIndex = currentWeaponIndex;
+        weaponIndex = Mathf.Clamp(weaponIndex, 0, weaponPrefabs.Count - 1);
+        currentSkinIndex = weaponIndex;
+
+        // 
+        PlayerPrefs.SetInt(weaponIndexKey, currentSkinIndex);
+        PlayerPrefs.Save();
+
         ClearWeapon();
 
-        currentWeapon = Instantiate(WeaponManager.Instance.GetCurrentWeapon().weaponPrefab, weaponPivot);
-        Debug.Log("무기 변경: " + weaponIndex);
+        currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponPivot);
 
-        StartCoroutine(DelayedSetNewWeapon());
-    }
+        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
+        StartCoroutine(DelayedFindWeaponRenderer());
 
-    public void SetWeapon()
-    {
-        if (!WeaponManager.Instance.IsWeaponUnlocked(currentWeaponIndex)) return;
-        PlayerPrefs.SetInt(weaponIndexKey, currentWeaponIndex);
-        PlayerPrefs.Save();
-    }
-
-    public void UnlockWeapon()
-    {
-        WeaponManager.Instance.UnlockWeapon(currentWeaponIndex);
+        if (_weaponHandler != null)
+        {
+            this.weaponData = _weaponHandler.weaponData; // WeaponSO 가져오기
+            Debug.Log("현재 장착한 무기: " + this.weaponData.name);
+            _weaponHandler.Setup(weaponData);
+        }
+        else
+        {
+            Debug.LogError("WeaponHandler를 찾을 수 없습니다!");
+        }
     }
 
     public void ClearWeapon()
     {
         if (currentWeapon != null)
-        {
             Destroy(currentWeapon);
-            currentWeapon = null;
-        }
 
         if (_weaponHandler != null)
             _weaponHandler = null;
@@ -378,22 +314,89 @@ public class PlayerController : BaseController
             weaponData = null;
     }
 
-    private IEnumerator DelayedSetNewWeapon()
+    private IEnumerator DelayedFindWeaponRenderer()
     {
         yield return null; // 한 프레임 대기
         FindWeaponRenderer();
-        Debug.Log("DelayedSetNewWeapon 실행됨");
-        _weaponHandler = currentWeapon.GetComponent<WeaponHandler>();
+    }
 
-        if (_weaponHandler != null)
+    // 능력치 변경 모음
+    #region Status Change
+    // 체력 증가 - 퍼센트
+    public void ChangeHealth(float value)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
         {
-            this.weaponData = _weaponHandler.weaponData; // WeaponSO 가져오기
-            Debug.Log("현재 장착한 무기: " + this.weaponData.name);
-            _weaponHandler.Setup(weaponData);
-        }
-        else
-        {
-            Debug.Log("WeaponHandler를 찾을 수 없습니다!");
+            int healthValue = (int)(value * resourceController.MaxHealth / 100);
+            resourceController.ChangeHealth(healthValue);
         }
     }
+    // 체력 증가 - 정수
+    public void ChangeHealth(int value)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            resourceController.ChangeHealth(value);
+        }
+    }
+
+    // 최대 체력 증가, changeHealth가 참이면 회복까지 진행 - 퍼센트
+    public void AddMaxHP(float addHealth, bool changeHealth = false)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            int healthValue = (int)(addHealth * resourceController.MaxHealth / 100);
+            resourceController.AddMaxHealth(healthValue);
+        }
+    }
+    // 최대 체력 증가, 정수
+    public void AddMaxHP(int addHealth, bool changeHealth = false)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            resourceController.AddMaxHealth(addHealth, changeHealth);
+        }
+    }
+    // 공격력 증가 - 퍼센트
+    public void AddPower(int percent)
+    {
+        _weaponHandler.AddPower(percent);
+    }
+    // 공격 속도 증가 - 퍼센트
+    public void AddAttackSpeed(int percent)
+    {
+        _weaponHandler.AddAttackSpeed(percent);
+    }
+    // 이동 속도 증가 - 정수
+    public void AddSpeed(int value)
+    {
+        ResourceController resourceController = GetComponent<ResourceController>();
+        if (resourceController != null)
+        {
+            resourceController.AddSpeed(value);
+        }
+    }
+    
+
+    // 발사 탄수 증가
+    public void AddBullet(int value)
+    {
+        _weaponHandler.AddFrontBullet(value);
+    }
+
+    // 총알 벽 반사
+    public void SetBounce(bool canBounce)
+    {
+        _weaponHandler.SetBounce(canBounce);
+    }
+    // 총알 적 통과
+    public void SetThrough(bool canThrough)
+    {
+        _weaponHandler.SetThrough(canThrough);
+    }
+    #endregion
 }
