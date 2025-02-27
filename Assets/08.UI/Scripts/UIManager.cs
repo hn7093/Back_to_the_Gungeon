@@ -7,6 +7,7 @@ namespace Preference
     public enum PageType
     {
         HOME_PAGE,
+        INTRO_PAGE,
         MAIN_PAGE,
         SETTINGS_PAGE,
         GAMEOVER_PAGE,

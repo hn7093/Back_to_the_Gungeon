@@ -26,8 +26,10 @@ public class FileManager : MonoBehaviour
 
     public void StartGame()
     {
-        SystemManager.Instance.UIManager.isLobby = false;
-        SystemManager.Instance.UIManager.isOpenStartPage = false;
+        var uiManager = SystemManager.Instance.UIManager;
+        uiManager.Clear();
+        uiManager.isLobby = false;
+        uiManager.isOpenStartPage = false;
         
         SceneManager.LoadScene(_startScene);
     }
