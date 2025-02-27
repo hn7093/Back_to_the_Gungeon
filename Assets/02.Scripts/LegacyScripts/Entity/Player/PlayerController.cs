@@ -26,6 +26,7 @@ public class PlayerController : BaseController
     public static readonly string controlTypeKey = "controlTypeKey";
     public static readonly string skinIndexKey = "skinIndexKey";
     public static readonly string weaponIndexKey = "weaponIndexKey";
+    public bool canMove = true;
     private bool isAnyEnemy = false;
     private int currentSkinIndex;
     private int currentWeaponIndex;
@@ -47,7 +48,13 @@ public class PlayerController : BaseController
 
     protected override void Update()
     {
-        HandleAction();
+        if (canMove)
+            HandleAction();
+        else
+        {
+            movementDirection = Vector2.zero;
+        }
+
         SetCloserTarget();
         SetLookDirection();
         SetIsLeft();
