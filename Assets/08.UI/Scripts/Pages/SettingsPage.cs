@@ -13,7 +13,10 @@ public class SettingsPage : UIMonoBehaviour
     public Toggle VFXToggle;
     public Slider VFXVolumeSlider;
     
+    public TMP_Dropdown ControllerSelector;
+
     public Button ExitButton;
+    
     
     private void Start()
     {
@@ -36,7 +39,11 @@ public class SettingsPage : UIMonoBehaviour
         
         // BGM Slider
         VFXVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume, "VFX"));
-        VFXVolumeSlider.value = 50f;
+        VFXVolumeSlider.value = 0.5f;
+        
+        // BGM selector
+        ControllerSelector.RefreshShownValue();
+        ControllerSelector.onValueChanged.AddListener((value) => fileManager.UpdateControlType(value));
         
         // Exit Button
         ExitButton.onClick.AddListener(() => uiManager.OpenPage(PageType.HOME_PAGE));

@@ -10,7 +10,10 @@ public class StageClearPage : UIMonoBehaviour
     private List<Ability> shuffledSkill;
     public TMP_Text Description;
     
+    private void OnEnable() { audioManager.PlayVFXSoundByName("victory"); }
+
     private void OnDisable() { ShowShuffleAbilities(); }
+
     private void Start() { ShowShuffleAbilities(); }
 
     private void ShowShuffleAbilities()

@@ -19,20 +19,28 @@ public class FileManager : MonoBehaviour
     
     public static readonly string controlTypeKey = "controlTypeKey";
 
-    public void UpdateControlType()
+    public void UpdateControlType(int index)
     {
-        
+        PlayerPrefs.SetInt(controlTypeKey, index);
     }
 
     public void StartGame()
     {
         SystemManager.Instance.UIManager.isLobby = false;
+        SystemManager.Instance.UIManager.isOpenStartPage = false;
+        
         SceneManager.LoadScene(_startScene);
     }
 
     public void GoToLobby()
     {
-        SystemManager.Instance.UIManager.isLobby = true;
+        var uiManager = SystemManager.Instance.UIManager;
+        
+        uiManager.Clear();
+        uiManager.isLobby = true;
+        uiManager.isOpenStartPage = true;
+        uiManager.OpenPage(PageType.HOME_PAGE);
+        
         SceneManager.LoadScene(_lobbyScene);
     }
 

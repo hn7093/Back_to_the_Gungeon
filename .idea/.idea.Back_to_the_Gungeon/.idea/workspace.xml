@@ -5,57 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StageClearPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/StatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Scripts/LegacyScripts/Entity/StatHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/05.Sounds/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05.Sounds/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/AbilityDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/AbilityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/AbilityDatabase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/AbilityManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/05.Sounds/AduioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/05.Sounds/AduioManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/07.Settings/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/EventManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/07.Settings/FileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/FileManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/07.Settings/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/PlayerStatusManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/PlayerStatusManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.Settings/SystemManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameOver.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Base/GameStart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Dialog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Dialog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/AbilitySelect.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/AbilitySelect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Dialog.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Dialog.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Quest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Interface/Quest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Angel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Angel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Devil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Devil.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Roullete.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Reward/Roullete.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Pages/Settings/Settings.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Components/SkillUIElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Components/SkillUIElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AbilitySelect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AbilitySelect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StageClearPage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Prefabs/UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Prefabs/UIManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/AngelPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/DevilPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/DevilPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/RoulletePage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/RoulletePage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/GameOverPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/GameOverPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/QuestPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/QuestPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/SettingsPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StageClearPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StageClearPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/StartGamePage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/data/abilityList.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/data/abilityList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Arrow_Barrage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Arrow_Barrage.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Beam.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Beam.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Buff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Buff.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Dash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Dash.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Fly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Fly.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Heal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Heal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slash.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_Slide.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_SpiritArrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/images/abilities/UI_Skill_Icon_SpiritArrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-25.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-25.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-37.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-37.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-45.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/DM-CGS-45.wav.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +45,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="3" />
+        <entry key="$PROJECT_DIR$" value="0227/2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -83,44 +64,10 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/test.unity.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/ResourceController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/ResourceController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/ResourceController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/ResourceController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/RangeWeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/RangeWeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Weapon/WeaponHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/AbilityDatabase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/PlayerStatusManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/07.Settings/Register/Tutorial2Event.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Mockup/SkillType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/08.UI/Scripts/DieTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
@@ -140,19 +87,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "0227/3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
@@ -211,6 +158,7 @@
       <workItem from="1740453932038" duration="21872000" />
       <workItem from="1740552020389" duration="2120000" />
       <workItem from="1740617829242" duration="10000" />
+      <workItem from="1740620811860" duration="11295000" />
     </task>
     <task id="LOCAL-00001" summary="feat: UI 구성 요소 관련">
       <option name="closed" value="true" />
@@ -365,7 +313,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="1" />
+                        <option value="origin/feature/ui" />
                       </list>
                     </value>
                   </entry>

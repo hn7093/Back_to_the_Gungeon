@@ -25,7 +25,10 @@ public class AngelPage : UIMonoBehaviour
             currentElement.SetData(shuffledSkill[idx]);
             
             // 선택된 경우 Task로 전달
-            currentElement.button.onClick.AddListener(() => { systemManager.EventManager.NotifyTaskComplete(currentElement.method); });
+            currentElement.button.onClick.AddListener(() =>
+            {
+                systemManager.EventManager.NotifyTaskComplete(currentElement.method);
+            });
         }
     }
 }

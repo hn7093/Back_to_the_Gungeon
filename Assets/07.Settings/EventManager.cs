@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using static MonsterName;
 
 public enum QuestType { DESTORY_MONSTER, Tutorial }
-public enum MonsterName { GOBLINE, FLY }
+public enum MonsterName { GOBLIN, FLY }
 
 namespace Preference
 {
@@ -49,6 +50,10 @@ namespace Preference
 
 
         private List<MonsterName> DestoryStackByQuest;
+
+        public bool isQuest1Clear = false;
+        public bool isQuest2Clear = false;
+        
         public enum TutorialList
         {
             MOVE_ARROW,
@@ -61,15 +66,46 @@ namespace Preference
             DestoryStackByQuest = new List<MonsterName>();
         }
 
-        public void DestroyDetector(MonsterName monster)
+        public void DestroyDetector(MonsterName name)
         {
-            DestoryStackByQuest.Add(monster);
+            // Debug.Log(name);
+            DestoryStackByQuest.Add(name);
             CheckQuestClear();
         }
 
         private void CheckQuestClear()
         {
-               
+            if (!isQuest1Clear)
+            {
+                int goblinCount = DestoryStackByQuest.FindAll(name => name == MonsterName.GOBLIN).Count;
+                if (goblinCount == 3)
+                {
+                    isQuest1Clear = true;
+                    SystemManager.Instance.UIManager.OpenPage(PageType.QUEST_COMPLETE_PAGE);
+                }
+            }
+           
+            if (!isQuest2Clear)
+            {
+                int goblinCount = DestoryStackByQuest.FindAll(name => name == MonsterName.FLY).Count;
+                if (goblinCount == 3)
+                {
+                    isQuest2Clear = true;
+                    SystemManager.Instance.UIManager.OpenPage(PageType.QUEST_COMPLETE_PAGE);
+                }
+            }
+        }
+        
+        
+        public bool isTutorial1Clear = false;
+        public bool isTutorial2Clear = false;
+        public bool isTutorial3Clear = false;
+
+        public void TutorialStart()
+        {
+            UIManager uiManager = SystemManager.Instance.UIManager;
+            uiManager.OpenPage(PageType.TUTORIAL_PAGE);
+            
         }
     }
 }

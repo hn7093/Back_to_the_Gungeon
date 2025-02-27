@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour
     // Awake 시 에러 남
     private void Start()
     {
-        SystemManager.Instance.RegisterPlayer(Player);
+        // SystemManager.Instance.RegisterPlayer(Player);
     }
     
     private void Update()

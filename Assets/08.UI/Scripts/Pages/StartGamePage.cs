@@ -7,7 +7,8 @@ public class StartGamePage : UIMonoBehaviour
 {
     public Button StartGameButton;
     public Button SettingsButton;
-    public Button LoadButton;
+    // public Button InventoryButton;
+    public Button ChangeSkinButton;
     public Button ExitButton;
 
     private void Start()

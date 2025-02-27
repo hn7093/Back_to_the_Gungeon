@@ -13,6 +13,7 @@ public class DevilPage : UIMonoBehaviour
     
     private void OnDisable() { ShowShuffleAbilities(); }
     private void Start() { ShowShuffleAbilities(); }
+    private void OnEnable() { audioManager.PlayVFXSoundByName("devil"); }
 
     private void ShowShuffleAbilities()
     {
@@ -28,7 +29,7 @@ public class DevilPage : UIMonoBehaviour
             currentElement.button.onClick.AddListener(() =>
             {
                 // 체력 감소를 보상으로 스킬 획득
-                systemManager.PlayerStatusManager.DecreaseCurrentHealth();
+                // systemManager.PlayerStatusManager.DecreaseCurrentHealth();
                 systemManager.EventManager.NotifyTaskComplete(currentElement.method);
             });
         }
