@@ -258,7 +258,7 @@ public class EnemyController : BaseController
     public override void Death()
     {
         animationHandler.Death();
-        EnemyManager.Instance.RemoveEnemyOnDeath(this);
         base.Death();
+        EnemyManager.Instance.RemoveEnemyOnDeath(this);
     }
 }
