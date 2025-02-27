@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float timeBetweenWaves = 1f; // 웨이브 당 대기 시간
 
     private Coroutine waveRoutine; // 웨이브 소환 코루틴
-    private PlayerController player;
+    [SerializeField] private PlayerController player;
     void Awake()
     {
         if (instance == null)
