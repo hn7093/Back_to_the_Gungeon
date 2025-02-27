@@ -1,21 +1,22 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Preference;
-using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class AngelPage : UIMonoBehaviour
+// do: 로직이 완전히 같음
+public class StageClearPage : UIMonoBehaviour
 {
     public SkillUIElement[] skillElements;
     private List<Ability> shuffledSkill;
+    public TMP_Text Description;
     
     private void OnDisable() { ShowShuffleAbilities(); }
     private void Start() { ShowShuffleAbilities(); }
-    private void OnEnable() { audioManager.PlayVFXSoundByName("victory"); }
 
     private void ShowShuffleAbilities()
     {
+        Description.text = $"현재 스테이지: {systemManager.FileManager.CurrentStage.ToString()}";
+        
         skillElements = transform.GetComponentsInChildren<SkillUIElement>();
         shuffledSkill = SystemManager.Instance.PlayerStatusManager.AbilityManager.GetShuffledAbilities(skillElements.Length);
 

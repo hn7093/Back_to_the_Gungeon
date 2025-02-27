@@ -10,18 +10,18 @@ public class SettingsPage : UIMonoBehaviour
     public Slider BGMVolumeSlider;
     public TMP_Dropdown BGMSelector;
     
-    // public Toggle VFXToggle;
-    // public Slider VFXVolumeSlider;
+    public Toggle VFXToggle;
+    public Slider VFXVolumeSlider;
     
     public Button ExitButton;
     
     private void Start()
     {
-        // Toggle BGMx
-        BGMToggle.onValueChanged.AddListener(isChecked => audioManager.TurnBGMOn(isChecked));
+        // Toggle BGM
+        BGMToggle.onValueChanged.AddListener(isChecked => audioManager.TurnBGMOn(isChecked, "BGM"));
         
         // BGM Slider
-        BGMVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume));
+        BGMVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume, "BGM"));
         BGMVolumeSlider.value = 50f;
         
         // BGM selector
@@ -30,6 +30,13 @@ public class SettingsPage : UIMonoBehaviour
         BGMSelector.value = audioManager.bgmList.FindIndex(list => list.name == audioManager.currentBGM.name);
         BGMSelector.RefreshShownValue();
         BGMSelector.onValueChanged.AddListener((value) => audioManager.UpdateBGMSourceClip(value));
+        
+        // Toggle BGM
+        VFXToggle.onValueChanged.AddListener(isChecked => audioManager.TurnBGMOn(isChecked, "VFX"));
+        
+        // BGM Slider
+        VFXVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume, "VFX"));
+        VFXVolumeSlider.value = 50f;
         
         // Exit Button
         ExitButton.onClick.AddListener(() => uiManager.OpenPage(PageType.HOME_PAGE));

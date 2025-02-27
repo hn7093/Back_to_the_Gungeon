@@ -13,7 +13,7 @@ namespace Preference
         ANGEL_PAGE,
         DEVIL_PAGE,
         ROULETTE_PAGE,
-        LEVELUP_PAGE,
+        STAGE_CLEAR_PAGE,
         DIALOGUE_PAGE, // 대화 데이터까지 포함하여
         IVENTORY_PAGE,
         PAUSE_PAGE,
@@ -51,6 +51,7 @@ namespace Preference
         
         public List<PageObject> Pages;
         private PageObject _currentPage;
+        public bool isLobby = true;
         
         public bool isOpenStartPage = false;
 
@@ -75,10 +76,15 @@ namespace Preference
             }
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void OpenPage(PageType pageName)
         {
+            
             _currentPage?.Instance.SetActive(false);
-            // 없는 경우에 대한 알림 필요
+            
+            // hofix: 홈으로 가는 경우로 해둔 목록들, lobby 체크를 통해 비활성화
+            if (pageName == PageType.HOME_PAGE && isLobby) { return; } 
+            // do: 없는 경우에 대한 예외 처리
             _currentPage = Pages.Find(page => page.PageName == pageName);
             _currentPage.Instance.SetActive(true);
         }

@@ -24,7 +24,7 @@ namespace Preference
         public void SetData(Ability skill)
         {
             method = skill.method;
-            image.sprite = Resources.Load<Sprite>(skill.filePath);
+            image.sprite = Resources.Load<Sprite>("images/abilities/" + skill.filePath);
             title.text = skill.name;
             description.text = skill.description;
         }

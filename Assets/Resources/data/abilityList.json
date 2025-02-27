@@ -4,31 +4,31 @@
       "name": "전체 체력 증가",
       "method": "increase_max_health",
       "description": "최대 체력이 증가합니다.",
-      "filePath": ""
+      "filePath": "MaxHealth"
     },
     {
       "name": "체력 회복",
       "method": "increase_current_health",
       "description": "현재 체력을 일부 회복합니다.",
-      "filePath": ""
+      "filePath": "health"
     },
     {
       "name": "공격력 강화",
       "method": "increase_attack_power",
       "description": "현재 공격력을 증가시킵니다.",
-      "filePath": ""
+      "filePath": "power"
     },
     {
       "name": "공격 부스트",
       "method": "increase_attack_speed",
       "description": "현재 공격 속도를 증가시킵니다.",
-      "filePath": ""
+      "filePath": "attackSpeed"
     },
     {
       "name": "이동 부스트",
       "method": "increase_move_speed",
       "description": "현재 이동 속도를 증가시킵니다.",
-      "filePath": ""
+      "filePath": "moveSpeed"
     }
   ],
   "skills": [
@@ -36,25 +36,25 @@
       "method": "Double",
       "name": "더블 샷",
       "description": "한번에 두번 공격이 발생합니다.",
-      "filePath": "Skills/skill3"
+      "filePath": "double"
     },
     {
       "method": "Penetration",
       "name": "투과 샷",
       "description": "총알이 투과됩니다.",
-      "filePath": "Skills/skill1"
+      "filePath": "penetration"
     },
     {
       "method": "Reflection",
       "name": "반동 샷",
       "description": "총알이 반사됩니다.",
-      "filePath": "Skills/skill1"
+      "filePath": "reflection"
     },
     {
       "method": "Multi",
-      "name": "강화",
-      "description": "데미지가 강해집니다.",
-      "filePath": "Skills/skill2"
+      "name": "멀티 샷",
+      "description": "한번에 여러발 분사합니다.",
+      "filePath": "Multi"
     }
   ]
 }

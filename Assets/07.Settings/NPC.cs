@@ -8,8 +8,8 @@ public class NPC : MonoBehaviour
 
     public GameObject Player;
 
-    // 플레이어 시작 부분에 추가 필요
-    private void Awake()
+    // Awake 시 에러 남
+    private void Start()
     {
         SystemManager.Instance.RegisterPlayer(Player);
     }
@@ -30,8 +30,13 @@ public class NPC : MonoBehaviour
     // NPC 또는 문을 통과할 때
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Destroy(gameObject);
+        SystemManager.Instance.AudioManager.PlayVFXSoundByName("click");
+        
         SystemManager.Instance.EventManager.OpenEventPage(PageType.ANGEL_PAGE);
         // SystemManager.Instance.EventManager.OpenEventPage(PageType.DEVIL_PAGE);
+        // SystemManager.Instance.EventManager.OpenEventPage(PageType.STAGE_CLEAR_PAGE);
+
         // SystemManager.Instance.EventManager.OpenEventPage(PageType.ROULETTE_PAGE);
     }
 }

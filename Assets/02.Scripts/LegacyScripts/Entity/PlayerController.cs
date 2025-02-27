@@ -18,7 +18,7 @@ public class PlayerController : BaseController
     [SerializeField] List<GameObject> weaponPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
     [SerializeField] protected GameObject currentWeapon;
-    private List<BaseController> enemyList; // Àû ¸®½ºÆ®
+    private List<BaseController> enemyList; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
 
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
@@ -44,7 +44,7 @@ public class PlayerController : BaseController
     protected override void Update()
     {
         HandleAction();
-        SetCloserTarget();
+        // SetCloserTarget();
         SetLookDirection();
         SetIsLeft();
         Rotate(isLeft);
@@ -126,15 +126,15 @@ public class PlayerController : BaseController
 
         foreach (var enemy in enemyList)
         {
-            // È°¼ºÈ­ µÈ ¿ÀºêÁ§Æ®ÀÏ ¶§¸¸
+            // È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (!enemy.gameObject.activeSelf) continue;
 
-            // ºñ±³¿ëÀ¸·Î Â÷ÀÌÀÇ Á¦°öÀ» »ç¿ë - Á¦°ö±Ù »ý·«
+            // ï¿½ñ±³¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             float dis = (enemy.transform.position - weaponPivot.position).sqrMagnitude;
             Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("Wall", "innerWall"));
 
-            if (hit.collider == null)//º®ÀÌ ¾øÀ¸¸é bestEnemy·Î ÁöÁ¤
+            if (hit.collider == null)//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ bestEnemyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             {
                 if (dis < closestDistance)
                 {
@@ -142,7 +142,7 @@ public class PlayerController : BaseController
                     bestEnemy = enemy.transform;
                 }
             }
-            else//º®ÀÌ ÀÖÀ¸¸é blockedEnemy·Î ÁöÁ¤
+            else//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ blockedEnemyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             {
                 if (dis < blockedDistance)
                 {
@@ -179,7 +179,7 @@ public class PlayerController : BaseController
             timeSinceLastAttack += Time.deltaTime;
         }
 
-        // °ø°Ý °¡´É ¿©ºÎ È®ÀÎ
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && isAnyEnemy)
         {
             timeSinceLastAttack = 0;
@@ -194,17 +194,17 @@ public class PlayerController : BaseController
 
         animationHandler.Death();
 
-        // ¸ðµç º»ÀÎ°ú ÀÚ½Ä ÄÄÆ÷³ÍÆ® ºñÈ°¼ºÈ­
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
         StartCoroutine(DisableComponentsAfterDelay(2f));
 
-        // °ÔÀÓ¿À¹ö È­¸é È£Ãâ
+        // ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ È­ï¿½ï¿½ È£ï¿½ï¿½
     }
 
     private IEnumerator DisableComponentsAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        // ¸ðµç º»ÀÎ°ú ÀÚ½Ä ÄÄÆ÷³ÍÆ® ºñÈ°¼ºÈ­
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
@@ -248,7 +248,7 @@ public class PlayerController : BaseController
 
         if (animationHandler != null)
         {
-            animationHandler.Init();  //  »õ·Î¿î ½ºÅ²ÀÇ Animator ÀçÇÒ´ç
+            animationHandler.Init();  //  ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Å²ï¿½ï¿½ Animator ï¿½ï¿½ï¿½Ò´ï¿½
             Debug.Log(" AnimationHandler initialized after skin change.");
         }
         else
@@ -289,13 +289,13 @@ public class PlayerController : BaseController
 
         if (_weaponHandler != null)
         {
-            this.weaponData = _weaponHandler.weaponData; // WeaponSO °¡Á®¿À±â
-            Debug.Log("ÇöÀç ÀåÂøÇÑ ¹«±â: " + this.weaponData.name);
+            this.weaponData = _weaponHandler.weaponData; // WeaponSO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + this.weaponData.name);
             _weaponHandler.Setup(weaponData);
         }
         else
         {
-            Debug.LogError("WeaponHandler¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù!");
+            Debug.LogError("WeaponHandlerï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
         }
     }
 
@@ -316,14 +316,14 @@ public class PlayerController : BaseController
 
     private IEnumerator DelayedFindWeaponRenderer()
     {
-        yield return null; // ÇÑ ÇÁ·¹ÀÓ ´ë±â
+        yield return null; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         FindWeaponRenderer();
     }
 
-    // ´É·ÂÄ¡ º¯°æ ¸ðÀ½
+    // ï¿½É·ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     #region Status Change
 
-    // Ã¼·Â Áõ°¡
+    // Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void ChangeHealth(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -333,7 +333,7 @@ public class PlayerController : BaseController
         }
     }
 
-    // ÃÖ´ë Ã¼·Â Áõ°¡, changeHealth°¡ ÂüÀÌ¸é È¸º¹±îÁö ÁøÇà
+    // ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, changeHealthï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddMaxHP(int addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -342,17 +342,17 @@ public class PlayerController : BaseController
             resourceController.AddMaxHealth(addHealth, changeHealth);
         }
     }
-    // °ø°Ý·Â Áõ°¡
+    // ï¿½ï¿½ï¿½Ý·ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddPower(int percent)
     {
         _weaponHandler.AddPower(percent);
     }
-    // °ø°Ý ¼Óµµ Áõ°¡
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddAttackSpeed(int percent)
     {
         _weaponHandler.AddAttackSpeed(percent);
     }
-    // ÀÌµ¿ ¼Óµµ Áõ°¡
+    // ï¿½Ìµï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddSpeed(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -362,18 +362,18 @@ public class PlayerController : BaseController
         }
     }
 
-    // ¹ß»ç Åº¼ö Áõ°¡
+    // ï¿½ß»ï¿½ Åºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void AddBullet(int value)
     {
         _weaponHandler.AddFrontBullet(value);
     }
 
-    // ÃÑ¾Ë º® ¹Ý»ç
+    // ï¿½Ñ¾ï¿½ ï¿½ï¿½ ï¿½Ý»ï¿½
     public void SetBounce(bool canBounce)
     {
         _weaponHandler.SetBounce(canBounce);
     }
-    // ÃÑ¾Ë Àû Åë°ú
+    // ï¿½Ñ¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
     public void SetThrough(bool canThrough)
     {
         _weaponHandler.SetThrough(canThrough);

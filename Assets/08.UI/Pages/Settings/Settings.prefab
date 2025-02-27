@@ -1379,6 +1379,8 @@ MonoBehaviour:
   BGMToggle: {fileID: 6036961431447167471}
   BGMVolumeSlider: {fileID: 607895317229494246}
   BGMSelector: {fileID: 2379708153185419701}
+  VFXToggle: {fileID: 4226392576828014706}
+  VFXVolumeSlider: {fileID: 1816327632208593574}
   ExitButton: {fileID: 4671553608000571944}
 --- !u!1 &4932505375828458584
 GameObject:
@@ -2858,6 +2860,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923c75900a8204cf8b01d650b7d49ccc, type: 3}
+--- !u!114 &4226392576828014706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7456224412241100901, guid: 923c75900a8204cf8b01d650b7d49ccc,
+    type: 3}
+  m_PrefabInstance: {fileID: 6764122136812748823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7642863057935565225 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4021180430960034238, guid: 923c75900a8204cf8b01d650b7d49ccc,

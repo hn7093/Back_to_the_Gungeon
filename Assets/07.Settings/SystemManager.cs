@@ -35,12 +35,17 @@ namespace Preference
         public void RegisterPlayer(GameObject player)
         {
             if (PlayerStatusManager == null) PlayerStatusManager = new PlayerStatusManager();
-            if (!player.GetComponent<StatHandler>() || !player.GetComponent<ResourceController>()) {
+            if (!player.GetComponent<PlayerController>()) {
                 Debug.LogError("game object is missing stat handler and resource controller");
                 return;
             }
             PlayerStatusManager.RegistryInfo(player);
 
+        }
+
+        public void IncreaseStageLevel()
+        {
+            FileManager.CurrentStage += 1;
         }
     }
 }
