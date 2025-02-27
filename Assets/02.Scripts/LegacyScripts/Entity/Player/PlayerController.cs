@@ -18,7 +18,7 @@ public class PlayerController : BaseController
     [SerializeField] List<GameObject> weaponPrefabs = new List<GameObject>();
     [SerializeField] protected GameObject currentSkin;
     [SerializeField] protected GameObject currentWeapon;
-    private List<BaseController> enemyList; // Àû ¸®½ºÆ®
+    private List<BaseController> enemyList; // ì  ë¦¬ìŠ¤íŠ¸
 
     private Vector2 startTouchPosition;
     private Vector2 currentTouchPosition;
@@ -126,15 +126,15 @@ public class PlayerController : BaseController
 
         foreach (var enemy in enemyList)
         {
-            // È°¼ºÈ­ µÈ ¿ÀºêÁ§Æ®ÀÏ ¶§¸¸
+            // í™œì„±í™” ëœ ì˜¤ë¸Œì íŠ¸ì¼ ë•Œë§Œ
             if (!enemy.gameObject.activeSelf) continue;
 
-            // ºñ±³¿ëÀ¸·Î Â÷ÀÌÀÇ Á¦°öÀ» »ç¿ë - Á¦°ö±Ù »ı·«
+            // ë¹„êµìš©ìœ¼ë¡œ ì°¨ì´ì˜ ì œê³±ì„ ì‚¬ìš© - ì œê³±ê·¼ ìƒëµ
             float dis = (enemy.transform.position - weaponPivot.position).sqrMagnitude;
             Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(weaponPivot.position, directionToEnemy, Mathf.Sqrt(dis), LayerMask.GetMask("Wall", "innerWall"));
 
-            if (hit.collider == null)//º®ÀÌ ¾øÀ¸¸é bestEnemy·Î ÁöÁ¤
+            if (hit.collider == null)//ë²½ì´ ì—†ìœ¼ë©´ bestEnemyë¡œ ì§€ì •
             {
                 if (dis < closestDistance)
                 {
@@ -142,7 +142,7 @@ public class PlayerController : BaseController
                     bestEnemy = enemy.transform;
                 }
             }
-            else//º®ÀÌ ÀÖÀ¸¸é blockedEnemy·Î ÁöÁ¤
+            else//ë²½ì´ ìˆìœ¼ë©´ blockedEnemyë¡œ ì§€ì •
             {
                 if (dis < blockedDistance)
                 {
@@ -179,7 +179,7 @@ public class PlayerController : BaseController
             timeSinceLastAttack += Time.deltaTime;
         }
 
-        // °ø°İ °¡´É ¿©ºÎ È®ÀÎ
+        // ê³µê²© ê°€ëŠ¥ ì—¬ë¶€ í™•ì¸
         if (isAttacking && timeSinceLastAttack > _weaponHandler.Delay && isAnyEnemy)
         {
             timeSinceLastAttack = 0;
@@ -194,17 +194,17 @@ public class PlayerController : BaseController
 
         animationHandler.Death();
 
-        // ¸ğµç º»ÀÎ°ú ÀÚ½Ä ÄÄÆ÷³ÍÆ® ºñÈ°¼ºÈ­
+        // ëª¨ë“  ë³¸ì¸ê³¼ ìì‹ ì»´í¬ë„ŒíŠ¸ ë¹„í™œì„±í™”
         StartCoroutine(DisableComponentsAfterDelay(2f));
 
-        // °ÔÀÓ¿À¹ö È­¸é È£Ãâ
+        // ê²Œì„ì˜¤ë²„ í™”ë©´ í˜¸ì¶œ
     }
 
     private IEnumerator DisableComponentsAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        // ¸ğµç º»ÀÎ°ú ÀÚ½Ä ÄÄÆ÷³ÍÆ® ºñÈ°¼ºÈ­
+        // ëª¨ë“  ë³¸ì¸ê³¼ ìì‹ ì»´í¬ë„ŒíŠ¸ ë¹„í™œì„±í™”
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
@@ -238,7 +238,7 @@ public class PlayerController : BaseController
 
         currentSkin = Instantiate(SkinManager.Instance.GetCurrentSkin().skinPrefab, transform);
         currentSkin.transform.localPosition = Vector3.zero;
-        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} ÀåÂø");
+        Debug.Log($"{SkinManager.Instance.GetCurrentSkin().name} ì¥ì°©");
         StartCoroutine(DelayedSetNewSkin());
     }
     public void SetSkin()
@@ -255,13 +255,13 @@ public class PlayerController : BaseController
 
     private IEnumerator DelayedSetNewSkin()
     {
-        yield return null; // ÇÑ ÇÁ·¹ÀÓ ´ë±â
+        yield return null; // í•œ í”„ë ˆì„ ëŒ€ê¸°
         characterRenderer = currentSkin.GetComponent<SpriteRenderer>();
         animationHandler = currentSkin.GetComponentInChildren<PlayerAnimationHandler>();
 
         if (animationHandler != null)
         {
-            animationHandler.Init();  //  »õ·Î¿î ½ºÅ²ÀÇ Animator ÀçÇÒ´ç
+            animationHandler.Init();  //  ìƒˆë¡œìš´ ìŠ¤í‚¨ì˜ Animator ì¬í• ë‹¹
             Debug.Log(" AnimationHandler initialized after skin change.");
         }
         else
@@ -301,13 +301,13 @@ public class PlayerController : BaseController
 
         if (_weaponHandler != null)
         {
-            this.weaponData = _weaponHandler.weaponData; // WeaponSO °¡Á®¿À±â
-            Debug.Log("ÇöÀç ÀåÂøÇÑ ¹«±â: " + this.weaponData.name);
+            this.weaponData = _weaponHandler.weaponData; // WeaponSO ê°€ì ¸ì˜¤ê¸°
+            Debug.Log("í˜„ì¬ ì¥ì°©í•œ ë¬´ê¸°: " + this.weaponData.name);
             _weaponHandler.Setup(weaponData);
         }
         else
         {
-            Debug.LogError("WeaponHandler¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù!");
+            Debug.LogError("WeaponHandlerë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
         }
     }
 
@@ -328,13 +328,13 @@ public class PlayerController : BaseController
 
     private IEnumerator DelayedFindWeaponRenderer()
     {
-        yield return null; // ÇÑ ÇÁ·¹ÀÓ ´ë±â
+        yield return null; // í•œ í”„ë ˆì„ ëŒ€ê¸°
         FindWeaponRenderer();
     }
 
-    // ´É·ÂÄ¡ º¯°æ ¸ğÀ½
+    // ëŠ¥ë ¥ì¹˜ ë³€ê²½ ëª¨ìŒ
     #region Status Change
-    // Ã¼·Â Áõ°¡ - ÆÛ¼¾Æ®
+    // ì²´ë ¥ ì¦ê°€ - í¼ì„¼íŠ¸
     public void ChangeHealth(float value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -344,7 +344,7 @@ public class PlayerController : BaseController
             resourceController.ChangeHealth(healthValue);
         }
     }
-    // Ã¼·Â Áõ°¡ - Á¤¼ö
+    // ì²´ë ¥ ì¦ê°€ - ì •ìˆ˜
     public void ChangeHealth(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -354,7 +354,7 @@ public class PlayerController : BaseController
         }
     }
 
-    // ÃÖ´ë Ã¼·Â Áõ°¡, changeHealth°¡ ÂüÀÌ¸é È¸º¹±îÁö ÁøÇà - ÆÛ¼¾Æ®
+    // ìµœëŒ€ ì²´ë ¥ ì¦ê°€, changeHealthê°€ ì°¸ì´ë©´ íšŒë³µê¹Œì§€ ì§„í–‰ - í¼ì„¼íŠ¸
     public void AddMaxHP(float addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -364,7 +364,7 @@ public class PlayerController : BaseController
             resourceController.AddMaxHealth(healthValue);
         }
     }
-    // ÃÖ´ë Ã¼·Â Áõ°¡, Á¤¼ö
+    // ìµœëŒ€ ì²´ë ¥ ì¦ê°€, ì •ìˆ˜
     public void AddMaxHP(int addHealth, bool changeHealth = false)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -373,17 +373,17 @@ public class PlayerController : BaseController
             resourceController.AddMaxHealth(addHealth, changeHealth);
         }
     }
-    // °ø°İ·Â Áõ°¡ - ÆÛ¼¾Æ®
+    // ê³µê²©ë ¥ ì¦ê°€ - í¼ì„¼íŠ¸
     public void AddPower(int percent)
     {
         _weaponHandler.AddPower(percent);
     }
-    // °ø°İ ¼Óµµ Áõ°¡ - ÆÛ¼¾Æ®
+    // ê³µê²© ì†ë„ ì¦ê°€ - í¼ì„¼íŠ¸
     public void AddAttackSpeed(int percent)
     {
         _weaponHandler.AddAttackSpeed(percent);
     }
-    // ÀÌµ¿ ¼Óµµ Áõ°¡ - Á¤¼ö
+    // ì´ë™ ì†ë„ ì¦ê°€ - ì •ìˆ˜
     public void AddSpeed(int value)
     {
         ResourceController resourceController = GetComponent<ResourceController>();
@@ -394,18 +394,18 @@ public class PlayerController : BaseController
     }
 
 
-    // ¹ß»ç Åº¼ö Áõ°¡
+    // ë°œì‚¬ íƒ„ìˆ˜ ì¦ê°€
     public void AddBullet(int value)
     {
         _weaponHandler.AddFrontBullet(value);
     }
 
-    // ÃÑ¾Ë º® ¹İ»ç
+    // ì´ì•Œ ë²½ ë°˜ì‚¬
     public void SetBounce(bool canBounce)
     {
         _weaponHandler.SetBounce(canBounce);
     }
-    // ÃÑ¾Ë Àû Åë°ú
+    // ì´ì•Œ ì  í†µê³¼
     public void SetThrough(bool canThrough)
     {
         _weaponHandler.SetThrough(canThrough);

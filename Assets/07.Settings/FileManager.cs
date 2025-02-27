@@ -24,10 +24,17 @@ public class FileManager : MonoBehaviour
         PlayerPrefs.SetInt(controlTypeKey, index);
     }
 
+    public int GetControlType()
+    {
+        return PlayerPrefs.GetInt(controlTypeKey);
+    }
+
     public void StartGame()
     {
-        SystemManager.Instance.UIManager.isLobby = false;
-        SystemManager.Instance.UIManager.isOpenStartPage = false;
+        var uiManager = SystemManager.Instance.UIManager;
+        uiManager.Clear();
+        uiManager.isLobby = false;
+        uiManager.isOpenStartPage = false;
         
         SceneManager.LoadScene(_startScene);
     }

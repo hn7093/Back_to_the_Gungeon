@@ -41,7 +41,7 @@ public class SettingsPage : UIMonoBehaviour
         VFXVolumeSlider.onValueChanged.AddListener(volume => audioManager.UpdateBGMVolume(volume, "VFX"));
         VFXVolumeSlider.value = 0.5f;
         
-        // BGM selector
+        ControllerSelector.value = fileManager.GetControlType();
         ControllerSelector.RefreshShownValue();
         ControllerSelector.onValueChanged.AddListener((value) => fileManager.UpdateControlType(value));
         
