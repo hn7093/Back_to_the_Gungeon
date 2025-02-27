@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponType: 0
   delay: 1
   weaponSize: 1
-  power: 0.3
+  power: 3
   speed: 2
   attackRange: 18
   attackSoundClip: {fileID: 0}
@@ -31,3 +31,4 @@ MonoBehaviour:
   multipleProjectilesAngel: 10
   multipleDelay: 0
   projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  numberOfObejects: 1
