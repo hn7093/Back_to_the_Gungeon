@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b3388c518b6fe4782a961012bb1db4, type: 3}
   m_Name: KnightSkin
   m_EditorClassIdentifier: 
-  skinName: 
-  skinPrefab: {fileID: 0}
+  skinName: KnightSkin
+  skinPrefab: {fileID: 1604483481732085248, guid: 45bc80dad28508b488f82cf99a9595ec,
+    type: 3}
   isUnlocked: 0

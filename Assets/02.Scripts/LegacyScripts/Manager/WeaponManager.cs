@@ -5,7 +5,7 @@ public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager Instance;
 
-    [SerializeField] public List<WeaponData> allWeapons; // 모든 무기 데이터 저장
+    [SerializeField] public List<WeaponUnlockData> allWeapons; // 모든 무기 데이터 저장
     private int currentWeaponIndex = 0;
     public int CurrentWeaponIndex { get => currentWeaponIndex; set { currentWeaponIndex = value; } }
 
@@ -30,7 +30,7 @@ public class WeaponManager : MonoBehaviour
         return PlayerPrefs.GetInt("WeaponUnlocked_" + index, 0) == 1;
     }
 
-    public WeaponData GetCurrentWeapon()
+    public WeaponUnlockData GetCurrentWeapon()
     {
         return allWeapons[currentWeaponIndex];
     }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2762d194bff643458d94fb1e0285253, type: 3}
   m_Name: M24
   m_EditorClassIdentifier: 
-  weaponName: 
-  weaponPrefab: {fileID: 0}
+  weaponName: M24
+  weaponPrefab: {fileID: 3068870324399637210, guid: 36074238b8dd8eb4fa1a9dcc5ae0e4f0,
+    type: 3}
   isUnlocked: 0

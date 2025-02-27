@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b3388c518b6fe4782a961012bb1db4, type: 3}
   m_Name: WizardSkin
   m_EditorClassIdentifier: 
-  skinName: 
-  skinPrefab: {fileID: 0}
+  skinName: WizardSkin
+  skinPrefab: {fileID: 8005150542524002181, guid: eb16c742fc919224985e5490ff86520b,
+    type: 3}
   isUnlocked: 0

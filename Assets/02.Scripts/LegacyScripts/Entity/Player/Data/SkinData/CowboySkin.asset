@@ -15,4 +15,4 @@ MonoBehaviour:
   skinName: CowboySkin
   skinPrefab: {fileID: 5128048467143391939, guid: 979d50fc87ff1a4478af5d37dcdfaece,
     type: 3}
-  isUnlocked: 0
+  isUnlocked: 1
