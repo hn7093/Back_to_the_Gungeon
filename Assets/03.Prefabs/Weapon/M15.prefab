@@ -82,7 +82,10 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 512
+  weaponData: {fileID: 11400000, guid: efc675d0c88941c41a001631260117b6, type: 2}
   projectileSpawnPosition: {fileID: 5215485769088710918}
+  canBounce: 0
+  canThrough: 0
 --- !u!212 &8678676566480142031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5181,7 +5184,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 110
   m_Sprite: {fileID: 21300000, guid: 12eab6dbb3fa2e5449845344e0389cd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
