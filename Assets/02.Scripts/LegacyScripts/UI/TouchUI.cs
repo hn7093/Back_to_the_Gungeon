@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DynamicJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler
+public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    public RectTransform joystickBackground;  // 조이스틱 UI 배경 (Dynamic)
+    public RectTransform joystickBackground;  // 조이스틱 배경
     public RectTransform joystickHandle;      // 조이스틱 핸들
     private Vector2 inputVector;
     private bool isJoystickActive = false;
@@ -15,22 +16,13 @@ public class DynamicJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler
         joystickBackground.gameObject.SetActive(false); // 시작할 때 조이스틱 숨기기
     }
 
-    private void Update()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        // 클릭하면 조이스틱을 해당 위치에 표시
-        if (Input.GetMouseButtonDown(0) && !IsPointerOverUI())
-        {
-            Vector2 touchPosition = Input.mousePosition;
-            ShowJoystick(touchPosition);
-        }
-    }
+        // 특정 UI 요소를 클릭했는지 확인 후 무시
+        if (IsPointerOverUI()) return;
 
-    public void ShowJoystick(Vector2 position)
-    {
-        joystickBackground.position = position;
-        joystickBackground.gameObject.SetActive(true);
-        joystickHandle.anchoredPosition = Vector2.zero;
-        isJoystickActive = true;
+        // 터치한 위치에서 조이스틱 활성화
+        ShowJoystick(eventData.position);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -45,17 +37,27 @@ public class DynamicJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!isJoystickActive) return;
+
         inputVector = Vector2.zero;
         joystickHandle.anchoredPosition = Vector2.zero;
         joystickBackground.gameObject.SetActive(false); // 터치 종료 시 조이스틱 숨기기
         isJoystickActive = false;
     }
 
+    private void ShowJoystick(Vector2 position)
+    {
+        joystickBackground.position = position;
+        joystickBackground.gameObject.SetActive(true);
+        joystickHandle.anchoredPosition = Vector2.zero;
+        isJoystickActive = true;
+    }
+
     // 특정 UI 요소를 클릭했는지 확인
     private bool IsPointerOverUI()
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
-        System.Collections.Generic.List<RaycastResult> results = new System.Collections.Generic.List<RaycastResult>();
+        List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, results);
 
         foreach (var result in results)
