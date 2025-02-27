@@ -15,7 +15,7 @@ public class StageManager : MonoBehaviour
     {
         currentStage = null;
         
-        stageCount = 10;
+        stageCount = 0;
         if (nextStage == null)
         {
             nextStage = FindObjectOfType<NextStage>();
@@ -68,15 +68,15 @@ public class StageManager : MonoBehaviour
         }
         else if (stageCount == 10)
         {
-            currentStage = Instantiate(stage[1]); // 보스 스테이지 지정
+            currentStage = Instantiate(stage[1]); // 매직 보스 스테이지 지정
         }
         else if (stageCount == 20)
         {
-            currentStage = Instantiate(stage[2]);
+            currentStage = Instantiate(stage[2]); // 데몬 보스 스테이지 지정
         }
-        else if (stageCount == 21)
+        else if (stageCount == 21) // 엔딩 스테이지
         {
-            currentStage = Instantiate(stage[3]); // 엔딩 스테이지
+            currentStage = Instantiate(stage[3]); 
         }
         else
         {
