@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class ResourceController : MonoBehaviour
 {
-    [SerializeField] private float InvincibleTime = 0.5f;
-
+[SerializeField] private float InvincibleTime = 0.5f;
 
     private BaseController baseController;
     private StatHandler statHandler;
 
     private float timeSinceLastChange = float.MaxValue;
-    private AnimationHandler animationHandler;
 
     [SerializeField] public float CurrentHealth;
     public float MaxHealth => statHandler.Health;
@@ -22,7 +20,6 @@ public class ResourceController : MonoBehaviour
     {
         statHandler = GetComponent<StatHandler>();
         baseController = GetComponent<BaseController>();
-        animationHandler = GetComponent<AnimationHandler>();
     }
 
     private void Start()
@@ -89,7 +86,7 @@ public class ResourceController : MonoBehaviour
             if (timeSinceLastChange >= InvincibleTime)
             {
                 timeSinceLastChange = InvincibleTime;
-                animationHandler.EndInvincibility();
+                baseController.DisableInvincible();
             }
         }
     }
