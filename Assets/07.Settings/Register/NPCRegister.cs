@@ -12,16 +12,20 @@ public class NPCRegister : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
+            playerController.canMove = false;
             if (npcType == NPCType.ANGEL)
             {
                 await SystemManager.Instance.EventManager.OpenEventPage(PageType.ANGEL_PAGE);
                 if(gameObject) Destroy(gameObject);
+                playerController.canMove = true;
             }
 
             if (npcType == NPCType.DEVIL)
             {
                 await SystemManager.Instance.EventManager.OpenEventPage(PageType.DEVIL_PAGE);
                 if(gameObject) Destroy(gameObject);
+                playerController.canMove = true;
             }
         }
     }
