@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5cd219ea-5004-4245-bb3b-e6bfbb3c89ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Back_to_the_Gungeon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00.External/Cainos/Pixel Art Top Down - Basic/Patch - URP 2D Lit.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/InventoryPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.UI/Scripts/Pages/InventoryPage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2" />
+        <entry key="$PROJECT_DIR$" value="3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,74 +45,14 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/00.External/0x72_DungeonTilesetII_v1.7/README.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/PlayerNCamera.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/DevlopScene/RewardTestScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/01.Scenes/Lobby.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/BaseController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Entity/Player/StatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/UI/TouchUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/EventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/FileManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/02.Scripts/LegacyScripts/Manager/StageManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/NPC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/NPC.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/QuestEventDetector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/Register/NPCRegister.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/07.Settings/SystemManager.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/07.Settings/WeaponDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Pages/Base/Inventory.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/DevilPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/SettingsPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/StartGamePage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/Plugins/Demigiant/DOTween/readme.txt.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/junebeom/Desktop/Back_to_the_Gungeon/Assets/08.UI/Scripts/Pages/InventoryPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
@@ -130,19 +72,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
