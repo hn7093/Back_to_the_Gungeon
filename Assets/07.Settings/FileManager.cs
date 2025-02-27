@@ -24,6 +24,11 @@ public class FileManager : MonoBehaviour
         PlayerPrefs.SetInt(controlTypeKey, index);
     }
 
+    public int GetControlType()
+    {
+        return PlayerPrefs.GetInt(controlTypeKey);
+    }
+
     public void StartGame()
     {
         var uiManager = SystemManager.Instance.UIManager;
