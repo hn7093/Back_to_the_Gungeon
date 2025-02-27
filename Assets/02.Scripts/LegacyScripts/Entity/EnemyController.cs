@@ -19,18 +19,21 @@ public enum EnemyType
 public class EnemyController : BaseController
 {
     [Header("EnemyInfo")]
-    [SerializeField] private float followRange = 15f; // 추적 거리
+    [SerializeField] private float followRange = 20f; // 추적 거리
     [SerializeField] private float attackRange = 5f;
     [SerializeField] private float roamRadius = 3f; // 배회 범위
     [SerializeField] private bool canMove = true;
     [SerializeField] private bool chase = true;
     [SerializeField] EnemyType enemyType = 0;
+    
     protected EnemyManager enemyManager;
-    private Transform target;
+    [SerializeField] private Transform target;
     private NavMeshAgent agent;
     public Transform AttackPos;
     private Vector2 lastPosition;
     protected bool isMove;
+    private bool isPlayerInAttackRange = false;
+    private ResourceController playerResourcController = null;
 
     private Vector3 roamTarget; // 배회 위치
     private bool isRoaming; // 배회 중인지 여부
@@ -56,6 +59,7 @@ public class EnemyController : BaseController
         agent.updateUpAxis = false;
         lastPosition = transform.position;
         closestEnemy = target;
+        _weaponHandler.Setup(weaponData);
     }
 
 
@@ -67,7 +71,7 @@ public class EnemyController : BaseController
 
     protected void Movement()
     {
-        if(enemyType == EnemyType.ranged) return;
+        if (enemyType == EnemyType.ranged) return;
         //Debug.Log($" Move called with magnitude: {obj.magnitude}");
 
         Vector2 currentPosition = transform.position;
@@ -100,59 +104,91 @@ public class EnemyController : BaseController
 
     protected void MeleeEnemyAction()
     {
-    // 목표 없으면 행동 X
-    if (_weaponHandler == null || target == null)
-    {
-        if (!movementDirection.Equals(Vector2.zero))
+        // 목표가 없거나, 무기가 없으면 행동 X
+        if (_weaponHandler == null || target == null || canMove == false)
         {
             movementDirection = Vector2.zero;
+            return;
         }
-        return;
-    }
 
-    // 행동 시작
-    float distance = DistanceToTarget();
-    Vector2 direction = DirectionToTarget();
-    //if (chase)
-    {
-        agent.SetDestination(target.position);
-    }
-    // 거리에 따라 공격 or 추격
-    isAttacking = false;
-        if (distance <= followRange)
+        // 행동 시작
+        float distance = DistanceToTarget();
+        Vector2 direction = DirectionToTarget();
+
+        if (!isPlayerInAttackRange) // 🔥 플레이어가 공격 범위(Collide) 밖에 있을 때 추적
         {
-            // 방향 전환
-            lookDirection = direction;
-            if (chase)
+            if (distance <= followRange) // 추적 가능 거리 안이면 이동
             {
+                agent.isStopped = false;
                 agent.SetDestination(target.position);
             }
-            // 공격 범위내라면
-            if (distance < _weaponHandler.AttackRange)
+            else
             {
-                // 물체 탐색 - Level 제외
-                int layerMaskTarget = _weaponHandler.target;
-                RaycastHit2D hit = Physics2D.Raycast(
-                    transform.position,
-                    direction,
-                    _weaponHandler.AttackRange * 1.5f,
-                    (1 << LayerMask.NameToLayer("Level")) | layerMaskTarget
-                    );
-                // 물체 레이어로 공격 여부 결정
-                if (hit.collider != null && layerMaskTarget == (layerMaskTarget | (1 << hit.collider.gameObject.layer)))
-                {
-                    isAttacking = true;
-                }
-                // 이동 없이
-                movementDirection = Vector2.zero;
-                return;
+                agent.isStopped = true; // 너무 멀면 멈춤
             }
+        }
+        else // 🔥 공격 범위 안에 있을 때
+        {
+            agent.isStopped = true;
+            agent.SetDestination(transform.position);
 
-            // 이동
-            if (canMove)
+            if (isAttacking)
             {
-                movementDirection = direction;
+                StartCoroutine(WaitAndAttack()); // 1초 대기 후 공격 실행
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) // 플레이어가 Collider 안에 들어오면 공격 모드
+        {
+            isPlayerInAttackRange = true;
+            isAttacking = true;
+            if (playerResourcController == null)
+                playerResourcController = collision.GetComponent<ResourceController>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) // 플레이어가 Collider 밖으로 나가면 추적 모드
+        {
+            isPlayerInAttackRange = false;
+            isAttacking = false;
+            if (playerResourcController != null)
+                playerResourcController = null;
+        }
+    }
+
+    private IEnumerator WaitAndAttack()
+    {
+        canMove = false;
+
+        if (isPlayerInAttackRange && Time.time - lastAttackTime > attackCooldown) // 여전히 공격 범위 안이면 공격
+        {
+            StartCoroutine(AttackRoutine()); // 근접 공격 실행
+            animationHandler.Attack(); // 애니메이션 실행
+            lastAttackTime = Time.time; // 마지막 공격 시간 갱신
+        }
+
+        yield return new WaitForSeconds(1f); // 1초 대기
+
+        canMove = true;
+
+        if (isPlayerInAttackRange)
+        {
+            playerResourcController.ChangeHealth(_weaponHandler.Power * (-1f));
+        }
+
+    }
+
+
+    private IEnumerator AttackRoutine()
+    {
+        if (_weaponHandler is MeleeWeaponHandler meleeWeapon)
+        {
+            yield return meleeWeapon.Attack(); // MeleeWeaponHandler의 Attack() 실행
         }
     }
 
@@ -191,6 +227,7 @@ public class EnemyController : BaseController
             }
             else
             {
+                isRoaming = false;
                 isAttacking = false;
             }
         }
@@ -222,7 +259,7 @@ public class EnemyController : BaseController
     public override void Death()
     {
         animationHandler.Death();
-        EnemyManager.Instance.RemoveEnemyOnDeath(this);
         base.Death();
+        EnemyManager.Instance.RemoveEnemyOnDeath(this);
     }
 }
