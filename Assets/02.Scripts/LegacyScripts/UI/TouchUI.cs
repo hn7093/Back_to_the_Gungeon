@@ -12,7 +12,7 @@ public class TouchJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler, I
 
     public Vector2 Direction => inputVector;
 
-    private void Start()
+    private void Awake()
     {
         controlType = (ControlType)PlayerPrefs.GetInt(PlayerController.controlTypeKey, 0);
         joystickBackground.gameObject.SetActive(false); // 시작할 때 조이스틱 숨기기
