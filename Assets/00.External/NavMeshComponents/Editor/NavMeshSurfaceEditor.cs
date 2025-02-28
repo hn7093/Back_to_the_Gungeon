@@ -1,5 +1,5 @@
 #define NAVMESHCOMPONENTS_SHOW_NAVMESHDATA_REF
-
+#if UNITY_EDITOR
 using System.Linq;
 using UnityEditor.IMGUI.Controls;
 using UnityEditorInternal;
@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.AI;
 using System.Reflection;
-
+#endif
 namespace NavMeshPlus.Components.Editors
 {
     [CanEditMultipleObjects]
